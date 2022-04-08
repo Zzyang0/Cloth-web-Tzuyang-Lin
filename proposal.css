@@ -1,0 +1,15 @@
+.Problem-section {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-indent: 2em;
+}
+
+header {
+    text-align: center;
+    padding: .5rem 0;
+}
+
+img{
+    height:300px;
+    width:500px;
+}

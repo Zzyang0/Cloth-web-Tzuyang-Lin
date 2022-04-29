@@ -54,3 +54,66 @@ footer{
     height: 150px;
     font-weight: bold;
 }
+
+header{
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container{
+
+}
+
+.Container .generator {
+  background-color: #C3A6A0;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+
+.generator label {
+  display: inline-block;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#choice .button, #BUDGET_input{
+  display: inline;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 30px;
+  text-align: center;
+  padding: 5px;
+  border-color: black;
+}
+
+#choice:nth-last-of-type(1) {
+  margin-top: 10px;
+}
+
+.Generator {
+  border-radius: 30px;
+  text-align: center;
+  margin: 10px 30px 10px 10px;
+  padding: 20px 20px;
+  border-color: black;
+}
+
+@media (min-width: 425px)
+{
+  .Container {
+      display: flex;
+      flex-grow: 1;
+      margin: 5% 20% 10px 10px;
+  }
+}
+
+.button:focus {
+  background-color: #C3A6A0;
+}
+
+nav a:hover{
+    border-bottom: 0.5rem solid #7f1d33;
+    transition: ease-out .25s;
+}

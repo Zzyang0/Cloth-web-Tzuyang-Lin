@@ -15,12 +15,6 @@ body{
     margin-right: auto;
 }
 
-
-nav ul{
-background-color: #F7F1F0;
-}
-
-
 nav a:hover{
     border-bottom: 0.5rem solid #7f1d33;
     transition: ease-out .25s;

@@ -9,12 +9,6 @@ body{
 }
 
 
-.container{
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 nav a:hover{
     border-bottom: 0.5rem solid #7f1d33;
     transition: ease-out .25s;
@@ -50,4 +44,13 @@ footer{
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+#buttom_home{
+    border-radius: 25px;
+    background: #fefcfc;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    font-weight: bold;
 }

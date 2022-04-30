@@ -45,6 +45,10 @@ header{
   font-size: 1.8rem;
 } 
 
+.container-fluid .navbar{
+  max-width: 992px;
+}
+
 @media (min-width:598px) {
   body {
     background-image: none;

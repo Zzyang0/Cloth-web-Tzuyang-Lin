@@ -90,14 +90,21 @@ header{
     font-size: 1.8rem;
   }  
 
-#buttom-home, .container-text{
+  #buttom-home, .container-text{
   margin-bottom:45px;
   }
 
   .Container {
-    display: flex;
-    flex-grow: 1;
     margin: 5% 20% 10px 10px;
+  }
+
+  .subpage-title{
+    width: 500px;
+  }
+
+  .Container .generator {
+    margin-left: 90px;
+    margin-bottom: 90px;
   }
 }
 
@@ -164,13 +171,29 @@ header{
       margin-left:-150px;
       font-weight: bold;
       font-size: 1.8rem;
-  }  
+  }
+  
+  .Container {
+    display: flex;
+    flex-grow: 1;
+    margin: 5% 20% 10px 10px;
+  }
+
+  .Container .generator {
+    flex-basis: 40%;
+  }
+
+  .Container .generated-cloth {
+    flex-basis: 60%;
+    display: flex;
+  }
 }
-/* this is the generator_page css */ */
+/* this is the generator_page css */ 
 .Container .generator {
   background-color: #C3A6A0;
   border-radius: 20px;
   padding: 0 10px;
+  height: 450px;
 }
 
 .generator label {
@@ -200,16 +223,6 @@ header{
   border-color: black;
 }
 
-
-/* this is the geneartor_page css */
-.Container .generator {
-  flex-basis: 30%;
-  background-color: #C3A6A0;
-  border-radius: 20px;
-  padding: 0 10px;
-  height: 450px;
-}
-
 .button:focus {
   background-color: #C3A6A0;
 }
@@ -220,8 +233,6 @@ nav a:hover{
 }
 
 .Container .generated-cloth {
-  flex-basis: 70%;
-  display: flex;
   margin-left: 50px;
 }
 
@@ -249,12 +260,26 @@ nav a:hover{
 }
 
 .save-to-closet {
-  width: 189px;
+  width: 170px;
   height: 50px;
   left: 841px;
   top: 739px;
 
   background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 7px 20px rgba(121, 188, 207, 0.4);
+  border-radius: 50px;
+  margin-bottom: 60px;
+}
+
+.saved-to-closet {
+  width: 170px;
+  height: 50px;
+  left: 841px;
+  top: 739px;
+
+  background: #858c93;
   border: 1px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 7px 20px rgba(121, 188, 207, 0.4);

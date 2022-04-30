@@ -14,47 +14,9 @@ nav li:hover{
     transition: ease-out .25s;
 }
 
-#account {
-  width:85px;
-  height:80px;
+#menu {
+  display:none;
 }
-
-#logo {
-    width: 250px;
-    padding-bottom: 1.5rem;
-  }
-
-
-nav ul li{
-  text-align: center;
-  padding-top: 3rem;
-  font-size:2.2rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-main div img{
-    width: 750px;
-    height: 580px;
-    padding-top: 4rem;
-    margin-left: 55%;
-    display: block;  
-}
-
-main div p:last-child{
-    font-weight: bold;
-}
-
-
-.container-text {
-  font-size: 5rem;
-  margin-top:200px;
-  height:auto;
-  position:absolute;
-  top:60px;
-  left:230px;
-}
-
 
 footer{
     position: fixed;
@@ -62,19 +24,6 @@ footer{
     bottom: 0;
     width: 100%;
     text-align: center;
-}
-
-#buttom_home{
-    border-radius: 25px;
-    background: #fefcfc;
-    padding: 30px;
-    width: 200px;
-    height: 400px;
-    position:relative;
-    right:20px;
-    bottom:8rem;
-    font-weight: bold;
-    font-size: 1.8rem;
 }
 
 header{
@@ -85,7 +34,132 @@ header{
   align-items: center;
 }
 
-/* this is the geneartor_page css */
+@media (min-width:598px) {
+  body {
+    background-image: none;
+  }
+
+  #home, #generator, #new, #about {
+    display:none;
+  }
+
+  
+  /* #menu {
+    display:block;
+  } */
+
+  #logo {
+    width: 250px;
+    padding-bottom:0.5rem;
+    margin-left:50px;
+    display:block;
+  }
+
+  nav #menu:hover{
+    border-bottom: 0.5rem solid #7f1d33;
+    transition: ease-out .25s;
+  }
+
+  main div img{
+    width: 770px;
+    height: 580px;
+    margin-left: 80px;
+    margin-top:80px;
+    display: block;
+    border-radius: 20px;;
+  }
+
+  .container-text {
+    font-size: 5rem;
+    margin-top:200px;
+    height:auto;
+    position:relative;
+    bottom:10rem;
+    left:320px;
+  }
+  
+  #buttom_home{
+    border-radius: 30px;
+    background: #fefcfc;
+    padding: 40px;
+    width: 200px;
+    height: 400px;
+    position:relative;
+    left:130px;
+    bottom:10rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }  
+
+#buttom-home, .container-text{
+  margin-bottom:45px;
+  }
+}
+
+@media (min-width:992px) {
+  #account {
+    width:95px;
+    height:80px;
+  }
+  
+  #menu {
+    display:none;
+  }
+
+  #logo {
+      width: 250px;
+      padding-bottom: 1.5rem;
+    }
+  
+  #home, #generator, #new, #about {
+    display:block;
+  }
+  
+    nav ul li{
+      text-align: center;
+      padding-top: 0.2rem;
+      margin:6px;
+      font-size:2.2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    main div img{
+      width: 750px;
+      height: 580px;
+      padding-top: 2rem;
+      margin-left: 50%;
+      display: block;  
+  }
+
+    main div p:last-child{
+      font-weight: bold;
+  }
+  
+  .container-text {
+    font-size: 5rem;
+    margin-top:200px;
+    height:auto;
+    position:relative;
+    bottom:44rem;
+    left:230px;
+  }
+  
+  #buttom-home, .container-text {
+    margin-bottom: -430px;
+  }
+
+  #buttom_home{
+      border-radius: 25px;
+      background: #fefcfc;
+      padding: 40px;
+      width: 500px;
+      height: 200px;
+      margin-left:-150px;
+      font-weight: bold;
+      font-size: 1.8rem;
+  }  
+}
+/* this is the generator_page css */ */
 .Container .generator {
   background-color: #C3A6A0;
   border-radius: 20px;
@@ -119,13 +193,14 @@ header{
   border-color: black;
 }
 
-@media (min-width: 425px)
+@media (min-width: 598px)
 {
   .Container {
       display: flex;
       flex-grow: 1;
       margin: 5% 20% 10px 10px;
   }
+
 }
 
 .button:focus {

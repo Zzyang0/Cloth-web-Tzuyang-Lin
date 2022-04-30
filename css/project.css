@@ -187,6 +187,10 @@ header{
     flex-basis: 60%;
     display: flex;
   }
+
+  .cloth {
+    flex-grow: 1;
+  }
 }
 /* this is the generator_page css */ 
 .Container .generator {
@@ -246,7 +250,6 @@ nav a:hover{
 
 .cloth {
   margin: auto;
-  flex-grow: 1;
   text-align: center;
 }
 
@@ -279,7 +282,7 @@ nav a:hover{
   left: 841px;
   top: 739px;
 
-  background: #858c93;
+  background: #9da6af;
   border: 1px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 7px 20px rgba(121, 188, 207, 0.4);

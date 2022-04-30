@@ -19,7 +19,7 @@ nav li:hover{
 }
 
 footer{
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -43,10 +43,9 @@ header{
     display:none;
   }
 
-  
-  /* #menu {
+  #menu {
     display:block;
-  } */
+  }
 
   #logo {
     width: 250px;
@@ -94,9 +93,14 @@ header{
 #buttom-home, .container-text{
   margin-bottom:45px;
   }
+
+  .Container {
+    display: flex;
+    flex-grow: 1;
+    margin: 5% 20% 10px 10px;
+  }
 }
 
-<<<<<<< HEAD
 @media (min-width:992px) {
   #account {
     width:95px;
@@ -140,9 +144,11 @@ header{
     font-size: 5rem;
     margin-top:200px;
     height:auto;
-    position:relative;
+    margin-bottom:auto;
+    margin-left:auto;
+    /* position:relative;
     bottom:44rem;
-    left:230px;
+    left:230px; */
   }
   
   #buttom-home, .container-text {
@@ -167,8 +173,6 @@ header{
   padding: 0 10px;
 }
 
-=======
->>>>>>> bb7b03c4be5d789fc220f564f259b5336c62abba
 .generator label {
   display: inline-block;
   justify-content: center;
@@ -196,15 +200,6 @@ header{
   border-color: black;
 }
 
-@media (min-width: 598px)
-{
-  .Container {
-      display: flex;
-      flex-grow: 1;
-      margin: 5% 20% 10px 10px;
-  }
-
-}
 
 /* this is the geneartor_page css */
 .Container .generator {

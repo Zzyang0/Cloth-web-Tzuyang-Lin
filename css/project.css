@@ -19,11 +19,10 @@ nav li:hover{
 }
 
 footer{
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 header{
@@ -33,6 +32,7 @@ header{
   justify-content: center;
   align-items: center;
 }
+
 
 @media (min-width:598px) {
   body {
@@ -44,54 +44,70 @@ header{
   }
 
   #menu {
-    display:block;
+    display:flex;
+    height:240px;
+    width:200px;
+    position:absolute;
+    top:30px;
+    right:-75px;
   }
 
   #logo {
-    width: 250px;
+    width: 320px;
     padding-bottom:0.5rem;
     margin-left:50px;
-    display:block;
+    display:flex;
+    height:200px;
+    position:absolute;
+    top:30px;
+    left:120px;
   }
 
-  nav #menu:hover{
+  #account {
+    display:flex;
+    height:200px;
+    width:180px;
+    position:absolute;
+    top:30px;
+    left:-75px;
+  }
+
+  #menu:hover, #logo:hover, #account:hover{
     border-bottom: 0.5rem solid #7f1d33;
     transition: ease-out .25s;
   }
 
   main div img{
-    width: 770px;
-    height: 580px;
-    margin-left: 80px;
-    margin-top:80px;
+    width: 720px;
+    height: 620px;
+    margin-right: 35px;
+    margin-top:290px;
     display: block;
     border-radius: 20px;;
   }
 
   .container-text {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top:200px;
     height:auto;
-    position:relative;
-    bottom:10rem;
-    left:320px;
+    margin-top:10px;
+    margin-left:16rem;
   }
   
   #buttom_home{
-    border-radius: 30px;
+    border-radius: 20px;
     background: #fefcfc;
-    padding: 40px;
+    padding: 30px;
     width: 200px;
     height: 400px;
-    position:relative;
-    left:130px;
-    bottom:10rem;
+    margin-bottom: 20px;
+    margin-left: 70px;
     font-weight: bold;
     font-size: 1.8rem;
   }  
 
-#buttom-home, .container-text{
-  margin-bottom:45px;
+  #buttom-home, .container-text{
+  margin-bottom:60px;
   }
 
   .Container {
@@ -142,17 +158,13 @@ header{
   
   .container-text {
     font-size: 5rem;
-    margin-top:200px;
+    margin-top:-550px;
     height:auto;
-    margin-bottom:auto;
-    margin-left:auto;
-    /* position:relative;
-    bottom:44rem;
-    left:230px; */
+    margin-left:120px;
   }
   
   #buttom-home, .container-text {
-    margin-bottom: -430px;
+    margin-bottom: 70px;
   }
 
   #buttom_home{

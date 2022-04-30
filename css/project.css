@@ -23,6 +23,7 @@ footer{
   bottom: 0;
   width: 100%;
   text-align: center;
+  margin-top: 150px;
 }
 
 header{
@@ -33,6 +34,16 @@ header{
   align-items: center;
 }
 
+#buttom_home{
+  border-radius: 20px;
+  background: #fefcfc;
+  padding: 30px;
+  width: 200px;
+  height: 400px;
+  margin-left: 70px;
+  font-weight: bold;
+  font-size: 1.8rem;
+} 
 
 @media (min-width:598px) {
   body {
@@ -47,9 +58,6 @@ header{
     display:flex;
     height:240px;
     width:200px;
-    position:absolute;
-    top:30px;
-    right:-75px;
   }
 
   #logo {
@@ -58,21 +66,15 @@ header{
     margin-left:50px;
     display:flex;
     height:200px;
-    position:absolute;
-    top:30px;
-    left:120px;
   }
 
   #account {
     display:flex;
     height:200px;
     width:180px;
-    position:absolute;
-    top:30px;
-    left:-75px;
   }
 
-  #menu:hover, #logo:hover, #account:hover{
+  #menu:hover {
     border-bottom: 0.5rem solid #7f1d33;
     transition: ease-out .25s;
   }
@@ -81,16 +83,16 @@ header{
     width: 720px;
     height: 620px;
     margin-right: 35px;
-    margin-top:290px;
+    margin-top:8px;
     display: block;
-    border-radius: 20px;;
+    border-radius: 20px;
   }
 
   .container-text {
     font-size: 4rem;
-    margin-top:200px;
+    margin-top:40px;
+    margin-bottom: 50px;
     height:auto;
-    margin-top:10px;
     margin-left:16rem;
   }
   
@@ -151,6 +153,10 @@ header{
       font-family: 'Montserrat', sans-serif;
     }
 
+    #buttom_home{
+      margin-left: -120px;
+    } 
+
     main div img{
       width: 750px;
       height: 580px;
@@ -174,15 +180,8 @@ header{
     margin-bottom: 70px;
   }
 
-  #buttom_home{
-      border-radius: 25px;
-      background: #fefcfc;
-      padding: 40px;
-      width: 500px;
-      height: 200px;
-      margin-left:-150px;
-      font-weight: bold;
-      font-size: 1.8rem;
+  footer {
+    margin-top: 350px;
   }
   
   .Container {

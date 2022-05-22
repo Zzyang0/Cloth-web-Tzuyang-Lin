@@ -1,7 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 export function Nav() {
-
+    return(
+    <section className="navbar">
+    <nav>
+      <header>
+        <h1 ><a className="logo" href="#">Dvogue</a></h1>
+        </header>
+        <a href="#">My Closet</a>
+        <div className="nav-dropdown">
+        <button className="dropbutton">Cloth Generator 
+        <i className="fa fa-caret-down"></i>
+        </button>
+        <div className="nav-dropdown-content">
+          <a href="#">Outfit Generator</a>
+          <a href="#">Item Generator</a>
+        </div>
+      </div>
+      <a href="#">Blog</a>
+      <a href="#">About us</a>
+      <a className="login" href="#"><i className="fa fa-fw fa-user"></i>Login</a>
+    </nav>
+    </section>
+    )
 
 }
 
@@ -40,10 +63,10 @@ export function Footer() {
             </ul>
           </li>
       
-          <li className="footeritem">
-            <h2 className="title">Social</h2>
+          <li classNameName="footeritem">
+            <h2 classNameName="title">Social</h2>
       
-            <ul className="footerul">
+            <ul classNameName="footerul">
               <li>
                 <a href="#">Our instagram</a>
               </li>
@@ -59,7 +82,7 @@ export function Footer() {
           </li>
         </ul>
 
-        <div className="contact">
+        <div classNameName="contact">
           <h2>Contact Us:</h2>
           <li>
             <a href="info@dvougue.com">Contact us via email</a>
@@ -69,7 +92,7 @@ export function Footer() {
           </li>
         </div>
       
-        <div className="groupmember">
+        <div classNameName="groupmember">
           <p>&copy; powered by Iris Ding, Frank Lin, Jiali Liu, Phuong Vu.</p>
         </div>
       </footer>

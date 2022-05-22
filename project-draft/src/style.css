@@ -13,9 +13,7 @@ html {
   margin: 0;
   background-color: #f7f1f0;
 }
-
-
-
+/* homepage */
 .sec1 {
   padding-top: 1.5em;
   display: flex;
@@ -90,7 +88,7 @@ html {
   font-size: 95%;
 }
 
-
+/* footer element */
 .footer {
   display: flex;
   flex-flow: row wrap;
@@ -161,7 +159,7 @@ html {
 .aboutpagecontainer .text {
   padding: 30px;
   margin: 20px;
-  background-color: #C3A6A0;
+  background-color: #e7d6d3;
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
   font-size: 1.8em;

@@ -1,10 +1,12 @@
+import { About } from "./about";
 import { Nav, Footer } from "./footer&header";
+
 
 function App(props) {
     return(
         <>
         <Nav />
-        <body></body>
+        <About />
         <Footer />
         </>
     );

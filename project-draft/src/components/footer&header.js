@@ -1,6 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+// import the font-icon style
+import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export function Nav() {
     return(
@@ -12,7 +14,7 @@ export function Nav() {
         <a href="#">My Closet</a>
         <div className="nav-dropdown">
         <button className="dropbutton">Cloth Generator 
-        <i className="fa fa-caret-down"></i>
+        <FontAwesomeIcon icon={faCaretDown} />
         </button>
         <div className="nav-dropdown-content">
           <a href="#">Outfit Generator</a>
@@ -21,7 +23,7 @@ export function Nav() {
       </div>
       <a href="#">Blog</a>
       <a href="#">About us</a>
-      <a className="login" href="#"><i className="fa fa-fw fa-user"></i>Login</a>
+      <a className="login" href="#"><FontAwesomeIcon icon={faUser} />Login</a>
     </nav>
     </section>
     )

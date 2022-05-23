@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This is the page that display item and cloth to user for choosing based on user input">
+  <meta name="description" content="This is the page that user's saved clothes">
   <!-- This stylesheet will "normalize" the styling across browsers -->
+  <link rel="icon" type="image/png" href="./img/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/new.css">
-  <title>Generator</title>
+  <title>My Closet</title>
 </head>
 
 <body>
@@ -45,75 +46,9 @@
       </div>
     </nav>
   </section>
+
   <main>
-    <header class="subpage-title"><h1>Item OUTFIT</h1></header>
-    <div class='Container'>
-      <div class='generator'>
-        <form>
-      
-          <label for="q1">Which category of items do you want?</label>
-          <div>
-                <input type="checkbox" id="Shoes" checked>
-                <label for="vehicle1"> Shoes </label><br>
-                <input type="checkbox" id="Shoes">
-                <label for="vehicle2"> Clothes </label><br>
-                <input type="checkbox" id="Shoes">
-                <label for="vehicle3"> Bags </label><br>
-                <input type="checkbox" id="Accessories">
-                <label for="vehicle3"> Accessories </label><br>
-              </select>
-          </div>
-      
-
-          <label for="q2">Optional: What other item you want to pair with?</label>
-          <div>
-              <select name="activity" id="activity">
-                  <option value="none" selected disabled hidden>Select an option</option>
-                  <option value="Movie">Rings</option>
-                  <option value="Picnic">Hats</option>
-                  <option value="Work">Glasses</option>
-                  <option value="Biking">Scraves</option>
-              </select>
-          </div>
-      
-          <div id='choice'>
-              <label for="budget" id="BUDGET_input">BUDGET:$</label>
-              <input type="BUDGET" id="BUDGET_input" name="BUDGET" placeholder="0 - 10,000"></input>
-          </div>
-      
-          <div class="output">
-              <button class="Generator" type="button">
-                  GENERATE
-              </button>
-          </div> 
-      </form>
-      </div>
-
-
-      <div class="generated-cloth">
-        <div class="cloth">
-          <img src="img/550.png" alt="image of the shoes">
-          <h1>New Balance</h1>
-          <h2>New Balance 550 White Grey</h2>
-          <p>$191</p>
-          <button class="save-to-closet" type="button"> SAVE TO CLOSET </button>
-        </div>
-        <div class="cloth">
-          <img src="img/boots1.png" alt="image of the boots">
-          <h1>Alexander McQueen</h1>
-          <h2>Alexander McQueen Tread Slick Boot</h2>
-          <p class="second">$500</p>
-          <button class="save-to-closet" type="button"> SAVE TO CLOSET </button>
-        </div>
-        <div class="cloth">
-          <img src="img/crocs.png" alt="image of the crocs">
-          <h1>Crocs</h1>
-          <h2>Crocs Classic Clog Pizzaslime</h2>
-          <p>$125</p>
-          <button class="save-to-closet" type="button"> SAVE TO CLOSET </button>
-        </div>
-      </div>
-    </div>
+    <header class="subpage-title"><h1>My Closet</h1></header>
 
   </main>
 
@@ -129,10 +64,10 @@
         <h2 class="title">Cloth generator</h2>
         <ul class="footerul">
           <li>
-            <a href="#">generate full outfit</a>
+            <a href="#">Generate full outfit</a>
           </li>
           <li>
-            <a href="#">generate items</a>
+            <a href="#">Generate items</a>
           </li>
         </ul>
       </li>
@@ -151,7 +86,7 @@
       </li>
   
       <li class="footeritem">
-        <h2 class="title">Social</h2>
+        <h2 class="title">Follow Us</h2>
   
         <ul class="footerul">
           <li>
@@ -185,6 +120,6 @@
     </div>
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 </html>

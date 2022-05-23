@@ -15,7 +15,7 @@ function ItemShow(props) {
 }
 
 // # this function takes in an array of object with product information
-export function FullProduct(props) {
+function FullProduct(props) {
     let products = props.Data3;
     let info = products?.map((single) => {
         return <ItemShow intake={single} key={single.imgd} />
@@ -29,7 +29,7 @@ export function FullProduct(props) {
 
 }
 
-export function ShoeOnly(props) {
+function ShoeOnly(props) {
     let base3 = props.products;
     return (
         <>
@@ -76,3 +76,17 @@ export function ShoeOnly(props) {
         </>
     )
 }
+
+export function Display(props) {
+    const data = props.item
+    return (
+        <main>
+            <header className="subpage-title"><h1>Item OUTFIT</h1></header>
+            <div className='Container'>
+                <ShoeOnly />
+                <FullProduct Data3={data} />
+            </div>
+        </main>
+    )
+}
+

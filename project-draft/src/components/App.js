@@ -1,6 +1,6 @@
 import { About } from "./about";
 import { Nav, Footer } from "./footer&header";
-import { FullProduct, ShoeOnly } from "./itemgenerate";
+import { Display } from "./itemgenerate";
 import products from "../data/item.json";
 import { All } from "./formpage";
 import { FullChoice, FullItem } from "./formpage";
@@ -16,21 +16,7 @@ function App(props) {
     return (
         <>
             <Nav />
-               {/*<main>
-                    <header className="subpage-title"><h1>GENERATING OUTFIT</h1></header>
-                    <div className='Container'>
-                        <FullChoice Dt={option} />
-                        <FullItem Da={shoes} />
-                    </div>
-                </main> */}
-            <main>
-                <header className="subpage-title"><h1>Item OUTFIT</h1></header>
-                <div className='Container'>
-                    <ShoeOnly />
-                    <FullProduct Data3={products} />
-                </div> *
-
-            </main>
+            <Display item={products} />
             <Footer />
         </>
     );

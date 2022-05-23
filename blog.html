@@ -5,13 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="This is the page that describe our websites">
+  <link rel="icon" type="image/png" href="./img/logo.png">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/new.css">
+  <title>Blog</title>
 </head>
-
-
+<body>
+<section class="navbar">
+  <nav>
+    <header>
+      <h1 ><a class="logo" href="./new_homepage.html">Dvogue</a></h1>
+    </header>
+    <ul class="navlink" id="navlink">
+      <li><a href="./my_closet.html" class="navl">My Closet</a></li>
+      <li>
+      <div class="nav-dropdown">
+        <button class="dropbutton">Cloth Generator 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="nav-dropdown-content">
+          <a href="./generator_page.html" class="navl">Outfit Generator</a>
+          <a href="./ItemGenerator.html" class="navl">Item Generator</a>
+        </div>
+      </div>
+      </li>
+      <li><a href="./blog.html" class="navl">Blog</a></li>
+      <li><a href="./about_page.html" class="navl">About us</a></li>
+      <li><a class="login" href="./login.html"><i class="fa fa-fw fa-user"></i></i>Login</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</section>
 <h1>BLOGS: Share Your #OOTD 🏷️</h1>
 <main class="allBlog">
   <div class="blog">
@@ -85,3 +115,6 @@
 <div align ="center">
 <button id="post_outfit">Post Your Outfit of the Day</button>
 </div>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -9,10 +9,10 @@ function Options(props) {
             <div id='choice'>
                 <select name="weather" id="weather">
                     <option value="none" disabled hidden>{need.guide}</option>
-                    <option value={need.op1}>{props.op1}</option>
-                    <option value={need.op2}>{props.op2}</option>
-                    <option value={need.op3}>{props.op3}</option>
-                    <option value={need.op4}>{props.op4}</option>
+                    <option value={need.op1}>{need.op1}</option>
+                    <option value={need.op2}>{need.op2}</option>
+                    <option value={need.op3}>{need.op3}</option>
+                    <option value={need.op4}>{need.op4}</option>
                 </select>
             </div>
         </div>
@@ -21,11 +21,11 @@ function Options(props) {
 
 
 // props in this case is an array of object
-function FullChoice(props) {
-    let data = props.Data1;
+export function FullChoice(props) {
+    let data = props.Dt;
     let result = data?.map((each) => {
         return <Options input={each} key={each.title} />
-})
+    })
     return(
         <div className='generator'>
             <form>
@@ -51,7 +51,7 @@ function ItemDisplay(props) {
     let re = props.intake;
     return(
         <div className="cloth">
-            <img scr = {re.des} alt={re.imgd} />
+            <img src = {re.img} alt={re.imgd} />
             <h1>{re.brand}</h1>
             <h2>{re.des}</h2>
             <p>{"$" + re.price}</p>
@@ -61,10 +61,10 @@ function ItemDisplay(props) {
 }
 
 // # this function takes in an array of object with product information
-function FullItem(props) {
-    let items = props.Data2;
+export function FullItem(props) {
+    let items = props.Da;
     let info = items?.map((single) => {
-        <ItemDisplay intake={single} key={single.imgd} />
+       return  <ItemDisplay intake={single} key={single.imgd} />
     })
 
     return (
@@ -75,17 +75,17 @@ function FullItem(props) {
 
 }
 
-export function All (props) {
-    let base1 = props.data;
-    let base2 = props.item;
-    return(
-        <main>
-            <header className="subpage-title"><h1>GENERATING OUTFIT</h1></header>
-            <div className='Container'>
-                <FullChoice Data1={base1} />
-                <FullItem Data2={base2}/>
-            </div>
-        </main>
+// export function All (props) {
+//     let base1 = props.data;
+//     let base2 = props.item;
+//     return(
+//         <main>
+//             <header className="subpage-title"><h1>GENERATING OUTFIT</h1></header>
+//             <div className='Container'>
+//                 <FullChoice Data1={base1} />
+//                 <FullItem Data2={base2}/>
+//             </div>
+//         </main>
 
-    )
-}
+//     )
+// }

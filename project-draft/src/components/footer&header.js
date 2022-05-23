@@ -65,10 +65,10 @@ export function Footer() {
             </ul>
           </li>
       
-          <li classNameName="footeritem">
-            <h2 classNameName="title">Social</h2>
+          <li className="footeritem">
+            <h2 className="title">Social</h2>
       
-            <ul classNameName="footerul">
+            <ul className="footerul">
               <li>
                 <a href="#">Our instagram</a>
               </li>
@@ -84,7 +84,7 @@ export function Footer() {
           </li>
         </ul>
 
-        <div classNameName="contact">
+        <div className="contact">
           <h2>Contact Us:</h2>
           <li>
             <a href="info@dvougue.com">Contact us via email</a>
@@ -94,7 +94,7 @@ export function Footer() {
           </li>
         </div>
       
-        <div classNameName="groupmember">
+        <div className="groupmember">
           <p>&copy; powered by Iris Ding, Frank Lin, Jiali Liu, Phuong Vu.</p>
         </div>
       </footer>

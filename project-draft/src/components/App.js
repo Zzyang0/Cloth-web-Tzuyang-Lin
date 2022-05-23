@@ -1,17 +1,16 @@
 import { About } from "./about";
 import { Nav, Footer } from "./footer&header";
-import {Bloglist} from "./blog";
+import {ShoeOnly} from "./itemgenerate";
+import products from "../data/item.json";
+
+
 // import { Routes, Route, Navigate } from 'react-router-dom';
 
-
-
-function App(props) {
-    const blogdata = props.blog;
-
+function App(props) { 
     return(
         <>
         <Nav />
-        <Bloglist blog={blogdata} />
+        {/* <ShoeOnly base3={products}/> */}
         <Footer />
         </>
     );

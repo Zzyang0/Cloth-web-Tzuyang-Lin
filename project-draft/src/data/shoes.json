@@ -1,0 +1,5 @@
+[
+    {"img":"img/shirts", "brand":"ESSENTIALS", "des":"Black Relaxed Crewneck Sweatshirt", "price":80, "imgd":"image of the shirt"},
+    {"img":"img/pant.png", "brand":"RAG & BONE", "des":"Blue Fit 2 Jeans", "price":195, "imgd":"image of the pants"},
+    {"img":"img/shoes.png", "brand":"AXEL ARIGATO", "des":"White & Grey Clean 90 Sneakers", "price":225, "imgd":"image of the shoes"}
+]

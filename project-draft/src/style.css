@@ -590,7 +590,7 @@ button:hover{
     margin-left: 0.75rem;
     width: 100%;
   }
-
+  
   .navbar a {
     float: left;
     font-size: 1.2rem;
@@ -600,15 +600,15 @@ button:hover{
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
   }
-
+  
   .navbar header .logo {
     font-family: 'Lobster', cursive;
     font-size: 2rem;
     color: #7f1d33;
     margin-right: 0.2rem;
-    padding-top: 10px;
+    padding-top: 2rem;
   }
-
+  
   .navlink {
     display: unset;
   }
@@ -617,16 +617,20 @@ button:hover{
     float: right;
     font-size: 0;
   }
-
+  
   .navbar .login .fa {
     font-size: initial;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   .nav-dropdown {
     float: left;
     overflow: hidden;
   }
-
+  
   .nav-dropdown .dropbutton {
     border: none;
     outline: none;
@@ -637,26 +641,25 @@ button:hover{
     background-color: inherit;
     font-family: inherit;
   }
-
+  
   nav a:hover {
     border-bottom: 0.3rem solid #7f1d33;
     transition: ease-out .25s;
     margin: -0.3rem;
   }
-
   .navbar header a:hover {
     color: #C3A6A0;
   }
-
+  
   .nav-dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 130px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-
+  
   .nav-dropdown-content a {
     float: none;
     color: black;
@@ -666,16 +669,14 @@ button:hover{
     display: block;
     text-align: left;
   }
-
+  
   .nav-dropdown-content a:hover {
     background-color: #ddd;
   }
-
+  
   .nav-dropdown:hover .nav-dropdown-content {
     display: block;
   }
-
-
 
   .trend1,
   .trend2,
@@ -756,7 +757,7 @@ button:hover{
     margin-left: 1rem;
     width: 100%;
   }
-
+  
   .navbar a {
     float: left;
     font-size: 1.6rem;
@@ -766,25 +767,25 @@ button:hover{
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
   }
-
+  
   .navbar header .logo {
     font-family: 'Lobster', cursive;
     font-size: 3rem;
     color: #7f1d33;
     margin-right: 0.2rem;
-    padding-top: 3px;
+    padding-top: 1.5rem;
   }
-
+  
   .navbar .login {
     float: right;
     font-size: 1.6rem;
   }
-
+  
   .nav-dropdown {
     float: left;
     overflow: hidden;
   }
-
+  
   .nav-dropdown .dropbutton {
     border: none;
     outline: none;
@@ -795,26 +796,25 @@ button:hover{
     background-color: inherit;
     font-family: inherit;
   }
-
+  
   nav a:hover {
     border-bottom: 0.3rem solid #7f1d33;
     transition: ease-out .25s;
     margin: -0.3rem;
   }
-
   .navbar header a:hover {
     color: #C3A6A0;
   }
-
+  
   .nav-dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-
+  
   .nav-dropdown-content a {
     float: none;
     color: black;
@@ -824,15 +824,15 @@ button:hover{
     display: block;
     text-align: left;
   }
-
+  
   .nav-dropdown-content a:hover {
     background-color: #ddd;
   }
-
+  
   .nav-dropdown:hover .nav-dropdown-content {
     display: block;
   }
-
+  
   .footer1>* {
     flex: 1;
   }

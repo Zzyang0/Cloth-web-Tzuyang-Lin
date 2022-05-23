@@ -6,25 +6,36 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 export function Nav() {
-    return(
+  return(
     <section className="navbar">
     <nav>
       <header>
         <h1><Link to='/home' className='logo'>Dvogue</Link></h1>
         </header>
-        <Link to='/closet'>My Closet</Link>
+        <ul className='navlink' id='navlink'>
+          <li>
+        <Link to='/closet' className='navl'>My Closet</Link>
+          </li>
+          <li>
         <div className="nav-dropdown">
         <button className="dropbutton">Cloth Generator 
         <FontAwesomeIcon icon={faCaretDown} />
         </button>
         <div className="nav-dropdown-content">
-          <Link to='/outfit generator'>Outfit Generator</Link>
-          <Link to='/item generator'>Item Generator</Link>
+          <Link to='/outfit generator' className='navl'>Outfit Generator</Link>
+          <Link to='/item generator' className='navl'>Item Generator</Link>
         </div>
       </div>
-      <Link to='/blog'>Blog</Link>
-      <Link to='/about'>About Us</Link>
-      <a className="login" href="#"><FontAwesomeIcon icon={faUser} />Login</a>
+      </li>
+      <li><Link to='/blog'>Blog</Link></li>
+      <li><Link to='/about'>About Us</Link></li>
+      <li><a className="login" href="#"><FontAwesomeIcon icon={faUser} />Login</a></li>
+      </ul>
+      <div className="hamburger">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
     </nav>
     </section>
     )

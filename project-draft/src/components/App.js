@@ -6,6 +6,7 @@ import { All } from "./formpage";
 import { FullChoice, FullItem } from "./formpage";
 import option from "../data/option.json";
 import shoes from "../data/shoes.json";
+import everything from "../data/clothes.json";
 
 
 
@@ -16,7 +17,7 @@ function App(props) {
     return (
         <>
             <Nav />
-            <Display item={products} />
+            <Display item={everything} />
             <Footer />
         </>
     );

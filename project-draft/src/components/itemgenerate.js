@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Nav, Footer } from "./footer&header";
 
 function ItemShow(props) {
@@ -31,22 +31,55 @@ function FullProduct(props) {
 
 function ShoeOnly(props) {
     let base3 = props.products;
+    const [filteredList, setFilteredList] = useState(base3);
+    const [want, setWant] = useState(['Shoes']);
+    const handleInputChange = (event) => {
+        const {value, checked} = event.target;
+        const wantCopy = [...want];
+        if (checked) {
+            wantCopy.push(value);
+        } else {
+            for (let i = 0; i < wantCopy.length; i ++) {
+                if (wantCopy[i] === value) {
+                    wantCopy[i] = '';
+                }
+            }
+        }
+        setWant(wantCopy);
+    }
+    const filterCategory = (filteredData) => {
+        if (want.length === 0) {
+            return filteredData;
+        }
+        let filterItem = filteredData;
+        for (let i = 0; i < want.length; i++) {
+            filterItem = filterItem.filter(
+                (item) => item.category === want[i]
+            );
+        }
+        return filterItem;
+    } 
+        
+    /*useEffect(() => {
+        var filteredData = filterCategory(base3);
+        setFilteredList(filteredData);
+    }, [want]);*/
     return (
         <>
             <div className='generator'>
                 <form>
                     <label htmlFor="q1">Which category of items do you want?</label>
                     <div>
-                        <input type="checkbox" id="Shoes" defaultChecked />
+                        <input type="checkbox" id="Shoes" name="category" value="Shoes" defaultChecked onChange={handleInputChange}/>
                         <label htmlFor="vehicle1"> Shoes </label>
                         <br></br>
-                        <input type="checkbox" id="Clothes" />
+                        <input type="checkbox" id="Clothes" name="category" value="Clothes" onChange={handleInputChange}/>
                         <label htmlFor="vehicle2"> Clothes </label>
                         <br></br>
-                        <input type="checkbox" id="Bags" />
+                        <input type="checkbox" id="Bags" name="category" value="Bags" onChange={handleInputChange}/>
                         <label htmlFor="vehicle3"> Bags </label>
                         <br></br>
-                        <input type="checkbox" id="Accessories" />
+                        <input type="checkbox" id="Accessories" name="category" value="Accessories" onChange={handleInputChange}/>
                         <label htmlFor="vehicle3"> Accessories </label>
                         <br></br>
                     </div>

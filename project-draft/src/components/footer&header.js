@@ -3,26 +3,27 @@ import React from 'react';
 import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 export function Nav() {
     return(
     <section className="navbar">
     <nav>
       <header>
-        <h1 ><a className="logo" href="#">Dvogue</a></h1>
+        <h1><Link to='/home' className='logo'>Dvogue</Link></h1>
         </header>
-        <a href="#">My Closet</a>
+        <Link to='/closet'>My Closet</Link>
         <div className="nav-dropdown">
         <button className="dropbutton">Cloth Generator 
         <FontAwesomeIcon icon={faCaretDown} />
         </button>
         <div className="nav-dropdown-content">
-          <a href="#">Outfit Generator</a>
-          <a href="#">Item Generator</a>
+          <Link to='/outfit generator'>Outfit Generator</Link>
+          <Link to='/item generator'>Item Generator</Link>
         </div>
       </div>
-      <a href="#">Blog</a>
-      <a href="#">About us</a>
+      <Link to='/blog'>Blog</Link>
+      <Link to='/about'>About Us</Link>
       <a className="login" href="#"><FontAwesomeIcon icon={faUser} />Login</a>
     </nav>
     </section>
@@ -37,30 +38,30 @@ export function Footer() {
         <ul className="footer1">
     
           <li className="footeritem">
-            <h2 className="title">Home</h2>
+          <h2><Link to='/home' className="title">Home</Link></h2>
           </li>
       
           <li className="footeritem">
             <h2 className="title">Cloth generator</h2>
             <ul className="footerul">
               <li>
-                <a href="#">Generate full outfit</a>
+                <Link to='/outfit generator'>Generate full outfit</Link>
               </li>
               <li>
-                <a href="#">Generate items</a>
+              <Link to='/item generator'>Generate items</Link>
               </li>
             </ul>
           </li>
       
           <li className="footeritem">
-            <h2 className="title">Blogs</h2>
+            <h2><Link to='/blog'className="title">Blogs</Link></h2>
           </li>
       
           <li className="footeritem">
-            <h2 className="title">About</h2>
+            <h2><Link to='/about' className="title">About</Link></h2>
             <ul className="footerul">
               <li>
-                <a href="#">About the web</a>
+                <Link to='/about'>About the web</Link>
               </li>
             </ul>
           </li>
@@ -70,15 +71,15 @@ export function Footer() {
       
             <ul className="footerul">
               <li>
-                <a href="#">Our instagram</a>
+                <a href="https://www.instagram.com/">Our instagram</a>
               </li>
       
               <li>
-                <a href="#">Our Facebook</a>
+                <a href="https://www.facebook.com/">Our Facebook</a>
               </li>
       
               <li>
-                <a href="#">Our twitter</a>
+                <a href="https://twitter.com/?lang=en">Our twitter</a>
               </li>
             </ul>
           </li>

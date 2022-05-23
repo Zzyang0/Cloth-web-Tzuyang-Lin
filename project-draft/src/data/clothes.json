@@ -1,0 +1,8 @@
+[
+    {"img":"img/550.png", "brand":"New Balance", "des":"New Balance 550 White Grey", "price":191, "imgd":"image of the shoes", "category": "Shoes"},
+    {"img":"img/boots1.png", "brand":"Alexander McQueen", "des":"Alexander McQueen Tread Slick Boot", "price":500, "imgd":"image of the boots", "category": "Shoes"},
+    {"img":"img/crocs.png", "brand":"Crocs", "des":"Crocs Classic Clog Pizzaslime", "price":125, "imgd":"image of the crocs", "category": "Shoes"},
+    {"img":"img/shirt.png", "brand":"ESSENTIALS", "des":"Black Relaxed Crewneck Sweatshirt", "price":80, "imgd":"image of the shirt", "category": "Clothes"},
+    {"img":"img/pant.png", "brand":"RAG & BONE", "des":"Blue Fit 2 Jeans", "price":195, "imgd":"image of the pants", "category": "Clothes"},
+    {"img":"img/shoes.png", "brand":"AXEL ARIGATO", "des":"White & Grey Clean 90 Sneakers", "price":225, "imgd":"image of the shoes", "category": "Shoes"}
+]

@@ -28,7 +28,7 @@ export function Bloglist(props) {
     return (
         <>
             <h1>BLOGS: Share Your #OOTD 🏷️</h1>
-            <main class="allBlog">
+            <main className="allBlog">
                 {blogdata}
             </main>
             <div align ="center">

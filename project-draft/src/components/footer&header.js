@@ -22,8 +22,8 @@ export function Nav() {
         <FontAwesomeIcon icon={faCaretDown} />
         </button>
         <div className="nav-dropdown-content">
-          <Link to='/outfit generator' className='navl'>Outfit Generator</Link>
-          <Link to='/item generator' className='navl'>Item Generator</Link>
+          <Link to='outfitgenerator' className='navl'>Outfit Generator</Link>
+          <Link to='/itemgenerator' className='navl'>Item Generator</Link>
         </div>
       </div>
       </li>
@@ -56,10 +56,10 @@ export function Footer() {
             <h2 className="title">Cloth generator</h2>
             <ul className="footerul">
               <li>
-                <Link to='/outfit generator'>Generate full outfit</Link>
+                <Link to='outfitgenerator'>Generate full outfit</Link>
               </li>
               <li>
-              <Link to='/item generator'>Generate items</Link>
+              <Link to='/itemgenerator'>Generate items</Link>
               </li>
             </ul>
           </li>

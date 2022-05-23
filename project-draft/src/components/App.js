@@ -8,26 +8,21 @@ import { FullChoice, FullItem } from "./formpage";
 import option from "../data/option.json";
 import shoes from "../data/shoes.json";
 import everything from "../data/clothes.json";
-
-
 import { Routes, Route } from 'react-router-dom';
 import blog from "../data/blog.json"
 import {Bloglist} from "./blog"
 import {Mycloest} from "./my_cloest"
 
-// import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App(props) {
     const data = props.data
     return (
         <>
             <Nav />
-            <Display item={everything} />
-            {/* <Display item={products} /> */}
             <Routes>
-            <Route path='/home' element={<Homepage />} />
-            {/* <Route path='/outfit generator' element={< />} />
-            <Route path='/item generator' element={< />} /> */}
+            <Route exact path='/home' element={<Homepage />} />
+            <Route path='outfitgenerator' element={<Display item={everything} />} />
+            <Route path='/itemgenerator' element={<Display item={products} />} />
             <Route path='/closet' element={<Mycloest />} />
             <Route path='/blog' element={<Bloglist blog={blog} />} />
             <Route path='/about' element={<About />} />

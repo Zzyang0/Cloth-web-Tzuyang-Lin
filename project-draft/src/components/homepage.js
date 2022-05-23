@@ -1,4 +1,5 @@
 import React from 'react'; //import React Component
+import { Link } from 'react-router-dom';
 
 
 export function Homepage() {
@@ -9,13 +10,14 @@ export function Homepage() {
         <main>
             <section className="sec1">
                 <div className="container-text">
-                    <p>Life is a party</p>
+                    <p>Life is a party 🎉</p>
                     <p>DRESS LIKE IT :)</p>
-                    < a href="a" id="buttom_home">Generate your outfit for the day now </ a>
+                    <Link to='/outfit generator' id="buttom_home">Generate your outfit for the day now</Link>
+                    {/* < a href="#" id="buttom_home">Generate your outfit for the day now </ a> */}
                 </div>
 
                 <div className="container-pic">
-                    <img src="https://media.istockphoto.com/photos/selection-of-multicolored-shirts-picture-id157532000?k=20&m=157532000&s=612x612&w=0&h=uvLW1W1eHXTac7XCNwDctS3Nz7ohCUQ4YbamtsnCxyI=" alt="image of colorful shirts" />
+                    <img src="img/homepagepic.jpg" alt="image of colorful shirts" />
                 </div>
             </section>
 

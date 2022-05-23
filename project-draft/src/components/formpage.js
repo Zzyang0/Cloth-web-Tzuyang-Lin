@@ -1,5 +1,20 @@
+import { faAppleWhole } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Nav, Footer } from "./footer&header";
+
+
+// # since We divide this page into two parts, thus, there will have two datasets, in order to render the web using one dataset, 
+// we include one of them as const at the page as a constant to refer
+
+
+const PickChoice = [
+    {"title":"HOW IS THE WEATHER TODAY?", "guide":"Select an option", "op1":"Sunny", "op2":"Windy", "op3":"Rainy", "op4":"Snowy"},
+    {"title":"YOU ARE GOING TO BE:", "guide":"Select an option", "op1":"Indoor", "op2":"Outdoor", "op3":"Both", "op4":"None"},
+    {"title":"WHAT OCCASION YOU WILL BE?", "guide":"Select an option", "op1":"Date", "op2":"Causal", "op3":"Sports", "op4":"Business"},
+    {"title":"WHAT ARE YOU DOING TODAY?", "guide":"Select an option", "op1":"Movie", "op2":"Picnic", "op3":"Work", "op4":"Hiking"}
+]
+
+
 // #props in this case is a single oject
 function Options(props) {
     let need = props.input;
@@ -21,8 +36,8 @@ function Options(props) {
 
 
 // props in this case is an array of object
-export function FullChoice(props) {
-    let data = props.Dt;
+function FullChoice(props) {
+    let data = PickChoice;
     let result = data?.map((each) => {
         return <Options input={each} key={each.title} />
     })
@@ -60,9 +75,10 @@ function ItemDisplay(props) {
     )
 }
 
+
 // # this function takes in an array of object with product information
-export function FullItem(props) {
-    let items = props.Da;
+function FullItem(props) {
+    let items = props.base;
     let info = items?.map((single) => {
        return  <ItemDisplay intake={single} key={single.imgd} />
     })
@@ -75,17 +91,17 @@ export function FullItem(props) {
 
 }
 
-// export function All (props) {
-//     let base1 = props.data;
-//     let base2 = props.item;
-//     return(
-//         <main>
-//             <header className="subpage-title"><h1>GENERATING OUTFIT</h1></header>
-//             <div className='Container'>
-//                 <FullChoice Data1={base1} />
-//                 <FullItem Data2={base2}/>
-//             </div>
-//         </main>
 
-//     )
-// }
+// # combine the whole structure into ine function and export it
+export function Whole(props) {
+    const file = props.require;
+    return(
+        <main>
+            <header className="subpage-title"><h1>GENERATING OUTFIT</h1></header>
+            <div className='Container'>
+                <FullChoice />
+                <FullItem base={file}/>
+            </div>
+        </main>
+    )
+}

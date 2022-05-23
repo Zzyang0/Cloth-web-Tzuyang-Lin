@@ -53,13 +53,13 @@ export function Footer() {
           </li>
       
           <li className="footeritem">
-            <h2 className="title">Cloth generator</h2>
+          <h2><Link to='outfitgenerator' className="title">Cloth generator</Link></h2>
             <ul className="footerul">
               <li>
                 <Link to='outfitgenerator'>Generate full outfit</Link>
               </li>
               <li>
-              <Link to='/itemgenerator'>Generate items</Link>
+              <Link to='itemgenerator'>Generate items</Link>
               </li>
             </ul>
           </li>

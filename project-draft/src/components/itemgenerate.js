@@ -99,8 +99,8 @@ function ShoeOnly(props) {
                     </div>
 
                     <div id='choice'>
-                        <label htmlFor="budget" id="BUDGET_input">BUDGET:$</label>
-                        <input type="BUDGET" id="BUDGET_input" name="BUDGET" placeholder="0 - 10,000"></input>
+                        <label htmlFor="budget" id="budget_input">BUDGET:$</label>
+                        <input type="BUDGET" id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
                     </div>
 
                     <div className="output">
@@ -119,7 +119,7 @@ export function Display(props) {
     return (
         <main>
             <header className="subpage-title"><h1>Item OUTFIT</h1></header>
-            <div className='Container'>
+            <div className='containerg'>
                 <ShoeOnly />
                 <FullProduct Data3={data} />
             </div>

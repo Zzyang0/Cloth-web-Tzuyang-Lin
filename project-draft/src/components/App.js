@@ -20,7 +20,7 @@ function App(props) {
             <Routes>
             <Route exact path='/home' element={<Homepage />} />
             <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-            <Route path='/itemgenerator' element={<Display item={products} />} />
+            <Route path='itemgenerator' element={<Display item={products} />} />
             <Route path='/closet' element={<Mycloest />} />
             <Route path='/blog' element={<Bloglist blog={blog} />} />
             <Route path='/about' element={<About />} />

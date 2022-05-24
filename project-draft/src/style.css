@@ -270,13 +270,13 @@ html {
 
 /* new generator */
 
-.Container {
+.containerg {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.Container .generator {
+.containerg .generator {
   background-color: #C3A6A0;
   border-radius: 20px;
   height: 450px;
@@ -290,7 +290,7 @@ html {
 
 
 #choice .button,
-#BUDGET_input {
+#budget_input {
   display: inline;
   font-family: 'Poppins', sans-serif;
   border-radius: 30px;
@@ -325,7 +325,7 @@ html {
 }
 
 
-.Container .generated-cloth {
+.containerg .generated-cloth {
   margin-left: 50px;
 }
 
@@ -718,15 +718,11 @@ button:hover{
     padding: auto;
   }
 
-  .Container {
+  .containerg {
     flex-wrap: nowrap;
   }
 
-  .Container {
-    flex-wrap: nowrap;
-  }
-
-  .Container .generated-cloth {
+  .containerg .generated-cloth {
     display: flex;
   }
 
@@ -734,7 +730,7 @@ button:hover{
     width: 500px;
   }
 
-  .Container .generator {
+  .containerg .generator {
     margin-left: 90px;
     margin-bottom: 90px;
   }
@@ -870,13 +866,13 @@ button:hover{
     margin-top: 350px;
   }
 
-  .Container {
+  .containerg {
     display: flex;
     flex-grow: 1;
     margin: 5% 20% 10px 10px;
   }
 
-  .Container .generated-cloth {
+  .containerg .generated-cloth {
     flex-basis: 60%;
     display: flex;
   }

@@ -8,10 +8,9 @@ import { Nav, Footer } from "./footer&header";
 
 
 const PickChoice = [
-    {"title":"HOW IS THE WEATHER TODAY?", "guide":"Select an option", "op1":"Sunny", "op2":"Windy", "op3":"Rainy", "op4":"Snowy"},
-    {"title":"YOU ARE GOING TO BE:", "guide":"Select an option", "op1":"Indoor", "op2":"Outdoor", "op3":"Both", "op4":"None"},
-    {"title":"WHAT OCCASION YOU WILL BE?", "guide":"Select an option", "op1":"Date", "op2":"Causal", "op3":"Sports", "op4":"Business"},
-    {"title":"WHAT ARE YOU DOING TODAY?", "guide":"Select an option", "op1":"Movie", "op2":"Picnic", "op3":"Work", "op4":"Hiking"}
+    {"title":"YOU ARE GOING TO BE:", "guide":"Select an option", "op1":"Indoor", "op2":"Outdoor", "op3":"Both", "op4":"None", "art":"in-out"},
+    {"title":"WHAT OCCASION YOU WILL BE?", "guide":"Select an option", "op1":"Date", "op2":"Causal", "op3":"Sports", "op4":"Business", "art":"occasion"},
+    {"title":"WHAT ARE YOU DOING TODAY?", "guide":"Select an option", "op1":"Movie", "op2":"Picnic", "op3":"Work", "op4":"Hiking", "art":"activity"}
 ]
 
 
@@ -21,15 +20,13 @@ function Options(props) {
     return (
         <div>
             <label htmlFor="q1">{need.title}</label>
-            <div id='choice'>
-                <select name="weather" id="weather">
+                <select name={need.art} id={need.art}>
                     <option value="none" disabled hidden>{need.guide}</option>
                     <option value={need.op1}>{need.op1}</option>
                     <option value={need.op2}>{need.op2}</option>
                     <option value={need.op3}>{need.op3}</option>
                     <option value={need.op4}>{need.op4}</option>
                 </select>
-            </div>
         </div>
     )
 }
@@ -44,17 +41,29 @@ function FullChoice(props) {
     return(
         <div className='generator'>
             <form>
-                {result}
-                <div id='choice'>
-                    <label htmlFor="budget" id="BUDGET_input">BUDGET:$</label>
-                    <input type="BUDGET" id="BUDGET_input" name="BUDGET" placeholder="0 - 10,000"></input>
-                </div>
-        
-                <div className="output">
-                    <button className="Generator" type="button">
-                        GENERATE
-                    </button>
-                </div> 
+            <label htmlFor="q1">HOW IS THE WEATHER TODAY?</label>
+            <div id='choice'>
+              <select name="weather" id="weather">
+                  <option value="none" defaultValue disabled hidden>Select an option</option>
+                  <option value="Sunny">Sunny</option>
+                  <option value="Windy">Windy</option>
+                  <option value="Rainy">Rainy</option>
+                  <option value="Humid">Humid</option>
+                  <option value="Frigid">Frigid</option>
+                  <option value="Snowy">Snowy</option>
+              </select>
+              {result}
+            </div>
+            <div id='choice'>
+                <label htmlFor="budget" id="BUDGET_input">BUDGET:$</label>
+                <input type="BUDGET" id="BUDGET_input" name="BUDGET" placeholder="0 - 10,000"></input>
+            </div>
+    
+            <div className="output">
+                <button className="Generator" type="button">
+                    GENERATE
+                </button>
+            </div> 
             </form>
         </div>
     )

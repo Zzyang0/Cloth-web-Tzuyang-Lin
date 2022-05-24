@@ -50,7 +50,7 @@ function ShoeOnly(props) {
     const filterCategory = (filteredData) => {
         if (want.length === 0) {
             return filteredData;
-        }
+        } else {
         let filterItem = filteredData;
         for (let i = 0; i < want.length; i++) {
             filterItem = filterItem.filter(
@@ -58,8 +58,10 @@ function ShoeOnly(props) {
             );
         }
         return filterItem;
+        }
     } 
-        
+    
+    
     /*useEffect(() => {
         var filteredData = filterCategory(base3);
         setFilteredList(filteredData);
@@ -87,10 +89,10 @@ function ShoeOnly(props) {
                     <div>
                         <select name="activity" id="activity">
                             <option value="none" defaultValue disabled hidden>Select an option</option>
-                            <option value="Movie">Rings</option>
-                            <option value="Picnic">Hats</option>
-                            <option value="Work">Glasses</option>
-                            <option value="Biking">Scraves</option>
+                            <option value="Rings">Rings</option>
+                            <option value="Hats">Hats</option>
+                            <option value="Glasses">Glasses</option>
+                            <option value="Scarves">Scraves</option>
                         </select>
                     </div>
 

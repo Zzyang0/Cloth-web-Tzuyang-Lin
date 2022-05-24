@@ -6,15 +6,42 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 export function Nav() {
+//   const hamburger = document.querySelector('.hamburger');
+//   const navlink = document.querySelector('.navlink');
+
+// hamburger.addEventListener('click', () => {
+//     hamburger.classList.toggle('active');
+//     navlink.classList.toggle('active');
+// })
+
+// document.querySelectorAll('.navl').forEach(n => n.addEventListener('click', () => {
+//     hamburger.classList.remove('active');
+//     navlink.classList.remove('active');
+// }))
+
+const hamburgerToggle = () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navlink = document.querySelector('.navlink');
+  hamburger.classList.toggle('active');
+  navlink.classList.toggle('active');
+}
+
+const navlRemove = () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navlink = document.querySelector('.navlink');
+  hamburger.classList.remove('active');
+  navlink.classList.remove('active');
+}
+
   return(
     <section className="navbar">
     <nav>
       <header>
-        <h1><Link to='/home' className='logo'>Dvogue</Link></h1>
+        <h1><Link to='/home' className='logo' onClick={navlRemove}>Dvogue</Link></h1>
         </header>
         <ul className='navlink' id='navlink'>
           <li>
-        <Link to='/closet' className='navl'>My Closet</Link>
+        <Link to='/closet' className='navl' onClick={navlRemove}>My Closet</Link>
           </li>
           <li>
         <div className="nav-dropdown">
@@ -22,16 +49,16 @@ export function Nav() {
         <FontAwesomeIcon icon={faCaretDown} />
         </button>
         <div className="nav-dropdown-content">
-          <Link to='/outfit generator' className='navl'>Outfit Generator</Link>
-          <Link to='/item generator' className='navl'>Item Generator</Link>
+          <Link to='/outfit generator' className='navl' onClick={navlRemove}>Outfit Generator</Link>
+          <Link to='/item generator' className='navl' onClick={navlRemove}>Item Generator</Link>
         </div>
       </div>
       </li>
-      <li><Link to='/blog'>Blog</Link></li>
-      <li><Link to='/about'>About Us</Link></li>
-      <li><a className="login" href="#"><FontAwesomeIcon icon={faUser} />Login</a></li>
+      <li><Link to='/blog' className='navl' onClick={navlRemove}>Blog</Link></li>
+      <li><Link to='/about' className='navl' onClick={navlRemove}>About Us</Link></li>
+      <li><Link to="/" className='navl' onClick={navlRemove}><FontAwesomeIcon icon={faUser} />Login</Link></li>
       </ul>
-      <div className="hamburger">
+      <div className="hamburger" onClick={hamburgerToggle}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>

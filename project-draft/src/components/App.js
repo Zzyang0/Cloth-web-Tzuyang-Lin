@@ -18,7 +18,7 @@ function App(props) {
         <>
             <Nav />
             <Routes>
-            <Route exact path='/home' element={<Homepage />} />
+            <Route exact path='/' element={<Homepage />} />
             <Route path='outfitgenerator' element={<Whole require={shoes} />} />
             <Route path='itemgenerator' element={<Display item={everything} />} />
             <Route path='/closet' element={<Mycloest />} />

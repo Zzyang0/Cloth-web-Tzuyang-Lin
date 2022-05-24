@@ -37,7 +37,7 @@ const navlRemove = () => {
     <section className="navbar">
     <nav>
       <header>
-        <h1><Link to='/home' className='logo' onClick={navlRemove}>Dvogue</Link></h1>
+        <h1><Link to='/' className='logo' onClick={navlRemove}>Dvogue</Link></h1>
         </header>
         <ul className='navlink' id='navlink'>
           <li>
@@ -78,7 +78,7 @@ export function Footer() {
         <ul className="footer1">
     
           <li className="footeritem">
-          <h2><Link to='/home' className="title">Home</Link></h2>
+          <h2><Link to='/' className="title">Home</Link></h2>
           </li>
       
           <li className="footeritem">

@@ -66,7 +66,7 @@ function ShoeOnly(props) {
                 );
                 for (let j = 0; j < filterItem.length; j++) {
                     finalItem.push(filterItem[j]);
-                }<FullProduct />
+                }
             }
             return finalItem;
         }
@@ -137,7 +137,7 @@ export function Display(props) {
     const data = props.item;
     return (
         <main>
-            <header className="subpage-title"><h1>Item OUTFIT</h1></header>
+            <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
                 <ShoeOnly products={data}/>
                 <FullProduct Data3={currData} />

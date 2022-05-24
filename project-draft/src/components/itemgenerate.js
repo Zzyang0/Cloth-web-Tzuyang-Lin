@@ -46,6 +46,8 @@ function ShoeOnly(props) {
             }
         }
         setWant(wantCopy);
+        /*let filteredData = filterCategory(base3);
+        setFilteredList(filteredData);*/
     }
     const filterCategory = (filteredData) => {
         if (want.length === 0) {

@@ -49,14 +49,16 @@ const navlRemove = () => {
         <FontAwesomeIcon icon={faCaretDown} />
         </button>
         <div className="nav-dropdown-content">
-          <Link to='/outfit generator' className='navl' onClick={navlRemove}>Outfit Generator</Link>
-          <Link to='/item generator' className='navl' onClick={navlRemove}>Item Generator</Link>
+          <Link to='outfitgenerator' className='navl' onClick={navlRemove}>Outfit Generator</Link>
+          <Link to='itemgenerator' className='navl' onClick={navlRemove}>Item Generator</Link>
         </div>
       </div>
       </li>
       <li><Link to='/blog' className='navl' onClick={navlRemove}>Blog</Link></li>
       <li><Link to='/about' className='navl' onClick={navlRemove}>About Us</Link></li>
-      <li><Link to="/" className='navl' onClick={navlRemove}><FontAwesomeIcon icon={faUser} />Login</Link></li>
+      {/* <li><Link to="/" className='navl' onClick={navlRemove}><FontAwesomeIcon icon={faUser} />Login</Link></li> */}
+      <li><a href="#" className='navl'><FontAwesomeIcon icon={faUser} />Login</a></li>
+
       </ul>
       <div className="hamburger" onClick={hamburgerToggle}>
         <span className="bar"></span>

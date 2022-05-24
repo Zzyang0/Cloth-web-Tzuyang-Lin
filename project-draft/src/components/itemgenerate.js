@@ -1,6 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import { Nav, Footer } from "./footer&header";
 
+var currData = [
+    {"img":"img/550.png", "brand":"New Balance", "des":"New Balance 550 White Grey", "price":191, "imgd":"image of the shoes", "category": "Shoes"},
+    {"img":"img/boots1.png", "brand":"Alexander McQueen", "des":"Alexander McQueen Tread Slick Boot", "price":500, "imgd":"image of the boots", "category": "Shoes"},
+    {"img":"img/crocs.png", "brand":"Crocs", "des":"Crocs Classic Clog Pizzaslime", "price":125, "imgd":"image of the crocs", "category": "Shoes"},
+    {"img":"img/shoes.png", "brand":"AXEL ARIGATO", "des":"White & Grey Clean 90 Sneakers", "price":225, "imgd":"image of the shoes", "category": "Shoes"}
+];
+
 function ItemShow(props) {
     let need = props.intake;
     return (
@@ -31,7 +38,6 @@ function FullProduct(props) {
 
 function ShoeOnly(props) {
     let base3 = props.products;
-    const [filteredList, setFilteredList] = useState(base3);
     const [want, setWant] = useState(['Shoes']);
     const handleInputChange = (event) => {
         const {value, checked} = event.target;
@@ -46,28 +52,33 @@ function ShoeOnly(props) {
             }
         }
         setWant(wantCopy);
-        /*let filteredData = filterCategory(base3);
-        setFilteredList(filteredData);*/
     }
     const filterCategory = (filteredData) => {
         if (want.length === 0) {
             return filteredData;
         } else {
-        let filterItem = filteredData;
-        for (let i = 0; i < want.length; i++) {
-            filterItem = filterItem.filter(
-                (item) => item.category === want[i]
-            );
+            let finalItem = [];
+            let filterItem = filteredData;
+            for (let i = 0; i < want.length; i++) {
+                filterItem = filteredData.filter(
+                    (item) => item.category === want[i]
+                );
+                for (let j = 0; j < filterItem.length; j++) {
+                    finalItem.push(filterItem[j]);
+                }<FullProduct />
+            }
+            return finalItem;
         }
-        return filterItem;
-        }
-    } 
+    }
     
-    
-    /*useEffect(() => {
-        var filteredData = filterCategory(base3);
-        setFilteredList(filteredData);
-    }, [want]);*/
+    let currData = filterCategory(base3);
+    /*const forceRender = (data) => {
+        console.log("I went in");
+        return <FullProduct Data3={data}/>
+    }*/
+    //forceRender(currData);
+    console.log(currData);
+
     return (
         <>
             <div className='generator'>
@@ -115,13 +126,13 @@ function ShoeOnly(props) {
 }
 
 export function Display(props) {
-    const data = props.item
+    const data = props.item;
     return (
         <main>
             <header className="subpage-title"><h1>Item OUTFIT</h1></header>
             <div className='containerg'>
-                <ShoeOnly />
-                <FullProduct Data3={data} />
+                <ShoeOnly products={data}/>
+                <FullProduct Data3={currData} />
             </div>
         </main>
     )

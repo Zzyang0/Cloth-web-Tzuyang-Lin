@@ -8,7 +8,7 @@ import products from "../data/item.json";
 import { Routes, Route } from 'react-router-dom';
 import { Whole } from "./formpage";
 import shoes from "../data/shoes.json";
-// import everything from "../data/clothes.json";
+import everything from "../data/clothes.json";
 import blog from "../data/blog.json"
 
 
@@ -20,7 +20,7 @@ function App(props) {
             <Routes>
             <Route exact path='/home' element={<Homepage />} />
             <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-            <Route path='itemgenerator' element={<Display item={products} />} />
+            <Route path='itemgenerator' element={<Display item={everything} />} />
             <Route path='/closet' element={<Mycloest />} />
             <Route path='/blog' element={<Bloglist blog={blog} />} />
             <Route path='/about' element={<About />} />

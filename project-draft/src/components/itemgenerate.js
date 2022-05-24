@@ -39,9 +39,10 @@ function FullProduct(props) {
 function ShoeOnly(props) {
     let base3 = props.products;
     const [want, setWant] = useState(['Shoes']);
+    let wantCopy = [];
     const handleInputChange = (event) => {
         const {value, checked} = event.target;
-        const wantCopy = [...want];
+        wantCopy = [...want];
         if (checked) {
             wantCopy.push(value);
         } else {
@@ -70,15 +71,20 @@ function ShoeOnly(props) {
             return finalItem;
         }
     }
+
+    currData = filterCategory(base3);
     
-    let currData = filterCategory(base3);
+    /*let currData = filterCategory(base3);
+    const forceRender = (item) => {
+        setWant(wantCopy);
+    } */
     /*const forceRender = (data) => {
         console.log("I went in");
         return <FullProduct Data3={data}/>
     }*/
     //forceRender(currData);
     console.log(currData);
-
+    
     return (
         <>
             <div className='generator'>
@@ -120,9 +126,11 @@ function ShoeOnly(props) {
                         </button>
                     </div>
                 </form>
+                <br></br>
+                <p>The category/ies you chose are: {want} </p>
             </div>
         </>
-    )
+    );
 }
 
 export function Display(props) {

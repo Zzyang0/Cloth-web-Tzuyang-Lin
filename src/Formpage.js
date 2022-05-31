@@ -1,6 +1,6 @@
 import { faAppleWhole } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { Nav, Footer } from "./footer&header";
+import { Nav, Footer } from "./Footer&Header";
 
 
 // # since We divide this page into two parts, thus, there will have two datasets, in order to render the web using one dataset, 

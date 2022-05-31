@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Mycloest(props){
+export function Mycloest(props) {
     return(
         <>
             <header className="subpage-title"><h1>My Closet</h1></header>

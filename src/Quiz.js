@@ -1,14 +1,27 @@
 import React from 'react';
 import { useState } from 'react';
 
+
+function Startquiz(props){
+    const start = () => props(true)
+    return (
+        <div>
+            <h1>Take Style Quiz.</h1>
+            <p>Understanding your needs and generate different outfits for you</p>
+            <button onClick={start}>Start Quiz</button>
+        </div>
+    )
+};
+
+
 export function Quiz(props) {
     const questions = [
 		{
-			question: 'What age are you in?',
+			question: ' What age are you in?',
 			answers: [
 				{ answer: '1-10(kid)'},
 				{ answer: '10-18 (teenager)'},
-				{ answer: '(18+) Adult'},
+				{ answer: 'Adult  (18+)'},
 			],
 		},
 		{
@@ -40,19 +53,35 @@ export function Quiz(props) {
 		},
 	];
 
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const handleQuestionClick = () => {
+		const next = current + 1;
+		if (next < questions.length) {
+			setCurrent(next);
+		} 
+	};
+
+    const [current, setCurrent] = useState(0);
+    // const [count, setCount] = useState(0);
+    // const [start, setStart] = useState(0);
+
 
     return (
         <div>
-            <h1>Take Your Style Quiz</h1>
-            <main>
-            <div className='questions'>
-            <div className='question'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
-						</div>
-						<div className='question'>{questions[currentQuestion].question}</div>
-                </div>
-            </main>
+            <div className='questions_container'>
+                        <div className='question'>
+						<div>
+                        Question {current + 1}/{questions.length}: 
+                        {questions[current].question}
+                        </div>
+                        </div>
+                        <div className='answers_container'>
+                            <div>
+				            {questions[current].answers.map((answer) => (
+				            <button key={answer.answer} className='choice' onClick={() => handleQuestionClick()}>{answer.answer}</button>
+						     ))}
+                            </div>
+					    </div>
+            </div>
         </div>
 
     )}

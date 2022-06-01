@@ -86,11 +86,6 @@ export function Footer() {
       
           <li className="footeritem">
             <h2><Link to='/about' className="title">About</Link></h2>
-            <ul className="footerul">
-              <li>
-                <Link to='/about'>About the web</Link>
-              </li>
-            </ul>
           </li>
       
           <li className="footeritem">

@@ -246,8 +246,8 @@ html {
 
 
 
-/*about page*/
-.aboutpagetitle p {
+/* about page*/
+.aboutpagetitle p{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.6em;
   text-align: center;
@@ -544,20 +544,45 @@ button:hover{
   }
 } 
 
-.questions {
-  width: 55%;
-  position: relative;
-  background-color: #ead5d5;
-  margin: 7em;
-  min-height: 350px;
-  height: min-content;
-  border-radius: 12px;
-  padding-top: 30px;
-  box-shadow: 10px 10px 42px 0px rgba(127, 127, 127, 0.75);
-  display: flex;
+.questions_container{
+  margin: 10px 300px;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 12px 12px 40px 0px rgba(127, 127, 127, 0.75);
+  border-radius: 12px;
+  width: 45%;
+  background-color: #ead5d5;
+  min-height: 450px;
+  padding-top: 5px;
+  position: relative;
+  margin-top: 6em;
 }
 
+.question{
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answers_container{
+  margin-top: 2em;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 22px;
+  color: #000000;
+  background-color: #e8d3d3;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0.8em auto;
+  border: 5px solid #d5baba;
+}
 
 @media (min-width:598px) {
   .navbar {
@@ -820,7 +845,6 @@ button:hover{
   main div img {
     width: 750px;
     height: 580px;
-    /* margin-left: 50%; */
     display: block;
   }
 

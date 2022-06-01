@@ -2,7 +2,7 @@ import { About } from "./About";
 import { Nav, Footer } from "./Footer&Header";
 import { Homepage } from "./Homepage";
 import { Display } from "./ItemGenerate";
-import {Bloglist} from "./Blog"
+import {Quiz} from "./Quiz"
 import {Mycloest} from "./MyCloest"
 import products from "./data/item.json";
 import { Routes, Route } from 'react-router-dom';
@@ -22,7 +22,7 @@ function App(props) {
             <Route path='outfitgenerator' element={<Whole require={shoes} />} />
             <Route path='itemgenerator' element={<Display item={everything} />} />
             <Route path='/closet' element={<Mycloest />} />
-            <Route path='/blog' element={<Bloglist blog={blog} />} />
+            <Route path='/quiz' element={<Quiz />} />
             <Route path='/about' element={<About />} />
 
             </Routes>

@@ -6,18 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 export function Nav() {
-//   const hamburger = document.querySelector('.hamburger');
-//   const navlink = document.querySelector('.navlink');
-
-// hamburger.addEventListener('click', () => {
-//     hamburger.classList.toggle('active');
-//     navlink.classList.toggle('active');
-// })
-
-// document.querySelectorAll('.navl').forEach(n => n.addEventListener('click', () => {
-//     hamburger.classList.remove('active');
-//     navlink.classList.remove('active');
-// }))
 
 const hamburgerToggle = () => {
   const hamburger = document.querySelector('.hamburger');
@@ -54,9 +42,8 @@ const navlRemove = () => {
         </div>
       </div>
       </li>
-      <li><Link to='/blog' className='navl' onClick={navlRemove}>Blog</Link></li>
+      <li><Link to='/quiz' className='navl' onClick={navlRemove}>Style Quiz</Link></li>
       <li><Link to='/about' className='navl' onClick={navlRemove}>About Us</Link></li>
-      {/* <li><Link to="/" className='navl' onClick={navlRemove}><FontAwesomeIcon icon={faUser} />Login</Link></li> */}
       <li><a href="#" className='navl'><FontAwesomeIcon icon={faUser} />Login</a></li>
 
       </ul>
@@ -94,7 +81,7 @@ export function Footer() {
           </li>
       
           <li className="footeritem">
-            <h2><Link to='/blog'className="title">Blogs</Link></h2>
+            <h2><Link to='/quiz'className="title">Style Quiz</Link></h2>
           </li>
       
           <li className="footeritem">

@@ -372,25 +372,11 @@ html {
   background-color: #787878;
 }
 
-.blog .blogText {
-  padding: 5px 10px 10px;
-}
 
 h1{
   text-align: center;
 }
 
-#post_outfit{
-  border: none;
-  border-radius: 12px;
-  background-color: rgb(212, 166, 166);
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
-}
 
 p.outfit_title{
     font-weight: bold;
@@ -407,35 +393,9 @@ button{
   font-size: 15px;
 }
 
-#post_outfit:hover{
-    background-color: pink;
-}
-
 button:hover{
     background-color: pink;
 }
-
-.allBlog {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 45px;
-}
-
-.blog {
-  flex: 0 0 23.5em;
-  box-shadow: 8px 8px rgba(117, 3, 3, 0.333);
-  margin: 50px;
-  border: 1px solid;
-  border-radius: 18px;
-  flex-shrink: 1;
-} 
-
-.blog img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 15px;
-}
-
 
 
 /* media query section */
@@ -584,6 +544,20 @@ button:hover{
   }
 } 
 
+.questions {
+  width: 55%;
+  position: relative;
+  background-color: #ead5d5;
+  margin: 7em;
+  min-height: 350px;
+  height: min-content;
+  border-radius: 12px;
+  padding-top: 30px;
+  box-shadow: 10px 10px 42px 0px rgba(127, 127, 127, 0.75);
+  display: flex;
+  justify-content: center;
+}
+
 
 @media (min-width:598px) {
   .navbar {
@@ -707,7 +681,7 @@ button:hover{
   .sec2_pic img {
     display: flex;
     width: 65%;
-    height: 75%;
+    height: 85%;
     border-radius: 10px;
     margin-left: auto;
 

@@ -22,8 +22,9 @@ function App(props) {
                 <Route path='outfitgenerator' element={<Whole require={shoes} />} />
                 <Route path='itemgenerator' element={<Display item={everything} />} />
                 <Route path='/closet' element={<Mycloest />} />
-                <Route path='/quiz' elemet={<Startquiz />} >
-                    <Route path='/quiz' element={<Quiz />} />
+                <Route>
+                    <Route path="/quiz" element={<Startquiz />} />
+                    <Route path="/quizquestion" element={<Quiz />} />
                 </Route>
                 <Route path='/about' element={<About />} />
                 <Route path='*' element={<Navigate to='/' />} />

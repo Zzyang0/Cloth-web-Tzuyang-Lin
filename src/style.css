@@ -138,7 +138,7 @@ html {
   margin: 50px;
 }
 
-#buttom_home {
+.buttom_home {
   font-size: 1rem;
   display: inline-block;
   padding: 0.85em 1.6em;
@@ -148,7 +148,7 @@ html {
   color: grey;
 }
 
-#buttom_home:hover {
+.buttom_home:hover {
   color: #000000;
   background-color: #ddcfcc;
 }

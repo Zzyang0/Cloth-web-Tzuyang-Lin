@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 export function Startquiz() {
@@ -16,7 +15,7 @@ export function Startquiz() {
 				</div>
 			</div>
 			<div>
-				<button className='quiz_btn'>Start</button>
+			<NavLink to="/quizquestion"><button className='quiz_btn'>Start</button></NavLink>
 			</div>
 		</div>
 	)

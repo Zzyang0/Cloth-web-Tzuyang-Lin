@@ -12,8 +12,7 @@ export function Homepage() {
                 <div className="container-text">
                     <p>Life is a party 🎉</p>
                     <p>DRESS LIKE IT :)</p>
-                    <Link to='/outfitgenerator' id="buttom_home">Generate your outfit for the day now</Link>
-                    {/* < a href="#" id="buttom_home">Generate your outfit for the day now </ a> */}
+                    <Link to='/outfitgenerator' className="buttom_home">Generate your outfit for the day now</Link>
                 </div>
 
                 <div className="container-pic">

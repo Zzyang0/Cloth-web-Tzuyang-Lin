@@ -1,14 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
-function Startquiz(props){
-    const start = () => props(true)
+export function Startquiz(){
     return (
+        <div className='start_container'>
         <div>
             <h1>Take Style Quiz.</h1>
             <p>Understanding your needs and generate different outfits for you</p>
-            <button onClick={start}>Start Quiz</button>
+            <button><Link to='quizcontent'>Start Quiz</Link></button>
+        </div>
         </div>
     )
 };
@@ -53,17 +55,23 @@ export function Quiz(props) {
 		},
 	];
 
-    const handleQuestionClick = () => {
+    const ClickNext = () => {
 		const next = current + 1;
 		if (next < questions.length) {
 			setCurrent(next);
 		} 
 	};
 
+    const ClickPrev = () => {
+        const pre = current - 1;
+		if (current >= 1) {
+            setCurrent(pre);
+		} 
+	};
+
     const [current, setCurrent] = useState(0);
     // const [count, setCount] = useState(0);
     // const [start, setStart] = useState(0);
-
 
     return (
         <div>
@@ -77,10 +85,18 @@ export function Quiz(props) {
                         <div className='answers_container'>
                             <div>
 				            {questions[current].answers.map((answer) => (
-				            <button key={answer.answer} className='choice' onClick={() => handleQuestionClick()}>{answer.answer}</button>
+				            <button key={answer.answer} className='choice' onClick={() => ClickNext()}>{answer.answer}</button>
 						     ))}
                             </div>
 					    </div>
+                        <div className='navi_container'>
+                            <div>
+                            <button className='navi_btn' onClick={ClickPrev}>previous</button>
+                            </div>
+                            <div>
+                            <button className='navi_btn' onClick={ClickNext}>next</button>
+                            </div>
+                        </div>
             </div>
         </div>
 

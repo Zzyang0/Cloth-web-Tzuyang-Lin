@@ -261,7 +261,8 @@ html {
 .aboutpagecontainer .text {
   padding: 30px;
   margin: 20px;
-  background-color: #e7d6d3;
+  color: #2d050e;
+  background-image: url(https://images.unsplash.com/photo-1556630184-066f7ac4e15f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&w=1000&q=80);
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
   font-size: 1.8em;
@@ -394,7 +395,7 @@ button{
 }
 
 button:hover{
-    background-color: pink;
+    background-color: rgb(240, 170, 170);
 }
 
 
@@ -553,6 +554,7 @@ button:hover{
   border-radius: 12px;
   width: 45%;
   background-color: #ead5d5;
+  background-image: url(https://i.pinimg.com/originals/93/db/b4/93dbb416b9ed038550c596f871cb0177.jpg);
   min-height: 450px;
   padding-top: 5px;
   position: relative;
@@ -565,6 +567,7 @@ button:hover{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  color: rgb(81, 9, 9);
 }
 
 .answers_container{
@@ -575,13 +578,23 @@ button:hover{
   display: flex;
   flex-direction: column;
   width: 30%;
-  font-size: 22px;
+  font-size: 1.2em;
   color: #000000;
-  background-color: #e8d3d3;
+  background-color: #dfcdcd;
   border-radius: 15px;
   padding: 10px;
   margin: 0.8em auto;
   border: 5px solid #d5baba;
+}
+.navi_container{
+  display: flex;
+  justify-content: center;
+}
+
+.navi_btn{
+  margin: 1.5em;
+  background-color: #d7bebe;
+  box-shadow: 12px 12px 40px 0px rgba(171, 154, 154, 0.75);
 }
 
 @media (min-width:598px) {

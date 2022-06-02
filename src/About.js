@@ -12,6 +12,7 @@ export function About(){
               Nowadays, people pay more attention to their outfits of the day(OOTD) and outfit matching.
               However, despite the considerable time they spent, still, the final illustration may not be good
               as people expected, thus comes the problem of dressing difficulties for people’s daily needs.
+              <p>
               Based on the existing cloth matching platform, one problem worth noticing is that most of them
               didn’t take the occasions
               and weather into consideration, rather simplifying classify the categories based on the cloth types.
@@ -21,9 +22,12 @@ export function About(){
               might not trust the source and quality of the outfit bought through their outfit platform.
               In addition, the existing attempts take a lot of steps before recommending the outfits are
               user-unfriendly.
+              </p>
+              <p>
               In general, by this chance, the site Dvougue is an outfit planner platform for users to fulfill
               their different needs of daily dressing,
               by incorporating the condition that other websites didn’t include.
+              </p>
             </p>
           </div>
         </div>

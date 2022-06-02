@@ -22,7 +22,7 @@ function App(props) {
             <Route path='outfitgenerator' element={<Whole require={shoes} />} />
             <Route path='itemgenerator' element={<Display item={everything} />} />
             <Route path='/closet' element={<Mycloest />} />
-            <Route path='/quiz' element={<Quiz />} />
+            <Route path='/quiz' element={<Startquiz />} />
             <Route path='/about' element={<About />} />
 
             </Routes>

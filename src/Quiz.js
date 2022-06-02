@@ -1,16 +1,22 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 
 export function Startquiz(){
     return (
         <div className='start_container'>
-        <div>
-            <h1>Take Style Quiz.</h1>
-            <p>Understanding your needs and generate different outfits for you</p>
-            <button><Link to='quizcontent'>Start Quiz</Link></button>
-        </div>
+            <div>
+                <div>
+                    <h1>Take A Quick Style Quiz</h1>
+                </div>
+                <div>
+                    <p>This is a general style quiz that understand your needs and generate different outfits for you</p>
+                </div>
+            </div>
+            <div>
+                <button className='quiz_btn'><Link to='quizcontent'>Start</Link></button>
+            </div>
         </div>
     )
 };

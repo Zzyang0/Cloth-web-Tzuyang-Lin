@@ -389,7 +389,6 @@ button{
   background-color: rgb(221, 205, 205);
   padding: 14px 16px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 15px;
 }
@@ -595,6 +594,26 @@ button:hover{
   margin: 1.5em;
   background-color: #d7bebe;
   box-shadow: 12px 12px 40px 0px rgba(171, 154, 154, 0.75);
+}
+
+.start_container{
+  background-image: url(https://cdn.shopify.com/s/files/1/0508/1838/4054/files/minimalist-retail-clothing-display_x800.jpg?v=1617366725);
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 550px;
+  margin: 0.8em auto;
+  justify-content: center;
+  margin-top: 4em;
+  border-radius: 15px;
+  font-size: 1.3em;
+  flex-shrink:1;
+}
+
+.quiz_btn{
+  font-size: 1.3em;
+  padding: 18px 40px;
+  font-weight: bold;
 }
 
 @media (min-width:598px) {

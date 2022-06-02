@@ -2,10 +2,10 @@ import { About } from "./About";
 import { Nav, Footer } from "./Footer&Header";
 import { Homepage } from "./Homepage";
 import { Display } from "./ItemGenerate";
-import {Startquiz, Quiz} from "./Quiz"
-import {Mycloest} from "./MyCloest"
+import { Startquiz, Quiz } from "./Quiz"
+import { Mycloest } from "./MyCloest"
 import products from "./data/item.json";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import { Whole } from "./Formpage";
 import shoes from "./data/shoes.json";
 import everything from "./data/clothes.json";
@@ -18,12 +18,15 @@ function App(props) {
         <div>
             <Nav />
             <Routes>
-            <Route exact path='/' element={<Homepage />} />
-            <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-            <Route path='itemgenerator' element={<Display item={everything} />} />
-            <Route path='/closet' element={<Mycloest />} />
-            <Route path='/quiz' element={<Startquiz />} />
-            <Route path='/about' element={<About />} />
+                <Route exact path='/' element={<Homepage />} />
+                <Route path='outfitgenerator' element={<Whole require={shoes} />} />
+                <Route path='itemgenerator' element={<Display item={everything} />} />
+                <Route path='/closet' element={<Mycloest />} />
+                <Route path='/quiz' elemet={<Startquiz />} >
+                    <Route path='/quiz' element={<Quiz />} />
+                </Route>
+                <Route path='/about' element={<About />} />
+                <Route path='*' element={<Navigate to='/' />} />
 
             </Routes>
             <Footer />

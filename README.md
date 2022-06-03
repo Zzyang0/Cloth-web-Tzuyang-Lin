@@ -15,5 +15,5 @@ see our website: https://dvogue-a1779.web.app/
 |  ----  | ----  |
 | YUNYI(Iris) Ding  | yding7@uw.edu|
 | Jiali Liu  | jiali123@uw.edu |
-| Phuong Vu  | pvu@uw.edu>|
+| Phuong Vu  | pvu@uw.edu|
 | Tzuyang Lin(Frank) | lin528@uw.edu |

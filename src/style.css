@@ -7,7 +7,6 @@ a {
   text-decoration: none;
 }
 
-
 body,
 html {
   font-family: sans-serif;
@@ -153,46 +152,6 @@ html {
   background-color: #ddcfcc;
 }
 
-.trend1,
-.trend2,
-.trend3,
-.container-texts {
-  display: none;
-}
-
-
-.sec2_text {
-  align-items: center;
-  display: flex;
-  text-align: center;
-  font-size: large;
-  font-weight: 100;
-  padding-top: 2em;
-}
-
-.sec2_pic {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  font-size: large;
-  font-weight: 100;
-  padding-top: 2em;
-}
-
-.sec2_pic img {
-  display: flex;
-  width: 65%;
-  height: 75%;
-  border-radius: 10px;
-  margin-left: auto;
-
-}
-
-.sec2_pic p {
-  font-size: 95%;
-}
-
-
 /* footer element */
 .footer {
   display: flex;
@@ -324,10 +283,7 @@ html {
   line-height: 2.5;
   font-size: 1rem;
   border-radius: 10px;
-  /* margin-left: 80px;
-    margin-top:5px; */
 }
-
 
 .containerg .generated-cloth {
   margin-left: 50px;
@@ -376,11 +332,9 @@ html {
   background-color: #787878;
 }
 
-
 h1{
   text-align: center;
 }
-
 
 p.outfit_title{
     font-weight: bold;
@@ -398,6 +352,94 @@ button{
 
 button:hover{
     background-color: rgb(240, 170, 170);
+}
+
+.questions_container{
+  margin: 10px 300px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 12px 12px 40px 0px rgba(127, 127, 127, 0.75);
+  border-radius: 12px;
+  width: 45%;
+  background-color: #ead5d5;
+  background-image: url(https://i.pinimg.com/originals/93/db/b4/93dbb416b9ed038550c596f871cb0177.jpg);
+  min-height: 450px;
+  padding-top: 5px;
+  position: relative;
+  margin-top: 6em;
+}
+
+.question{
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: rgb(81, 9, 9);
+}
+
+.answers_container{
+  margin-top: 2em;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 1.2em;
+  color: #000000;
+  background-color: #dfcdcd;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0.8em auto;
+  border: 5px solid #d5baba;
+}
+.navi_container{
+  display: flex;
+  justify-content: center;
+}
+
+.navi_btn{
+  margin: 1.5em;
+  background-color: #d7bebe;
+  box-shadow: 12px 12px 40px 0px rgba(171, 154, 154, 0.75);
+}
+
+.start_container{
+  background-image: url(https://cdn.shopify.com/s/files/1/0508/1838/4054/files/minimalist-retail-clothing-display_x800.jpg?v=1617366725);
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 550px;
+  margin: 0.8em auto;
+  justify-content: center;
+  margin-top: 4em;
+  border-radius: 15px;
+  font-size: 1.3em;
+  flex-shrink:1;
+}
+
+.quiz_btn{
+  font-size: 1.3em;
+  padding: 18px 40px;
+  font-weight: bold;
+}
+
+.sec2_trend {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.trend {
+  flex: 0 0 500px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 12px 12px 40px 0px rgba(127, 127, 127, 0.75);
+} 
+.trend img {
+  max-width: 100%;
 }
 
 
@@ -543,79 +585,14 @@ button:hover{
   .navlink.active {
     left: 0;
   }
+
+  .container-texts {
+    display: flex;
+    font-weight: bold;
+    font-size: large;
+  }
 } 
 
-.questions_container{
-  margin: 10px 300px;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 12px 12px 40px 0px rgba(127, 127, 127, 0.75);
-  border-radius: 12px;
-  width: 45%;
-  background-color: #ead5d5;
-  background-image: url(https://i.pinimg.com/originals/93/db/b4/93dbb416b9ed038550c596f871cb0177.jpg);
-  min-height: 450px;
-  padding-top: 5px;
-  position: relative;
-  margin-top: 6em;
-}
-
-.question{
-  font-size: 25px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: rgb(81, 9, 9);
-}
-
-.answers_container{
-  margin-top: 2em;
-}
-
-.choice {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  font-size: 1.2em;
-  color: #000000;
-  background-color: #dfcdcd;
-  border-radius: 15px;
-  padding: 10px;
-  margin: 0.8em auto;
-  border: 5px solid #d5baba;
-}
-.navi_container{
-  display: flex;
-  justify-content: center;
-}
-
-.navi_btn{
-  margin: 1.5em;
-  background-color: #d7bebe;
-  box-shadow: 12px 12px 40px 0px rgba(171, 154, 154, 0.75);
-}
-
-.start_container{
-  background-image: url(https://cdn.shopify.com/s/files/1/0508/1838/4054/files/minimalist-retail-clothing-display_x800.jpg?v=1617366725);
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 550px;
-  margin: 0.8em auto;
-  justify-content: center;
-  margin-top: 4em;
-  border-radius: 15px;
-  font-size: 1.3em;
-  flex-shrink:1;
-}
-
-.quiz_btn{
-  font-size: 1.3em;
-  padding: 18px 40px;
-  font-weight: bold;
-}
 
 @media (min-width:598px) {
   .navbar {
@@ -709,43 +686,10 @@ button:hover{
     display: block;
   }
 
-  .trend1,
-  .trend2,
-  .trend3,
   .container-texts {
     display: flex;
-  }
-
-  .sec2_text {
-    align-items: center;
-    display: flex;
-    text-align: center;
+    font-weight: bold;
     font-size: large;
-    font-weight: 100;
-    padding-top: 2em;
-  }
-
-  .sec2_pic {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    font-size: large;
-    font-weight: 100;
-    padding-top: 2em;
-  }
-
-  .sec2_pic img {
-    display: flex;
-    width: 65%;
-    height: 85%;
-    border-radius: 10px;
-    margin-left: auto;
-
-  }
-
-  .sec2_pic p {
-    font-size: 30px;
-    padding: auto;
   }
 
   .containerg {
@@ -857,7 +801,8 @@ button:hover{
   .nav-dropdown:hover .nav-dropdown-content {
     display: block;
   }
-  
+
+
   .footer1>* {
     flex: 1;
   }
@@ -868,13 +813,6 @@ button:hover{
 
   .contact {
     flex: 1 0px;
-  }
-
-
-  main div img {
-    width: 750px;
-    height: 580px;
-    display: block;
   }
 
 
@@ -912,13 +850,9 @@ button:hover{
     margin-top: 25px;
   }
 
-  #buttom-home {
-    margin: 20px;
-  }
 }
 
 @media (min-width:1440px) {
-
 
   .cloth .second {
     margin-top: 10px;

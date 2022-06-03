@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 
 export function Homepage() {
 
-
-
     return (
         <main>
             <section className="sec1">
@@ -21,33 +19,32 @@ export function Homepage() {
             </section>
 
             <section className="sec2_text">
-
                 <div className="container-texts">
-                    <p>See The Latest Trend</p>
+                    <p>See The Latest Fashion Trend</p>
                 </div>
 
             </section>
 
-            <section className="sec2_pic">
-
-                <div className="trend1">
-                    <p>Cropped Cardigans</p>
-                    <img src="https://thevou.com/wp-content/uploads/2021/05/Current-fashion-trends-wtvox.com-Cropped-Cardigan-01.jpg" alt="Kendall Jenner outfit" />
+            <section className="sec2_trend">
+            <div className="trend">
+            <img src="img/Coastal_Grandmother.png" alt="this is a picture of Coastal Grandmother Trend"/>
+            <div>
+            <p>Coastal Grandmother Trend</p>
+            </div>
+            </div>
+            <div className="trend">
+            <img src="img/jumpsuit.png" alt="this is a picture of Jumpsuit in Street Style Trend"/>
+            <div>
+            <p>Jumpsuit in Street Style Trend</p>
+            </div>
+            </div>
+            <div className="trend">
+            <img src="img/sweater_vests.png" alt="this is a picture of Street Stylers Worked Sweater Vests Trend "/>
+            <div>
+            <p> Street Stylers Worked Sweater Vests Trend</p>
+            </div>
                 </div>
-
-                <div className="trend2">
-                    <p>Casual Trench</p>
-                    <img src="https://thevou.com/wp-content/uploads/2021/05/Current-fashion-trends-wtvox.com-Casual-trench-01.jpg" alt="Hailey Bieber outfit" />
-                </div>
-
-                <div className="trend3">
-                    <p>Boiler Suits</p>
-                    <img src="https://thevou.com/wp-content/uploads/2021/05/Current-fashion-trends-wtvox.com-Boiler-suits-01.jpg" alt="model outfit" />
-                </div>
-
             </section>
-
-
         </main>
 
     );

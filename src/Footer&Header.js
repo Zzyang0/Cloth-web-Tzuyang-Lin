@@ -59,9 +59,8 @@ export function Nav(props) {
           {!currentUser &&
             <li><Link to='/signin'><FontAwesomeIcon icon={faUser} />Login</Link></li>
           }
-          {currentUser && <>
+          {currentUser &&
             <li><Link to='/signin' onClick={handleSignOut}>Sign Out</Link></li>
-          </>
           }
 
         </ul>

@@ -79,12 +79,6 @@ export function Quiz() {
 		}
 	};
 
-	// const submitbottom = () => {
-	// 	if (current === 3) {
-	// 		setCurrent()
-	// 	}
-	// }
-
 
 	return (
 		<div>
@@ -106,18 +100,8 @@ export function Quiz() {
 					{current!==0 &&
 						<button className='navi_btn' onClick={ClickPrev}>previous</button>
 					}
-					{/* <div>
-						<button className='navi_btn' onClick={ClickPrev}>previous</button>
-					</div>
-					<div>
-					    <button className='navi_btn' onClick={ClickNext}>next</button>
-					</div> */}
-					{/* {current !== 3 &&
-						<button className='navi_btn' onClick={ClickNext}>next</button>
-					} */}
-					{current === 3 && <>
+					{current === 3 &&
 						<button className='navi_btn' onClick={ClickNext}>submit</button>
-					</>
 					}
 				</div>
 			</div>

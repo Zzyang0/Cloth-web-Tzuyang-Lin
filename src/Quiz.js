@@ -75,6 +75,7 @@ export function Quiz() {
 		}
 	};
 
+
 	const [current, setCurrent] = useState(0);
 	// const [count, setCount] = useState(0);
 	// const [start, setStart] = useState(0);
@@ -101,6 +102,9 @@ export function Quiz() {
 					</div>
 					<div>
 						<button className='navi_btn' onClick={ClickNext}>next</button>
+					</div>
+					<div>
+						<button className='navi_btn'>submit</button>
 					</div>
 				</div>
 			</div>

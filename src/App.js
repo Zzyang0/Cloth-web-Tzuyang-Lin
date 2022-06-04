@@ -56,13 +56,13 @@ function App(props) {
                     {/* protected routes */}
                     <Route element={<ProtectedPage currentUser={currentUser} />}>
                         <Route path="/closet" element={
-                            <Mycloest currentUser={currentUser} />
+                            <Mycloset currentUser={currentUser} />
                         } />
                     </Route>
                     <Route path='/' element={<Homepage />} />
                     <Route path='outfitgenerator' element={<Whole require={shoes} />} />
                     <Route path='itemgenerator' element={<Display item={everything} />} />
-                    <Route path='/closet' element={<Mycloest />} />
+                    <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />
                         <Route path="/quizquestion" element={<Quiz />} />

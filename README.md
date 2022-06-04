@@ -7,7 +7,7 @@
 
 ## Website🕸️
 
-see our website: https://dvogue-a1779.web.app/
+See our website: https://dvogue-a1779.web.app/
 
 
 ## **Teams:**

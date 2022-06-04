@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Mycloest(props) {
+export function Mycloset(props) {
     return(
         <div>
         </div>

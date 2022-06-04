@@ -42,7 +42,7 @@ function FullChoice(props) {
         <div className='generator'>
             <form>
             <label htmlFor="q1">HOW IS THE WEATHER TODAY?</label>
-            <div id='choice'>
+            <div className='choice' id='choice'>
               <select name="weather" id="weather">
                   <option value="none" defaultValue disabled hidden>Select an option</option>
                   <option value="Sunny">Sunny</option>
@@ -54,9 +54,9 @@ function FullChoice(props) {
               </select>
               {result}
             </div>
-            <div id='choice'>
-                <label htmlFor="budget" id="budget_input">BUDGET:$</label>
-                <input type="BUDGET" id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
+            <div className='choice' id='choice'>
+                <label htmlFor="budget" className='budget_input' id="budget_input">BUDGET:$</label>
+                <input type="BUDGET" className='budget_input' id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
             </div>
     
             <div className="output">

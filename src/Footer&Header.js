@@ -1,6 +1,5 @@
 import React from 'react';
 // import the font-icon style
-import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
@@ -28,25 +27,13 @@ const navlRemove = () => {
         <h1><Link to='/' className='logo' onClick={navlRemove}>Dvogue</Link></h1>
         </header>
         <ul className='navlink' id='navlink'>
-          <li>
-        <Link to='/closet' className='navl' onClick={navlRemove}>My Closet</Link>
-          </li>
-          <li>
-        <div className="nav-dropdown">
-        <button className="dropbutton">Cloth Generator 
-        <FontAwesomeIcon icon={faCaretDown} />
-        </button>
-        <div className="nav-dropdown-content">
-          <Link to='outfitgenerator' className='navl' onClick={navlRemove}>Outfit Generator</Link>
-          <Link to='itemgenerator' className='navl' onClick={navlRemove}>Item Generator</Link>
-        </div>
-      </div>
-      </li>
-      <li><Link to='/quiz' className='navl' onClick={navlRemove}>Style Quiz</Link></li>
-      <li><Link to='/about' className='navl' onClick={navlRemove}>About Us</Link></li>
-      <li><a href="#" className='navl'><FontAwesomeIcon icon={faUser} />Login</a></li>
-
-      </ul>
+          <li><Link to='/closet' className='navl' onClick={navlRemove}>My Closet</Link></li>
+          <li><Link to='outfitgenerator' className='navl' onClick={navlRemove}>Outfit Generator</Link></li>
+          <li><Link to='itemgenerator' className='navl' onClick={navlRemove}>Item Generator</Link></li>
+          <li><Link to='/quiz' className='navl' onClick={navlRemove}>Style Quiz</Link></li>
+          <li><Link to='/about' className='navl' onClick={navlRemove}>About Us</Link></li>
+          <li><a href="#" className='navl'><FontAwesomeIcon icon={faUser} />Login</a></li>
+        </ul>
       <div className="hamburger" onClick={hamburgerToggle}>
         <span className="bar"></span>
         <span className="bar"></span>

@@ -91,7 +91,7 @@ export function Quiz() {
 				<div className='answers_container'>
 					<div>
 						{questions[current].answers.map((answer) => (
-							<button key={answer.answer} className='choice' onClick={() => ClickNext()}>{answer.answer}</button>
+							<button key={answer.answer} className='quiz_choice' onClick={() => ClickNext()}>{answer.answer}</button>
 						))}
 					</div>
 				</div>

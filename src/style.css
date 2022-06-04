@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-
+/* general style section */
 a {
   text-decoration: none;
 }
@@ -18,6 +18,25 @@ html {
   background-color: #f7f1f0;
 }
 
+h1{
+  text-align: center;
+}
+
+button{
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(221, 205, 205);
+  padding: 14px 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+}
+
+button:hover{
+  background-color: rgb(240, 170, 170);
+}
+
+/* login page */
 .form-page {
   display: flex;
   justify-content: center;
@@ -114,7 +133,6 @@ html {
   list-style: none;
 }
 
-
 /* homepage */
 .sec1 {
   padding-top: 1.5em;
@@ -148,6 +166,38 @@ html {
 .buttom_home:hover {
   color: #000000;
   background-color: #ddcfcc;
+}
+.sec2_trend {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.trend {
+  flex: 0 0 500px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 12px 12px 40px 0px rgba(127, 127, 127, 0.75);
+} 
+.trend img {
+  max-width: 100%;
+}
+
+/* my closet section */
+.welcome{
+  color: #787878;
+  font-size: 2.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.8em;
+}
+
+.welcome_text{
+  color: #787878;
+  font-size: 2em;
+  margin-top: 5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* footer element */
@@ -230,7 +280,7 @@ html {
 }
 
 
-/* new generator */
+/* generator page */
 
 .containerg {
   display: flex;
@@ -331,28 +381,7 @@ html {
   background-color: #787878;
 }
 
-h1{
-  text-align: center;
-}
-
-p.outfit_title{
-    font-weight: bold;
-}
-
-button{
-  border: none;
-  border-radius: 12px;
-  background-color: rgb(221, 205, 205);
-  padding: 14px 16px;
-  text-align: center;
-  display: inline-block;
-  font-size: 15px;
-}
-
-button:hover{
-    background-color: rgb(240, 170, 170);
-}
-
+/* style quiz page */
 .questions_container{
   margin: 10px 300px;
   justify-content: center;
@@ -394,6 +423,7 @@ button:hover{
   margin: 0.8em auto;
   border: 5px solid #d5baba;
 }
+
 .navi_container{
   display: flex;
   justify-content: center;
@@ -424,39 +454,6 @@ button:hover{
   padding: 18px 40px;
   font-weight: bold;
 }
-
-.sec2_trend {
-  margin-top: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.trend {
-  flex: 0 0 500px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 12px 12px 40px 0px rgba(127, 127, 127, 0.75);
-} 
-.trend img {
-  max-width: 100%;
-}
-
-.welcome{
-  color: #787878;
-  font-size: 2.2em;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 1.8em;
-}
-
-.welcome_text{
-  color: #787878;
-  font-size: 2em;
-  margin-top: 5em;
-  font-weight: bold;
-  text-align: center;
-}
-
 
 
 /* media query section */

@@ -13,7 +13,6 @@ import shoes from "./data/shoes.json";
 import everything from "./data/clothes.json";
 import blog from "./data/blog.json";
 import SignIn from "./SignInPage";
-
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 
@@ -22,7 +21,7 @@ function App(props) {
     const nullUser = { userId: null, userName: null }
     const [currentUser, setCurrentUser] = useState(nullUser);
     const navigateTo = useNavigate();
-
+    
 
     useEffect(() => {
 

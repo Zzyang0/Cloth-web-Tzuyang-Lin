@@ -8,18 +8,20 @@ import { Nav, Footer } from "./Footer&Header";
 
 
 const PickChoice = [
-    {"title":"YOU ARE GOING TO BE:", "guide":"Select an option", "op1":"Indoor", "op2":"Outdoor", "op3":"Both", "op4":"None", "art":"in-out"},
-    {"title":"WHAT OCCASION YOU WILL BE?", "guide":"Select an option", "op1":"Date", "op2":"Causal", "op3":"Sports", "op4":"Business", "art":"occasion"},
-    {"title":"WHAT ARE YOU DOING TODAY?", "guide":"Select an option", "op1":"Movie", "op2":"Picnic", "op3":"Work", "op4":"Hiking", "art":"activity"}
+    {"title":"How IS THE WEATHER TODAY?", "guide":"Select an option", "op1":"Sunny", "op2":"Windy", "op3":"Rainy", "op4":"Humid", "num":"q1"},  
+    {"title":"WHERE YOU ARE GOING TO BE?", "guide":"Select an option", "op1":"Indoor", "op2":"Outdoor", "op3":"Both", "op4":"None", "art":"in-out", "num":"q2"},
+    {"title":"WHAT OCCASION YOU WILL BE?", "guide":"Select an option", "op1":"Date", "op2":"Causal", "op3":"Sports", "op4":"Business", "art":"occasion", "num":"q3"},
+    {"title":"WHAT ARE YOU DOING TODAY?", "guide":"Select an option", "op1":"Movie", "op2":"Picnic", "op3":"Work", "op4":"Hiking", "art":"activity", "num":"q4"}
 ]
 
 
 // #props in this case is a single oject
 function Options(props) {
     let need = props.input;
+    
     return (
-        <div>
-            <label htmlFor="q1">{need.title}</label>
+        <div className='choice' id='choice'>
+            <label htmlFor={need.num}>{need.title}</label>
                 <select name={need.art} id={need.art}>
                     <option value="none" disabled hidden>{need.guide}</option>
                     <option value={need.op1}>{need.op1}</option>
@@ -41,22 +43,10 @@ function FullChoice(props) {
     return(
         <div className='generator'>
             <form>
-            <label htmlFor="q1">HOW IS THE WEATHER TODAY?</label>
-            <div className='choice' id='choice'>
-              <select name="weather" id="weather">
-                  <option value="none" defaultValue disabled hidden>Select an option</option>
-                  <option value="Sunny">Sunny</option>
-                  <option value="Windy">Windy</option>
-                  <option value="Rainy">Rainy</option>
-                  <option value="Humid">Humid</option>
-                  <option value="Frigid">Frigid</option>
-                  <option value="Snowy">Snowy</option>
-              </select>
               {result}
-            </div>
-            <div className='choice' id='choice'>
-                <label htmlFor="budget" className='budget_input' id="budget_input">BUDGET:$</label>
-                <input type="BUDGET" className='budget_input' id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
+            <div id='choice'>
+                <label htmlFor="budget" id="budget_input">BUDGET:$</label>
+                <input type="BUDGET" id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
             </div>
     
             <div className="output">

@@ -15,7 +15,7 @@ export function Startquiz() {
 				</div>
 			</div>
 			<div>
-			<NavLink to="/quizquestion"><button className='quiz_btn'>Start</button></NavLink>
+				<NavLink to="/quizquestion"><button className='quiz_btn'>Start</button></NavLink>
 			</div>
 		</div>
 	)
@@ -23,6 +23,10 @@ export function Startquiz() {
 
 
 export function Quiz() {
+	const [current, setCurrent] = useState(0);
+	// const [count, setCount] = useState(0);
+	// const [start, setStart] = useState(0);
+
 	const questions = [
 		{
 			question: ' What age are you in?',
@@ -75,9 +79,6 @@ export function Quiz() {
 		}
 	};
 
-	const [current, setCurrent] = useState(0);
-	// const [count, setCount] = useState(0);
-	// const [start, setStart] = useState(0);
 
 	return (
 		<div>
@@ -96,12 +97,12 @@ export function Quiz() {
 					</div>
 				</div>
 				<div className='navi_container'>
-					<div>
+					{current!==0 &&
 						<button className='navi_btn' onClick={ClickPrev}>previous</button>
-					</div>
-					<div>
-						<button className='navi_btn' onClick={ClickNext}>next</button>
-					</div>
+					}
+					{current === 3 &&
+						<button className='navi_btn' onClick={ClickNext}>submit</button>
+					}
 				</div>
 			</div>
 		</div>

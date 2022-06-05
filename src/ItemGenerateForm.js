@@ -1,17 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import ItemGenerateForm from './ItemGenerateForm';
-import ItemDisplay from './ItemDisplay';
+import React, { useState } from 'react';
 
-import datajson from "./data/database.json";
-
-let currData = [
-    {"img":"img/550.png", "brand":"New Balance", "des":"New Balance 550 White Grey", "price":191, "imgd":"image of the sneakers", "category": "Shoes"},
-    {"img":"img/boots1.png", "brand":"Alexander McQueen", "des":"Alexander McQueen Tread Slick Boot", "price":500, "imgd":"image of the boots", "category": "Shoes"},
-    {"img":"img/crocs.png", "brand":"Crocs", "des":"Crocs Classic Clog Pizzaslime", "price":125, "imgd":"image of the crocs", "category": "Shoes"},
-    {"img":"img/shoes.png", "brand":"AXEL ARIGATO", "des":"White & Grey Clean 90 Sneakers", "price":225, "imgd":"image of the shoes", "category": "Shoes"}
-];
-
-function ShoeOnly(props) {
+function ItemForm(props) {
     let base3 = props.products;
     const [want, setWant] = useState(['Shoes']);
     const [needData, setNeedData] = useState(base3);
@@ -48,7 +37,7 @@ function ShoeOnly(props) {
         }
     }
 
-    currData = filterCategory(needData);
+    let currData = filterCategory(needData);
     
     /*let currData = filterCategory(base3);
     const forceRender = (item) => {
@@ -109,22 +98,18 @@ function ShoeOnly(props) {
                 <br></br>
                 <p>The category/ies you chose are: {want} </p >
             </div>
-            
         </div>
     );
 }
 
-export function ItemGenerate(props) {
+export default function ItemGenerateForm(props) {
     const data = props.item;
-
-
-
     return (
         <main>
             <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
-                <ItemGenerateForm changeFilter={data}/>
-                <ItemDisplay Data3={currData} />
+                <ItemForm products={data}/>
+                <ItemDisplay />
             </div>
         </main>
     )

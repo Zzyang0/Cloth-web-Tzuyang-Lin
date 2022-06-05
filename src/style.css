@@ -455,47 +455,6 @@ button:hover{
   font-weight: bold;
 }
 
-<<<<<<< HEAD
-.sec2_trend {
-  margin-top: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.trend {
-  flex: 0 0 500px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 12px 12px 40px 0px rgba(127, 127, 127, 0.75);
-} 
-.trend img {
-  max-width: 100%;
-}
-
-.welcome{
-  color: #787878;
-  font-size: 2.2em;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 1.8em;
-}
-
-.welcome_text{
-  color: #787878;
-  font-size: 2em;
-  margin-top: 5em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.generator form label {
-  display:flex;
-  flex-wrap: wrap;
-  margin:auto;
-}
-
-=======
->>>>>>> 2ef1966da00e123ea1b6a905fc4da3b66ae90530
 
 /* media query section */
 @media (max-width:597px) {

@@ -44,10 +44,12 @@ function FullChoice(props) {
         <div className='generator'>
             <form>
               {result}
-            <div id='choice'>
-                <label htmlFor="budget" id="budget_input">BUDGET:$</label>
-                <input type="BUDGET" id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
-            </div>
+              <div className='choice' id='choice'>
+                        <p>
+                        <label htmlFor="budget" className='budget_input' id="budget_input">BUDGET:$</label>
+                        </p >
+                        <input type="BUDGET" className='budget_input' id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
+                    </div>
     
             <div className="output">
                 <button className="Generator" type="button">

@@ -246,7 +246,7 @@ html {
 
 .generator label {
   display: inline-block;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 25px;
 }
 
@@ -457,6 +457,11 @@ button:hover{
   text-align: center;
 }
 
+.generator form label {
+  display:flex;
+  flex-wrap: wrap;
+  margin:auto;
+}
 
 
 /* media query section */

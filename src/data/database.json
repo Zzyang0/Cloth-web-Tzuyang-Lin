@@ -1,4 +1,24 @@
 {
+  "Saveditem": {
+    "-N3q3mTmbFu0QSWCmxFQ": {
+      "des": "Black Relaxed Crewneck Sweatshirt",
+      "img": "img/shirt.png",
+      "price": 80,
+      "userId": "YmDFQylQ5OVpWBexbT39c3SKUoN2"
+    },
+    "-N3q6B8EKOZrmPauiJSm": {
+      "des": "Black Relaxed Crewneck Sweatshirt",
+      "img": "img/shirt.png",
+      "price": 80,
+      "userId": "YmDFQylQ5OVpWBexbT39c3SKUoN2"
+    },
+    "-N3q6CON3jjWVY9nrclN": {
+      "des": "Blue Fit 2 Jeans",
+      "img": "img/pant.png",
+      "price": 195,
+      "userId": "YmDFQylQ5OVpWBexbT39c3SKUoN2"
+    }
+  },
   "accessories": {
     "8": {
       "activity": {
@@ -787,775 +807,387 @@
       }
     }
   },
-  "clothes": {
-    "bottom": {
-      "6": {
-        "activity": {
-          "6-13": "picnic",
-          "6-14": "movie"
-        },
-        "age": {
-          "6-1": "teenager",
-          "6-2": "adult"
-        },
-        "brand": "Rag & Bone",
-        "category": {
-          "6-15": "clothe"
-        },
-        "color": {
-          "6-3": "mellow"
-        },
-        "description": "Blue Fit 2 Jeans",
-        "event": {
-          "6-11": "casual",
-          "6-12": "date"
-        },
-        "img": "https://i1.adis.ws/i/rb/M1223K510THP-420-A/Fit-2---Throop.jpg?$plp$",
-        "imgDescription": "Image of Blue Fit 2 Jeans",
-        "location": {
-          "6-10": "both"
-        },
-        "price": 195,
-        "sex": {
-          "6-6": "unisex"
-        },
-        "style": {
-          "6-4": "laidBack",
-          "6-5": "highStreet"
-        },
-        "weather": {
-          "6-7": "sunny",
-          "6-8": "windy",
-          "6-9": "rainy"
-        }
+  "bottom": {
+    "6": {
+      "activity": {
+        "6-13": "picnic",
+        "6-14": "movie"
       },
-      "9": {
-        "activity": {
-          "9-10": "work",
-          "9-9": "picnic"
-        },
-        "age": {
-          "9-1": "adult"
-        },
-        "brand": "MM6 Maison Margiela",
-        "category": {
-          "9-11": "clothe"
-        },
-        "color": {
-          "9-2": "light"
-        },
-        "description": "Off-White Denim Midi Skirt",
-        "event": {
-          "9-8": "date"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221188F092017_1/mm6-maison-margiela-off-white-denim-midi-skirt.jpg",
-        "imgDescription": "Image of Off-White Denim Midi Skirt",
-        "location": {
-          "9-7": "both"
-        },
-        "price": 550,
-        "sex": {
-          "9-5": "women"
-        },
-        "style": {
-          "9-3": "minimalistic",
-          "9-4": "highStreet"
-        },
-        "weather": {
-          "9-6": "sunny"
-        }
+      "age": {
+        "6-1": "teenager",
+        "6-2": "adult"
       },
-      "12": {
-        "activity": {
-          "12-10": "movie",
-          "12-11": "picnic"
-        },
-        "age": {
-          "12-1": "adult"
-        },
-        "brand": "Vejas Maksimas",
-        "category": {
-          "12-12": "clothe"
-        },
-        "color": {
-          "12-2": "mellow"
-        },
-        "description": "Black Darted Denim Trousers",
-        "event": {
-          "12-9": "casual"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221849F069001_1/vejas-maksimas-black-darted-denim-trousers.jpg",
-        "imgDescription": "Image of Black Darted Denim Trousers",
-        "location": {
-          "12-8": "both"
-        },
-        "price": 500,
-        "sex": {
-          "12-4": "women"
-        },
-        "style": {
-          "12-3": "highStreet",
-          "12-7": "laidBack"
-        },
-        "weather": {
-          "12-5": "sunny",
-          "12-6": "windy"
-        }
+      "brand": "Rag & Bone",
+      "category": {
+        "6-15": "cloth"
       },
-      "31": {
-        "activity": {
-          "32-12": "picnic"
-        },
-        "age": {
-          "31-1": "teenager",
-          "32-2": "adult"
-        },
-        "brand": "Levi's",
-        "category": {
-          "32-13": "clothes"
-        },
-        "color": {
-          "32-3": "warm",
-          "32-4": "mellow"
-        },
-        "description": "Blue 412 Slim Shorts",
-        "event": {
-          "32-11": "casual"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221099M193012_1/levis-blue-412-slim-shorts.jpg",
-        "imgDescription": "Image of Blue 412 Slim Shorts",
-        "location": {
-          "32-10": "both"
-        },
-        "price": 35,
-        "sex": {
-          "32-7": "unisex"
-        },
-        "style": {
-          "32-5": "laidBack",
-          "32-6": "highStreet"
-        },
-        "weather": {
-          "32-8": "sunny",
-          "32-9": "windy"
-        }
+      "color": {
+        "6-3": "mellow"
       },
-      "32": {
-        "activity": {
-          "32-12": "movie",
-          "32-13": "work"
-        },
-        "age": {
-          "32-1": "adult"
-        },
-        "brand": "Han Kjobenhavn",
-        "category": {
-          "32-14": "clothes"
-        },
-        "color": {
-          "32-2": "cold"
-        },
-        "description": "Black Polyester Trousers",
-        "event": {
-          "32-10": "date",
-          "32-11": "business"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221827M191007_1/han-kjobenhavn-black-polyester-trousers.jpg",
-        "imgDescription": "Image of Black Polyester Trousers",
-        "location": {
-          "32-9": "both"
-        },
-        "price": 290,
-        "sex": {
-          "32-5": "unisex"
-        },
-        "style": {
-          "32-3": "minimalistic",
-          "32-4": "highStreet"
-        },
-        "weather": {
-          "32-6": "sunny",
-          "32-7": "windy",
-          "32-8": "rainy"
-        }
+      "description": "Blue Fit 2 Jeans",
+      "event": {
+        "6-11": "casual",
+        "6-12": "date"
       },
-      "33": {
-        "activity": {
-          "33-14": "movie",
-          "33-15": "picnic",
-          "33-16": "hiking"
-        },
-        "age": {
-          "33-1": "teenager",
-          "33-2": "adult"
-        },
-        "brand": "Essentials",
-        "category": {
-          "33-17": "clothes"
-        },
-        "color": {
-          "33-3": "warm",
-          "33-4": "mellow"
-        },
-        "description": "Off-White Thermal Waffle Logo Lounge Pants",
-        "event": {
-          "33-12": "casual",
-          "33-13": "sports"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/212161M190023_1/essentials-off-white-thermal-waffle-logo-lounge-pants.jpg",
-        "imgDescription": "Image of Off-White Thermal Waffle Logo Lounge Pants",
-        "location": {
-          "33-11": "both"
-        },
-        "price": 50,
-        "sex": {
-          "33-7": "unisex"
-        },
-        "style": {
-          "33-5": "highStreet",
-          "33-6": "laidBack"
-        },
-        "weather": {
-          "33-10": "rainy",
-          "33-8": "sunny",
-          "33-9": "windy"
-        }
+      "img": "https://i1.adis.ws/i/rb/M1223K510THP-420-A/Fit-2---Throop.jpg?$plp$",
+      "imgDescription": "Image of Blue Fit 2 Jeans",
+      "location": {
+        "6-10": "both"
       },
-      "34": {
-        "activity": {
-          "34-14": "movie",
-          "34-15": "picnic",
-          "34-16": "hiking"
-        },
-        "age": {
-          "34-1": "teenager",
-          "34-2": "adult"
-        },
-        "brand": "Essentials",
-        "category": {
-          "34-17": "clothes"
-        },
-        "color": {
-          "34-3": "warm",
-          "34-4": "mellow"
-        },
-        "description": "Gray Cotton Shorts",
-        "event": {
-          "34-12": "casual",
-          "34-13": "sports"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221161M193018_1/essentials-gray-cotton-shorts.jpg",
-        "imgDescription": "Image of Gray Cotton Shorts",
-        "location": {
-          "34-11": "both"
-        },
-        "price": 45,
-        "sex": {
-          "34-6": "unisex"
-        },
-        "style": {
-          "34-10": "laidBack",
-          "34-5": "highStreet"
-        },
-        "weather": {
-          "34-7": "sunny",
-          "34-8": "windy",
-          "34-9": "rainy"
-        }
+      "price": 195,
+      "sex": {
+        "6-6": "unisex"
       },
-      "35": {
-        "activity": {
-          "35-10": "picnic"
-        },
-        "age": {
-          "35-1": "adult"
-        },
-        "brand": "Citizens of Humanity",
-        "category": {
-          "35-11": "clothes"
-        },
-        "color": {
-          "35-2": "cold"
-        },
-        "description": "Blue Denim Overalls",
-        "event": {
-          "35-9": "casual"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221030F070001_1/citizens-of-humanity-blue-denim-overalls.jpg",
-        "imgDescription": "Image of Blue Denim Overalls",
-        "location": {
-          "35-8": "outdoor"
-        },
-        "price": 296,
-        "sex": {
-          "35-4": "women"
-        },
-        "style": {
-          "35-3": "highStreet"
-        },
-        "weather": {
-          "35-5": "sunny",
-          "35-6": "windy",
-          "35-7": "rainy"
-        }
+      "style": {
+        "6-4": "laidBack",
+        "6-5": "highStreet"
       },
-      "36": {
-        "activity": {
-          "36-12": "picnic"
-        },
-        "age": {
-          "36-1": "teenager",
-          "36-2": "adult"
-        },
-        "brand": "Agolde",
-        "category": {
-          "36-13": "bottom"
-        },
-        "color": {
-          "36-3": "cold"
-        },
-        "description": "Black Parker Shorts",
-        "event": {
-          "36-10": "date",
-          "36-11": "casual"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222214F088011_1/agolde-black-parker-shorts.jpg",
-        "imgDescription": "Image of Black Parker Shorts",
-        "location": {
-          "36-9": "both"
-        },
-        "price": 140,
-        "sex": {
-          "36-6": "women"
-        },
-        "style": {
-          "36-4": "sexy",
-          "36-5": "highStreet"
-        },
-        "weather": {
-          "36-7": "sunny",
-          "36-8": "windy"
-        }
-      },
-      "37": {
-        "activity": {
-          "37-9": "work"
-        },
-        "age": {
-          "37-1": "adult"
-        },
-        "brand": "Bondi Born",
-        "category": {
-          "37-10": "bottom"
-        },
-        "color": {
-          "37-2": "cold"
-        },
-        "description": "Black Voyager Lounge Pants",
-        "event": {
-          "37-11": "casual",
-          "37-8": "date"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222804F086000_1/bondi-born-black-voyager-lounge-pants.jpg",
-        "imgDescription": "Image of Black Voyager Lounge Pants",
-        "location": {
-          "37-7": "both"
-        },
-        "price": 40,
-        "sex": {
-          "37-4": "unisex"
-        },
-        "style": {
-          "37-3": "highStreet"
-        },
-        "weather": {
-          "37-5": "sunny",
-          "37-6": "windy"
-        }
+      "weather": {
+        "6-7": "sunny",
+        "6-8": "windy",
+        "6-9": "rainy"
       }
     },
-    "top": {
-      "5": {
-        "activity": {
-          "5-13": "movie",
-          "5-14": "picnic"
-        },
-        "age": {
-          "5-1": "teenager",
-          "5-2": "adult"
-        },
-        "brand": "Essentials",
-        "category": {
-          "5-15": "top"
-        },
-        "color": {
-          "5-3": "cold"
-        },
-        "description": "Black Relaxed Crewneck Sweatshirt",
-        "event": {
-          "5-11": "casual",
-          "5-12": "sports"
-        },
-        "img": "https://img.ssensemedia.com/images/221161M204008_1/essentials-black-relaxed-crewneck-sweatshirt.jpg",
-        "imgDescription": "Image of Black Relaxed Crewneck Sweatshirt",
-        "location": {
-          "5-10": "both"
-        },
-        "price": 80,
-        "sex": {
-          "5-5": "unisex"
-        },
-        "style": {
-          "5-4": "highStreet",
-          "5-5": "laidBack"
-        },
-        "weather": {
-          "5-6": "sunny",
-          "5-7": "windy",
-          "5-9": "rainy"
-        }
+    "9": {
+      "activity": {
+        "9-10": "work",
+        "9-9": "picnic"
       },
-      "11": {
-        "activity": {
-          "11-10": "picnic"
-        },
-        "age": {
-          "11-1": "adult"
-        },
-        "brand": "Anna October",
-        "category": {
-          "top": ""
-        },
-        "color": {
-          "11-2": "light"
-        },
-        "description": "White Arta Tank Top",
-        "event": {
-          "11-8": "casual",
-          "11-9": "date"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221200F111009_1/anna-october-white-arta-tank-top.jpg",
-        "imgDescription": "Image of White Arta Tank Top",
-        "location": {
-          "11-7": "both"
-        },
-        "price": 405,
-        "sex": {
-          "11-5": "women"
-        },
-        "style": {
-          "11-3": "sexy",
-          "11-4": "highStreet"
-        },
-        "weather": {
-          "11-6": "sunny"
-        }
+      "age": {
+        "9-1": "adult"
       },
-      "38": {
-        "activity": {
-          "38-11": "work"
-        },
-        "age": {
-          "38-1": "teenager",
-          "38-2": "adult"
-        },
-        "brand": "Thom Browne",
-        "category": {
-          "38-12": "top"
-        },
-        "color": {
-          "38-3": "light"
-        },
-        "description": "White Cotton Shirt",
-        "event": {
-          "38-10": "business"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,g_center,f_auto,q_auto:best/222381M192004_1/thom-browne-white-cotton-shirt.jpg",
-        "imgDescription": "Image of White Cotton Shirt",
-        "location": {
-          "38-9": "both"
-        },
-        "price": 46,
-        "sex": {
-          "38-5": "unisex"
-        },
-        "style": {
-          "38-4": "highStreet"
-        },
-        "weather": {
-          "38-6": "sunny",
-          "38-7": "windy",
-          "38-8": "rainy"
-        }
+      "brand": "MM6 Maison Margiela",
+      "category": {
+        "9-11": "cloth"
       },
-      "39": {
-        "activity": {
-          "39-11": "picnic"
-        },
-        "age": {
-          "39-1": "teenager",
-          "39-2": "adult"
-        },
-        "brand": "Rag & Bone",
-        "category": {
-          "39-12": "top"
-        },
-        "color": {
-          "39-3": "warm",
-          "39-4": "mellow"
-        },
-        "description": "White Cotton Henley",
-        "event": {
-          "39-10": "casual"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222055M211002_1/rag-and-bone-white-cotton-henley.jpg",
-        "imgDescription": "Image of White Cotton Henley",
-        "location": {
-          "39-9": "both"
-        },
-        "price": 145,
-        "sex": {
-          "39-6": "unisex"
-        },
-        "style": {
-          "39-5": "laidBack"
-        },
-        "weather": {
-          "39-7": "sunny",
-          "39-8": "windy"
-        }
+      "color": {
+        "9-2": "light"
       },
-      "40": {
-        "activity": {
-          "40-12": "picnic",
-          "40-13": "hiking"
-        },
-        "age": {
-          "40-1": "adult",
-          "40-2": "teenager"
-        },
-        "brand": "Norse Projects",
-        "category": {
-          "40-14": "top"
-        },
-        "color": {
-          "40-3": "light",
-          "40-4": "mellow"
-        },
-        "description": "Off-White Leif Polo",
-        "event": {
-          "40-11": "casual"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222116M212008_1/norse-projects-off-white-leif-polo.jpg",
-        "imgDescription": "Image of Off-White Leif Polo",
-        "location": {
-          "40-10": "both"
-        },
-        "price": 200,
-        "sex": {
-          "40-7": "unisex"
-        },
-        "style": {
-          "40-5": "higStreet",
-          "40-6": "laidBack"
-        },
-        "weather": {
-          "40-8": "sunny",
-          "40-9": "windy"
-        }
+      "description": "Off-White Denim Midi Skirt",
+      "event": {
+        "9-8": "date"
       },
-      "41": {
-        "activity": {
-          "41-12": "movie",
-          "41-13": "picnic",
-          "41-14": "work",
-          "41-15": "hiking"
-        },
-        "age": {
-          "41-1": "teenager",
-          "41-2": "adult"
-        },
-        "brand": "Axel Arigato",
-        "category": {
-          "41-16": "top"
-        },
-        "color": {
-          "41-3": "cold"
-        },
-        "description": "Black London T-Shirt",
-        "event": {
-          "41-10": "casual",
-          "41-11": "sports"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/212307M213006_1/axel-arigato-black-london-t-shirt.jpg",
-        "imgDescription": "Image of Black London T-Shirt",
-        "location": {
-          "41-9": "both"
-        },
-        "price": 40,
-        "sex": {
-          "41-6": "unisex"
-        },
-        "style": {
-          "41-4": "highStreet",
-          "41-5": "laidBack"
-        },
-        "weather": {
-          "41-7": "sunny",
-          "41-8": "windy"
-        }
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221188F092017_1/mm6-maison-margiela-off-white-denim-midi-skirt.jpg",
+      "imgDescription": "Image of Off-White Denim Midi Skirt",
+      "location": {
+        "9-7": "both"
       },
-      "42": {
-        "activity": {
-          "42-11": "movie",
-          "42-12": "work"
-        },
-        "age": {
-          "42-1": "adult"
-        },
-        "brand": "Moncler",
-        "category": {
-          "42-13": "top"
-        },
-        "color": {
-          "42-2": "mellow"
-        },
-        "description": "Gray Wool Sweater",
-        "event": {
-          "42-10": "casual",
-          "42-8": "date",
-          "42-9": "business"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222111M206001_1/moncler-gray-wool-sweater.jpg",
-        "imgDescription": "Image of Gray Wool Sweater",
-        "location": {
-          "42-7": "both"
-        },
-        "price": 89,
-        "sex": {
-          "42-4": "unisex"
-        },
-        "style": {
-          "42-3": "laidBack"
-        },
-        "weather": {
-          "42-5": "windy",
-          "42-6": "rainy"
-        }
+      "price": 55,
+      "sex": "women",
+      "style": {
+        "9-3": "minimalistic",
+        "9-4": "highStreet"
       },
-      "43": {
-        "activity": {
-          "43-13": "picnic",
-          "43-14": "hiking"
-        },
-        "age": {
-          "43-1": "teenager",
-          "43-2": "adult"
-        },
-        "brand": "Acne Studios",
-        "category": {
-          "43-15": "top"
-        },
-        "color": {
-          "43-3": "glitering",
-          "43-4": "light"
-        },
-        "description": "Pink Cotton Hoodie",
-        "event": {
-          "43-11": "casual",
-          "43-12": "sports"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222129M202000_1/acne-studios-pink-cotton-hoodie.jpg",
-        "imgDescription": "Image of Pink Cotton Hoodie",
-        "location": {
-          "43-10": "both"
-        },
-        "price": 78,
-        "sex": {
-          "43-7": "unisex"
-        },
-        "style": {
-          "43-5": "laidBack",
-          "43-6": "highStreet"
-        },
-        "weather": {
-          "43-8": "windy",
-          "43-9": "rainy"
-        }
+      "weather": {
+        "9-6": "sunny"
+      }
+    },
+    "12": {
+      "activity": {
+        "12-10": "movie",
+        "12-11": "picnic"
       },
-      "44": {
-        "activity": {
-          "44-10": "work"
-        },
-        "age": {
-          "44-1": "adult"
-        },
-        "brand": "Maiden Name",
-        "category": {
-          "44-11": "top"
-        },
-        "color": {
-          "44-2": "cold"
-        },
-        "description": "SSENSE Exclusive Black Isabel Blouse",
-        "event": {
-          "44-8": "date",
-          "44-9": "business"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221938F107001_1/maiden-name-ssense-exclusive-black-isabel-blouse.jpg",
-        "imgDescription": "Image of SSENSE Exclusive Black Isabel Blouse",
-        "location": {
-          "44-7": "both"
-        },
-        "price": 47,
-        "sex": {
-          "44-4": "women"
-        },
-        "style": {
-          "44-3": "highStreet"
-        },
-        "weather": {
-          "44-5": "sunny",
-          "44-6": "windy"
-        }
+      "age": {
+        "12-1": "adult"
       },
-      "45": {
-        "activity": {
-          "45-11": "picnic",
-          "45-12": "hiking"
-        },
-        "age": {
-          "45-1": "adult",
-          "45-2": "teenager"
-        },
-        "brand": "Anne Isabella",
-        "category": {
-          "45-13": "top"
-        },
-        "color": {
-          "45-3": "light"
-        },
-        "description": "Off-White Cotton Polo",
-        "event": {
-          "45-10": "casual",
-          "45-9": "date"
-        },
-        "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221986F108001_1/anne-isabella-off-white-cotton-polo.jpg",
-        "imgDescription": "Image of Off-White Cotton Polo",
-        "location": {
-          "45-8": "both"
-        },
-        "price": 32,
-        "sex": {
-          "45-5": "women"
-        },
-        "style": {
-          "45-4": "highStreet"
-        },
-        "weather": {
-          "45-6": "sunny",
-          "45-7": "windy"
-        }
+      "brand": "Vejas Maksimas",
+      "category": {
+        "12-12": "cloth"
+      },
+      "color": {
+        "12-2": "mellow"
+      },
+      "description": "Black Darted Denim Trousers",
+      "event": {
+        "12-9": "casual"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221849F069001_1/vejas-maksimas-black-darted-denim-trousers.jpg",
+      "imgDescription": "Image of Black Darted Denim Trousers",
+      "location": {
+        "12-8": "both"
+      },
+      "price": 50,
+      "sex": {
+        "12-4": "women"
+      },
+      "style": {
+        "12-3": "highStreet",
+        "12-7": "laidBack"
+      },
+      "weather": {
+        "12-5": "sunny",
+        "12-6": "windy"
+      }
+    },
+    "31": {
+      "activity": {
+        "32-12": "picnic"
+      },
+      "age": {
+        "31-1": "teenager",
+        "31-2": "adult"
+      },
+      "brand": "Levi's",
+      "category": {
+        "32-13": "cloth"
+      },
+      "color": {
+        "32-3": "warm",
+        "32-4": "mellow"
+      },
+      "description": "Blue 412 Slim Shorts",
+      "event": {
+        "32-11": "casual"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221099M193012_1/levis-blue-412-slim-shorts.jpg",
+      "imgDescription": "Image of Blue 412 Slim Shorts",
+      "location": {
+        "32-10": "both"
+      },
+      "price": 35,
+      "sex": {
+        "32-7": "unisex"
+      },
+      "style": {
+        "32-5": "laidBack",
+        "32-6": "highStreet"
+      },
+      "weather": {
+        "32-8": "sunny",
+        "32-9": "windy"
+      }
+    },
+    "32": {
+      "activity": {
+        "32-12": "movie",
+        "32-13": "work"
+      },
+      "age": {
+        "32-1": "adult"
+      },
+      "brand": "Han Kjobenhavn",
+      "category": {
+        "32-14": "cloth"
+      },
+      "color": {
+        "32-2": "cold"
+      },
+      "description": "Black Polyester Trousers",
+      "event": {
+        "32-10": "date",
+        "32-11": "business"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221827M191007_1/han-kjobenhavn-black-polyester-trousers.jpg",
+      "imgDescription": "Image of Black Polyester Trousers",
+      "location": {
+        "32-9": "both"
+      },
+      "price": 29,
+      "sex": {
+        "32-5": "unisex"
+      },
+      "style": {
+        "32-3": "minimalistic",
+        "32-4": "highStreet"
+      },
+      "weather": {
+        "32-6": "sunny",
+        "32-7": "windy",
+        "32-8": "rainy"
+      }
+    },
+    "33": {
+      "activity": {
+        "33-14": "movie",
+        "33-15": "picnic",
+        "33-16": "hiking"
+      },
+      "age": {
+        "33-1": "teenager",
+        "33-2": "adult"
+      },
+      "brand": "Essentials",
+      "category": {
+        "33-17": "cloth"
+      },
+      "color": {
+        "33-3": "warm",
+        "33-4": "mellow"
+      },
+      "description": "Off-White Thermal Waffle Logo Lounge Pants",
+      "event": {
+        "33-12": "casual",
+        "33-13": "sports"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/212161M190023_1/essentials-off-white-thermal-waffle-logo-lounge-pants.jpg",
+      "imgDescription": "Image of Off-White Thermal Waffle Logo Lounge Pants",
+      "location": {
+        "33-11": "both"
+      },
+      "price": 50,
+      "sex": {
+        "33-7": "unisex"
+      },
+      "style": {
+        "33-5": "highStreet",
+        "33-6": "laidBack"
+      },
+      "weather": {
+        "33-10": "rainy",
+        "33-8": "sunny",
+        "33-9": "windy"
+      }
+    },
+    "34": {
+      "activity": {
+        "34-14": "movie",
+        "34-15": "picnic",
+        "34-16": "hiking"
+      },
+      "age": {
+        "34-1": "teenager",
+        "34-2": "adult"
+      },
+      "brand": "Essentials",
+      "category": {
+        "34-17": "cloth"
+      },
+      "color": {
+        "34-3": "warm",
+        "34-4": "mellow"
+      },
+      "description": "Gray Cotton Shorts",
+      "event": {
+        "34-12": "casual",
+        "34-13": "sports"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221161M193018_1/essentials-gray-cotton-shorts.jpg",
+      "imgDescription": "Image of Gray Cotton Shorts",
+      "location": {
+        "34-11": "both"
+      },
+      "price": 45,
+      "sex": {
+        "34-6": "unisex"
+      },
+      "style": {
+        "34-10": "laidBack",
+        "34-5": "highStreet"
+      },
+      "weather": {
+        "34-7": "sunny",
+        "34-8": "windy",
+        "34-9": "rainy"
+      }
+    },
+    "35": {
+      "activity": {
+        "35-10": "picnic"
+      },
+      "age": {
+        "35-1": "adult"
+      },
+      "brand": "Citizens of Humanity",
+      "category": {
+        "35-11": "cloth"
+      },
+      "color": {
+        "35-2": "cold"
+      },
+      "description": "Blue Denim Overalls",
+      "event": {
+        "35-9": "casual"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221030F070001_1/citizens-of-humanity-blue-denim-overalls.jpg",
+      "imgDescription": "Image of Blue Denim Overalls",
+      "location": {
+        "35-8": "outdoor"
+      },
+      "price": 96,
+      "sex": {
+        "35-4": "women"
+      },
+      "style": {
+        "35-3": "highStreet"
+      },
+      "weather": {
+        "35-5": "sunny",
+        "35-6": "windy",
+        "35-7": "rainy"
+      }
+    },
+    "36": {
+      "activity": {
+        "36-12": "picnic"
+      },
+      "age": {
+        "36-1": "teenager",
+        "36-2": "adult"
+      },
+      "brand": "Agolde",
+      "category": {
+        "36-13": "cloth"
+      },
+      "color": {
+        "36-3": "cold"
+      },
+      "description": "Black Parker Shorts",
+      "event": {
+        "36-10": "date",
+        "36-11": "casual"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222214F088011_1/agolde-black-parker-shorts.jpg",
+      "imgDescription": "Image of Black Parker Shorts",
+      "location": {
+        "36-9": "both"
+      },
+      "price": 100,
+      "sex": {
+        "36-6": "women"
+      },
+      "style": {
+        "36-4": "sexy",
+        "36-5": "highStreet"
+      },
+      "weather": {
+        "36-7": "sunny",
+        "36-8": "windy"
+      }
+    },
+    "37": {
+      "activity": {
+        "37-9": "work"
+      },
+      "age": {
+        "37-1": "adult"
+      },
+      "brand": "Bondi Born",
+      "category": {
+        "37-10": "cloth"
+      },
+      "color": {
+        "37-2": "cold"
+      },
+      "description": "Black Voyager Lounge Pants",
+      "event": {
+        "37-11": "casual",
+        "37-8": "date"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222804F086000_1/bondi-born-black-voyager-lounge-pants.jpg",
+      "imgDescription": "Image of Black Voyager Lounge Pants",
+      "location": {
+        "37-7": "both"
+      },
+      "price": 40,
+      "sex": {
+        "37-4": "unisex"
+      },
+      "style": {
+        "37-3": "highStreet"
+      },
+      "weather": {
+        "37-5": "sunny",
+        "37-6": "windy"
       }
     }
   },
@@ -1930,6 +1562,390 @@
       "weather": {
         "50-8": "sunny",
         "50-9": "windy"
+      }
+    }
+  },
+  "top": {
+    "5": {
+      "activity": {
+        "5-1": "movie",
+        "5-2": "picnic"
+      },
+      "age": {
+        "5-3": "teenager",
+        "5-4": "adult"
+      },
+      "brand": "Essentials",
+      "category": {
+        "5-5": "cloth"
+      },
+      "color": {
+        "5-6": "cold"
+      },
+      "description": "Black Relaxed Crewneck Sweatshirt",
+      "event": {
+        "5-7": "casual",
+        "5-8": "sports"
+      },
+      "img": "https://img.ssensemedia.com/images/221161M204008_1/essentials-black-relaxed-crewneck-sweatshirt.jpg",
+      "imgDescription": "Image of Black Relaxed Crewneck Sweatshirt",
+      "location": {
+        "5-9": "both"
+      },
+      "price": 80,
+      "sex": {
+        "5-10": "unisex"
+      },
+      "style": {
+        "5-11": "highStreet",
+        "5-12": "laidBack"
+      },
+      "weather": {
+        "5-13": "sunny",
+        "5-14": "windy",
+        "5-15": "rainy"
+      }
+    },
+    "11": {
+      "activity": {
+        "11-10": "picnic"
+      },
+      "age": {
+        "11-1": "adult"
+      },
+      "brand": "Anna October",
+      "category": {
+        "11-2": "cloth"
+      },
+      "color": {
+        "11-3": "light"
+      },
+      "description": "White Arta Tank Top",
+      "event": {
+        "11-8": "casual",
+        "11-9": "date"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221200F111009_1/anna-october-white-arta-tank-top.jpg",
+      "imgDescription": "Image of White Arta Tank Top",
+      "location": {
+        "11-7": "both"
+      },
+      "price": 405,
+      "sex": {
+        "11-6": "women"
+      },
+      "style": {
+        "11-4": "sexy",
+        "11-5": "highStreet"
+      },
+      "weather": {
+        "11-11": "sexy"
+      }
+    },
+    "38": {
+      "activity": {
+        "38-11": "work"
+      },
+      "age": {
+        "38-1": "teenager",
+        "38-2": "adult"
+      },
+      "brand": "Thom Browne",
+      "category": {
+        "38-12": "cloth"
+      },
+      "color": {
+        "38-3": "light"
+      },
+      "description": "White Cotton Shirt",
+      "event": {
+        "38-10": "business"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,g_center,f_auto,q_auto:best/222381M192004_1/thom-browne-white-cotton-shirt.jpg",
+      "imgDescription": "Image of White Cotton Shirt",
+      "location": {
+        "38-9": "both"
+      },
+      "price": 46,
+      "sex": {
+        "38-5": "unisex"
+      },
+      "style": {
+        "38-4": "highStreet"
+      },
+      "weather": {
+        "38-6": "sunny",
+        "38-7": "windy",
+        "38-8": "rainy"
+      }
+    },
+    "39": {
+      "activity": {
+        "39-11": "picnic"
+      },
+      "age": {
+        "39-1": "teenager",
+        "39-2": "adult"
+      },
+      "brand": "Rag & Bone",
+      "category": {
+        "39-12": "cloth"
+      },
+      "color": {
+        "39-3": "warm",
+        "39-4": "mellow"
+      },
+      "description": "White Cotton Henley",
+      "event": {
+        "39-10": "casual"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222055M211002_1/rag-and-bone-white-cotton-henley.jpg",
+      "imgDescription": "Image of White Cotton Henley",
+      "location": {
+        "39-9": "both"
+      },
+      "price": 145,
+      "sex": {
+        "39-6": "unisex"
+      },
+      "style": {
+        "39-5": "laidBack"
+      },
+      "weather": {
+        "39-7": "sunny",
+        "39-8": "windy"
+      }
+    },
+    "40": {
+      "activity": {
+        "40-12": "picnic",
+        "40-13": "hiking"
+      },
+      "age": {
+        "40-1": "adult",
+        "40-2": "teenager"
+      },
+      "brand": "Norse Projects",
+      "category": {
+        "40-14": "cloth"
+      },
+      "color": {
+        "40-3": "light",
+        "40-4": "mellow"
+      },
+      "description": "Off-White Leif Polo",
+      "event": {
+        "40-11": "casual"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222116M212008_1/norse-projects-off-white-leif-polo.jpg",
+      "imgDescription": "Image of Off-White Leif Polo",
+      "location": {
+        "40-10": "both"
+      },
+      "price": 200,
+      "sex": {
+        "40-7": "unisex"
+      },
+      "style": {
+        "40-5": "highStreet",
+        "40-6": "laidBack"
+      },
+      "weather": {
+        "40-8": "sunny",
+        "40-9": "windy"
+      }
+    },
+    "41": {
+      "activity": {
+        "41-12": "movie",
+        "41-13": "picnic",
+        "41-14": "work",
+        "41-15": "hiking"
+      },
+      "age": {
+        "41-1": "teenager",
+        "41-2": "adult"
+      },
+      "brand": "Axel Arigato",
+      "category": {
+        "41-16": "cloth"
+      },
+      "color": {
+        "41-3": "cold"
+      },
+      "description": "Black London T-Shirt",
+      "event": {
+        "41-10": "casual",
+        "41-11": "sports"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/212307M213006_1/axel-arigato-black-london-t-shirt.jpg",
+      "imgdescription": "Image of Black London T-Shirt",
+      "location": {
+        "41-9": "both"
+      },
+      "price": 40,
+      "sex": {
+        "41-6": "unisex"
+      },
+      "style": {
+        "41-4": "highStreet",
+        "41-5": "laidBack"
+      },
+      "weather": {
+        "41-7": "sunny",
+        "41-8": "windy"
+      }
+    },
+    "42": {
+      "activity": {
+        "42-11": "movie",
+        "42-12": "work"
+      },
+      "age": {
+        "42-1": "adult"
+      },
+      "brand": "Moncler",
+      "category": {
+        "42-13": "cloth"
+      },
+      "color": {
+        "42-2": "mellow"
+      },
+      "description": "Gray Wool Sweater",
+      "event": {
+        "42-10": "casual",
+        "42-8": "business",
+        "42-9": "date"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222111M206001_1/moncler-gray-wool-sweater.jpg",
+      "imgDescription": "Image of Gray Wool Sweater",
+      "location": {
+        "42-7": "both"
+      },
+      "price": 89,
+      "sex": {
+        "42-4": "unisex"
+      },
+      "style": {
+        "42-3": "laidBack"
+      },
+      "weather": {
+        "42-5": "windy",
+        "42-6": "rainy"
+      }
+    },
+    "43": {
+      "activity": {
+        "43-13": "picnic",
+        "43-14": "hiking"
+      },
+      "age": {
+        "43-1": "teenager",
+        "43-2": "adult"
+      },
+      "brand": "Acne Studios",
+      "category": {
+        "43-15": "cloth"
+      },
+      "color": {
+        "43-3": "glitering",
+        "43-4": "light"
+      },
+      "description": "Pink Cotton Hoodie",
+      "event": {
+        "43-11": "casual",
+        "43-12": "sports"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/222129M202000_1/acne-studios-pink-cotton-hoodie.jpg",
+      "imgDescription": "Image of Pink Cotton Hoodie",
+      "location": {
+        "43-10": "both"
+      },
+      "price": 78,
+      "sex": {
+        "43-7": "unisex"
+      },
+      "style": {
+        "43-5": "laidBack",
+        "43-6": "highStreet"
+      },
+      "weather": {
+        "43-8": "windy",
+        "43-9": "rainy"
+      }
+    },
+    "44": {
+      "activity": {
+        "44-10": "work"
+      },
+      "age": {
+        "44-1": "adult"
+      },
+      "brand": "Maiden Name",
+      "category": {
+        "44-11": "cloth"
+      },
+      "color": {
+        "44-2": "cold"
+      },
+      "description": "SSENSE Exclusive Black Isabel Blouse",
+      "event": {
+        "44-8": "date",
+        "44-9": "business"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221938F107001_1/maiden-name-ssense-exclusive-black-isabel-blouse.jpg",
+      "imgDescription": "Image of SSENSE Exclusive Black Isabel Blouse",
+      "location": {
+        "44-7": "both"
+      },
+      "price": 47,
+      "sex": {
+        "44-4": "women"
+      },
+      "style": {
+        "44-3": "highStreet"
+      },
+      "weather": {
+        "44-5": "sunny",
+        "44-6": "windy"
+      }
+    },
+    "45": {
+      "activity": {
+        "45-11": "picnic",
+        "45-12": "hiking"
+      },
+      "age": {
+        "45-1": "adult",
+        "45-2": "teenager"
+      },
+      "brand": "Anne Isabella",
+      "category": {
+        "45-13": "top"
+      },
+      "color": {
+        "45-3": "light"
+      },
+      "description": "Off-White Cotton Polo",
+      "event": {
+        "45-10": "casual",
+        "45-9": "date"
+      },
+      "img": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221986F108001_1/anne-isabella-off-white-cotton-polo.jpg",
+      "imgDescription": "Image of Off-White Cotton Polo",
+      "location": {
+        "45-8": "both"
+      },
+      "price": 32,
+      "sex": {
+        "45-5": "women"
+      },
+      "style": {
+        "45-4": "highStreet"
+      },
+      "weather": {
+        "45-6": "sunny",
+        "45-7": "windy"
       }
     }
   }

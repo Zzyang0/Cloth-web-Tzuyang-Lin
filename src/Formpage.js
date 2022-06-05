@@ -1,14 +1,14 @@
 import { faAppleWhole } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import React , {useState} from 'react';
 import { Nav, Footer } from "./Footer&Header";
-
+import database from './data/database.json';
 
 // # since We divide this page into two parts, thus, there will have two datasets, in order to render the web using one dataset, 
 // we include one of them as const at the page as a constant to refer
 
 
 const PickChoice = [
-    {"title":"How IS THE WEATHER TODAY?", "guide":"Select an option", "op1":"Sunny", "op2":"Windy", "op3":"Rainy", "op4":"Humid", "num":"q1"},  
+    {"title":"How IS THE WEATHER TODAY?", "guide":"Select an option", "op1":"Sunny", "op2":"Windy", "op3":"Rainy", "op4":"Snowy", "num":"q1"},  
     {"title":"WHERE YOU ARE GOING TO BE?", "guide":"Select an option", "op1":"Indoor", "op2":"Outdoor", "op3":"Both", "op4":"None", "art":"in-out", "num":"q2"},
     {"title":"WHAT OCCASION YOU WILL BE?", "guide":"Select an option", "op1":"Date", "op2":"Causal", "op3":"Sports", "op4":"Business", "art":"occasion", "num":"q3"},
     {"title":"WHAT ARE YOU DOING TODAY?", "guide":"Select an option", "op1":"Movie", "op2":"Picnic", "op3":"Work", "op4":"Hiking", "art":"activity", "num":"q4"}
@@ -16,14 +16,36 @@ const PickChoice = [
 
 
 // #props in this case is a single oject
-function Options(props) {
+function Options(props, data) {
     let need = props.input;
     
+      const [value, setValue] = useState(need.guide);
+      let backUp = [];
+      let result = [];
+      const handleChange = (e) => {
+        setValue(e.target.value);
+        backUp = [...backUp, e.target.value];
+        console.log(backUp); // it will update each time as long as user select the option;
+        
+        // for (let i = 0; i < data.length; i++){ // into a single obj
+        //    for (let j = 0; j < Object.values(data[i]).length; j++) {
+        //        for (let k = 0; k < Object.values(data[i][j]).length; k++){
+        //            if (Object.values(data[i][j]).includes(e.target.value)) {
+        //                   result = [...result, data[i][j]];
+        //            } 
+        //        }
+        //    }
+        // }
+        // there are 5 condition to be consider, weather, location, event, category, price
+        // goes inside each category, only keep the item satisfy the condition, four times,
+        // need first look for the values for each, and to see whether they
+      };
+
     return (
         <div className='choice' id='choice'>
             <label htmlFor={need.num}>{need.title}</label>
-                <select name={need.art} id={need.art}>
-                    <option value="none" disabled hidden>{need.guide}</option>
+                <select name={need.art} id={need.art} value={value} onChange={handleChange}>
+                    <option value="none">{need.guide}</option>
                     <option value={need.op1}>{need.op1}</option>
                     <option value={need.op2}>{need.op2}</option>
                     <option value={need.op3}>{need.op3}</option>
@@ -38,7 +60,7 @@ function Options(props) {
 function FullChoice(props) {
     let data = PickChoice;
     let result = data?.map((each) => {
-        return <Options input={each} key={each.title} />
+        return <Options input={each} key={each.title} /> // run four times;
     })
     return(
         <div className='generator'>

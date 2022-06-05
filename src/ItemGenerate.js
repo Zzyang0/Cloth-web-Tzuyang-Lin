@@ -39,7 +39,7 @@ function ItemGenerateForm(props) {
         setWant(wantCopy);
     }
     
-    
+
 
     /*let currData = filterCategory(base3);
     const forceRender = (item) => {

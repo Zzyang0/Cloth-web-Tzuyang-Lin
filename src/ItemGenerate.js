@@ -38,11 +38,6 @@ function FullProduct(props) {
 
 function ShoeOnly(props) {
     let base3 = props.products;
-    console.log([datajson]);
-    // const keys = Object.keys(datajson);
-    // console.log(keys)
-    // const values = Object.values(datajson);
-    // console.log(values);
     const [want, setWant] = useState(['Shoes']);
     const [needData, setNeedData] = useState(base3);
     let wantCopy = [];

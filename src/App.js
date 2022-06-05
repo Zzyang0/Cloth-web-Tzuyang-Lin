@@ -59,7 +59,7 @@ function App(props) {
                     </Route>
                     <Route path='/' element={<Homepage />} />
                     <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-                    <Route path='itemgenerator' element={<Display item={everything} jsonItem={datajson}/>} />
+                    <Route path='itemgenerator' element={<Display item={everything} />} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />
@@ -139,7 +139,7 @@ function IdExtract(categoryValue) {
             for (let j = 0; j < Object.keys(categoryValue).length, j++;) {
                 let clothesCategory = Object.keys(categoryValue)[j];
                 let clothesCategoryValue = categoryValue[clothesCategory];
-                clothesCategoryValue = idExtract(clothesCategoryValue);
+                clothesCategoryValue = IdExtract(clothesCategoryValue);
             }
         }
         categoryValue = IdExtract(categoryValue);

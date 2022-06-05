@@ -1,25 +1,28 @@
 import React, {useEffect, useState} from 'react';
-import ItemGenerateForm from './ItemGenerateForm';
-import ItemDisplay from './ItemDisplay';
+import ItemDisplay from './ItemDisplay.js';
 
-import datajson from "./data/database.json";
+function FilterCategory (filteredData, want) { // filter database with user input
+    if (want.length === 0) {
+        return filteredData;
+    } else {
+        let finalItem = [];
+        let filterItem = filteredData;
+        for (let i = 0; i < want.length; i++) {
+            filterItem = filteredData.filter(
+                (item) => item.category === want[i]
+            );
+            for (let j = 0; j < filterItem.length; j++) {
+                finalItem.push(filterItem[j]);
+            }
+        }
+        return finalItem;
+    }
+}
 
-let currData = [
-    {"img":"img/550.png", "brand":"New Balance", "des":"New Balance 550 White Grey", "price":191, "imgd":"image of the sneakers", "category": "Shoes"},
-    {"img":"img/boots1.png", "brand":"Alexander McQueen", "des":"Alexander McQueen Tread Slick Boot", "price":500, "imgd":"image of the boots", "category": "Shoes"},
-    {"img":"img/crocs.png", "brand":"Crocs", "des":"Crocs Classic Clog Pizzaslime", "price":125, "imgd":"image of the crocs", "category": "Shoes"},
-    {"img":"img/shoes.png", "brand":"AXEL ARIGATO", "des":"White & Grey Clean 90 Sneakers", "price":225, "imgd":"image of the shoes", "category": "Shoes"}
-];
-
-function ShoeOnly(props) {
-    let base3 = props.products;
-    console.log([datajson]);
-    // const keys = Object.keys(datajson);
-    // console.log(keys)
-    // const values = Object.values(datajson);
-    // console.log(values);
+function ItemGenerateForm(props) {
+    let data = props.products;
     const [want, setWant] = useState(['Shoes']);
-    const [needData, setNeedData] = useState(base3);
+    const [needData, setNeedData] = useState(data);
     let wantCopy = [];
     const handleInputChange = (event) => {
         const {value, checked} = event.target;
@@ -35,26 +38,9 @@ function ShoeOnly(props) {
         }
         setWant(wantCopy);
     }
-    const filterCategory = (filteredData) => {
-        if (want.length === 0) {
-            return filteredData;
-        } else {
-            let finalItem = [];
-            let filterItem = filteredData;
-            for (let i = 0; i < want.length; i++) {
-                filterItem = filteredData.filter(
-                    (item) => item.category === want[i]
-                );
-                for (let j = 0; j < filterItem.length; j++) {
-                    finalItem.push(filterItem[j]);
-                }
-            }
-            return finalItem;
-        }
-    }
-
-    currData = filterCategory(needData);
     
+    
+
     /*let currData = filterCategory(base3);
     const forceRender = (item) => {
         setWant(wantCopy);
@@ -64,7 +50,6 @@ function ShoeOnly(props) {
         return <FullProduct Data3={data}/>
     }*/
     //forceRender(currData);
-    console.log(currData);
     
     return (
         <div>
@@ -123,13 +108,12 @@ export function ItemGenerate(props) {
     const data = props.item;
 
 
-
     return (
         <main>
             <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
                 <ItemGenerateForm changeFilter={data}/>
-                <ItemDisplay Data3={currData} />
+                <ItemDisplay item={data}/>
             </div>
         </main>
     )

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { About } from "./About";
 import { Nav, Footer } from "./Footer&Header";
 import { Homepage } from "./Homepage";
-import { Display } from "./ItemGenerate";
+import {ItemGenerate } from "./ItemGenerate";
 import { Startquiz, Quiz } from "./Quiz"
 import { Mycloset } from "./MyCloset"
 import products from "./data/item.json";
@@ -13,6 +13,7 @@ import everything from "./data/clothes.json";
 import blog from "./data/blog.json";
 import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import database from "./data/database.json";
 
 
 
@@ -20,6 +21,7 @@ function App(props) {
     const nullUser = { userId: null, userName: null }
     const [currentUser, setCurrentUser] = useState(nullUser);
     const navigateTo = useNavigate();
+    const dataArray = Transform(database);
     
 
     useEffect(() => {
@@ -59,7 +61,7 @@ function App(props) {
                     </Route>
                     <Route path='/' element={<Homepage />} />
                     <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-                    <Route path='itemgenerator' element={<Display item={everything} jsonItem={datajson}/>} />
+                    <Route path='itemgenerator' element={<ItemGenerate item={dataArray}/>} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />
@@ -129,23 +131,17 @@ function IdExtract(categoryValue) {
  function Transform (database) {
     let dataCopy = database;
     let dataArray = [];
-    // console.log(database);
     let key = Object.keys(dataCopy);
-    let keyLength = key.length; // it should be 4
+    let keyLength = key.length; // it should be 5
     for (let i = 0; i < keyLength; i++) {
         let category = key[i]; //read each category at one time
         let categoryValue = dataCopy[category]; //reads in the value of correspond key
-        if (category === 'clothes') { 
-            for (let j = 0; j < Object.keys(categoryValue).length, j++;) {
-                let clothesCategory = Object.keys(categoryValue)[j];
-                let clothesCategoryValue = categoryValue[clothesCategory];
-                clothesCategoryValue = idExtract(clothesCategoryValue);
-            }
-        }
         categoryValue = IdExtract(categoryValue);
         let singleCategory = {[category]: categoryValue};
         dataArray.push(singleCategory);
+        
     }
+    console.log(dataArray);
     return dataArray;
 }
 

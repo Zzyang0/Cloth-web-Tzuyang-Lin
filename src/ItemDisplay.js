@@ -1,21 +1,56 @@
 import React from 'react';
 
-export default function ItemList (item) {
-    const elemArray = item.map((anItem) => {
-        return (
-            <div className="cloth">
-                <img src={anItem.img} alt={anItem.imgd} />
-                <h1>{anItem.brand}</h1>
-                <h2>{anItem.description}</h2>
-                <p>{"$" + anItem.price}</p >
-                <button className="save-to-closet" type="button"> SAVE TO CLOSET </button>
-            </div>
-        )
-    })
-
+function ItemShow(props) {
+    let need = props.intake;
+    let infoArray = need[Object.keys(need)[0]];
+    let imgLink;
+    let imgDes;
+    let brand;
+    let des;
+    let price;
+    infoArray.forEach(function(info) {
+        if (Object.keys(info).includes('brand')) {
+            brand = info['brand'][0];
+        } else if (Object.keys(info).includes('description')) {
+            des = info['description'][0];
+        } else if (Object.keys(info).includes('img')) {
+            imgLink = info['img'][0];
+        } else if (Object.keys(info).includes('imgDescription')) {
+            imgDes = info['imgDescription'][0];
+        } else if (Object.keys(info).includes('price')) {
+            price = info['price'][0];
+        }
+    });
     return (
-        <div className='display-item'>
-            {elemArray}
+        <div className="cloth">
+            < img src={imgLink} alt={imgDes} />
+            <h1>{brand}</h1>
+            <h2>{des}</h2>
+            <p>{"$" + price}</p >
+            <button className="save-to-closet" type="button"> SAVE TO CLOSET </button>
         </div>
     )
+}
+
+export default function ItemDisplay (item) {
+    const database = item.item;
+    let totalArray = [];
+    let elemArray;
+    let itemArray;
+    for (let i = 0; i < database.length; i++) { // should be 4 for 4 categories
+        let categoryObject = database[i];
+        let category = Object.keys(categoryObject);
+        itemArray = categoryObject[category[0]];
+        itemArray.forEach(function(item) {
+            totalArray.push(item);
+        });
+    }
+    elemArray = totalArray?.map((anItem) => {
+        return <ItemShow intake={anItem}/>
+    });
+    return (
+        <div className='generated-cloth'>
+            {elemArray}
+        </div>
+    );
 }

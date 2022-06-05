@@ -42,7 +42,12 @@ export function Nav(props) {
           <li><Link to='itemgenerator' className='navl' onClick={navlRemove}>Item Generator</Link></li>
           <li><Link to='/quiz' className='navl' onClick={navlRemove}>Style Quiz</Link></li>
           <li><Link to='/about' className='navl' onClick={navlRemove}>About Us</Link></li>
-          <li><a href="#" className='navl'><FontAwesomeIcon icon={faUser} />Login</a></li>
+          {!currentUser &&
+            <li><Link to='/signin'><FontAwesomeIcon icon={faUser} />Login</Link></li>
+          }
+          {currentUser &&
+            <li><Link to='/signin' onClick={handleSignOut}>Sign Out</Link></li>
+          }
         </ul>
       <div className="hamburger" onClick={hamburgerToggle}>
         <span className="bar"></span>

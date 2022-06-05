@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ItemGenerateForm from './ItemGenerateForm';
 import ItemDisplay from './ItemDisplay';
 
+import datajson from "./data/database.json";
 
 let currData = [
     {"img":"img/550.png", "brand":"New Balance", "des":"New Balance 550 White Grey", "price":191, "imgd":"image of the sneakers", "category": "Shoes"},
@@ -12,6 +13,11 @@ let currData = [
 
 function ShoeOnly(props) {
     let base3 = props.products;
+    console.log([datajson]);
+    // const keys = Object.keys(datajson);
+    // console.log(keys)
+    // const values = Object.values(datajson);
+    // console.log(values);
     const [want, setWant] = useState(['Shoes']);
     const [needData, setNeedData] = useState(base3);
     let wantCopy = [];
@@ -108,6 +114,7 @@ function ShoeOnly(props) {
                 <br></br>
                 <p>The category/ies you chose are: {want} </p >
             </div>
+            
         </div>
     );
 }

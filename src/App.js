@@ -5,12 +5,9 @@ import { Homepage } from "./Homepage";
 import {ItemGenerate } from "./ItemGenerate";
 import { Startquiz, Quiz } from "./Quiz"
 import { Mycloset } from "./MyCloset"
-import products from "./data/item.json";
-import { Routes, Route, Navigate, Link, useNavigate, Outlet } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate, Outlet } from 'react-router-dom';
 import { Whole } from "./Formpage";
 import shoes from "./data/shoes.json";
-import everything from "./data/clothes.json";
-import blog from "./data/blog.json";
 import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";

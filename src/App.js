@@ -141,7 +141,6 @@ function IdExtract(categoryValue) {
         dataArray.push(singleCategory);
         
     }
-    console.log(dataArray);
     return dataArray;
 }
 

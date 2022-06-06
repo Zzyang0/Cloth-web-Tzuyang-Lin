@@ -45,6 +45,8 @@ export default function ItemDisplay (item) {
             totalArray.push(item);
         });
     }
+    console.log(totalArray);
+    console.log(totalArray.length);
     elemArray = totalArray?.map((anItem) => {
         return <ItemShow intake={anItem}/>
     });

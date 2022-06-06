@@ -20,39 +20,41 @@ function App(props) {
     const [displayData, setDisplayData] = useState(dataArray);
     const navigateTo = useNavigate();
     
-    function FilterCategory (filteredData, want) { // filter database with user input
+    function FilterCategory (want) { // filter database with user input
+        console.log(dataArray);
         if (want.length === 0) {
-            setDisplayData(filteredData);
-            return filteredData;
+            return dataArray;
         } else {
             let finalItem = [];
-            let filterItem = filteredData;
+            let filterItem = dataArray;
             for (let i = 0; i < want.length; i++) {
-                filterItem = filteredData.filter(
-                    (item) => item.category === want[i]
+                filterItem = dataArray.filter((categoryObject) =>
+                    Object.keys(categoryObject)[0] === want[i]
                 );
+                console.log(i);
+                console.log(want[i]);
+                console.log(filterItem);
                 for (let j = 0; j < filterItem.length; j++) {
                     finalItem.push(filterItem[j]);
                 }
+                console.log(finalItem);
+                
             }
-            setDisplayData(finalItem);
             return finalItem;
         }
     }
 
     function FilterBudget (data, budget) {
         if (budget === null) {
-            setDisplayData(data);
             return data;
         } else {
             let finalItem = [];
-            let filterItem = [...data];
+            let filterItem = data;
             for (let i = 0; i < filterItem.length; i ++) {
                 finalItem = filterItem.filter(
                     (item) => item.price <= budget
                 );
             }
-            setDisplayData(finalItem);
             return finalItem;
         }
     }

@@ -295,7 +295,7 @@ button:hover{
 .containerg .generator {
   background-color: #C3A6A0;
   border-radius: 20px;
-  height: 500px;
+  height: 580px;
 }
 
 .generator label {
@@ -329,6 +329,11 @@ button:hover{
   margin: 10px 30px 10px 10px;
   padding: 20px 20px;
   border-color: black;
+}
+
+.generator .ques, .generator .choice label {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .output .Generator {

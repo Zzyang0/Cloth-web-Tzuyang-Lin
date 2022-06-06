@@ -3,40 +3,30 @@ import ItemDisplay from './ItemDisplay.js';
 
 function ItemGenerateForm(props) {
     let data = props.products;
-    const [want, setWant] = useState(['Shoes']);
-    let wantCopy = [];
+    const [want, setWant] = useState([]);
+    let wantCopy = want;
     const handleInputChange = (event) => {
         const {value, checked} = event.target;
-        wantCopy = [...want];
+        wantCopy = want;
         if (checked) {
             wantCopy.push(value);
         } else {
             for (let i = 0; i < wantCopy.length; i ++) {
                 if (wantCopy[i] === value) {
-                    wantCopy[i] = '';
+                    //wantCopy = wantCopy.splice(i, 1);
+                    delete wantCopy[i];
                 }
             }
         }
-        setWant(wantCopy);
-        props.filterCategory(data, want);
-        //props.budgetFilter(data, budget);
+        let copy = wantCopy.filter(n => n);
+        setWant(copy);
+        let filterData = props.filterCategory(copy);
+        props.setDisplay(filterData);
     }
 
     const handleBudgetChange = (event) => {
-        const {value, checked} = event.target;
-        wantCopy = [...want];
-        if (checked) {
-            wantCopy.push(value);
-        } else {
-            for (let i = 0; i < wantCopy.length; i ++) {
-                if (wantCopy[i] === value) {
-                    wantCopy[i] = '';
-                }
-            }
-        }
-        setWant(wantCopy);
-        props.filterCategory(data, want);
-        //props.budgetFilter(data, budget);
+        const budget = event.target.value;
+        props.budgetFilter(data, budget);
     }
 
 
@@ -60,35 +50,41 @@ function ItemGenerateForm(props) {
         <div>
             <div className='generator'>
                 <form>
-                    <label htmlFor="q1">Which category of items do you want?</label>
+                    <label className="ques" htmlFor="q1">Which category of items do you want?</label>
                     <div className='category'>
                         <div className="input">
-                            <input type="checkbox" id="Shoes" name="category" value="Shoes" defaultChecked onChange={handleInputChange}/>
+                            <input type="checkbox" id="Shoes" name="category" value="shoes" onChange={handleInputChange}/>
                             <label htmlFor="vehicle1"> Shoes </label>
                         </div>
                         
                         {/* <br></br> */}
                         <div className='input'>
-                            <input type="checkbox" id="Clothes" name="category" value="Clothes" onChange={handleInputChange}/>
-                            <label htmlFor="vehicle2"> Clothes </label>
+                            <input type="checkbox" id="Clothes" name="category" value="top" onChange={handleInputChange}/>
+                            <label htmlFor="vehicle2"> Top </label>
+                        </div>
+
+                        <div className='input'>
+                            <input type="checkbox" id="Clothes" name="category" value="bottom" onChange={handleInputChange}/>
+                            <label htmlFor="vehicle2"> Bottom </label>
                         </div>
 
                         {/* <br></br> */}
                         <div className='input'>
-                            <input type="checkbox" id="Bags" name="category" value="Bags" onChange={handleInputChange}/>
+                            <input type="checkbox" id="Bags" name="category" value="bags" onChange={handleInputChange}/>
                             <label htmlFor="vehicle3"> Bags </label>
                         </div>
                         
                         {/* <br></br> */}
                         <div className='input'>
-                            <input type="checkbox" id="Accessories" name="category" value="Accessories" onChange={handleInputChange}/>
+                            <input type="checkbox" id="Accessories" name="category" value="accessories" onChange={handleInputChange}/>
                             <label htmlFor="vehicle3"> Accessories </label>
                         </div>
                         
                         {/* <br></br> */}
                     </div>
                     <p>
-                    <label htmlFor="q2">Optional: What other item you want to pair with?</label>
+            
+                    <label className='ques' htmlFor="q2">Optional: What other item you want to pair with?</label>
                     </p >
                     <div>
                         <select name="activity" id="activity">
@@ -113,8 +109,6 @@ function ItemGenerateForm(props) {
                         </button>
                     </div>
                 </form>
-                <br></br>
-                <p>The category/ies you chose are: {want} </p >
             </div>
             
         </div>
@@ -122,7 +116,6 @@ function ItemGenerateForm(props) {
 }
 
 export function ItemGenerate(props) {
-    console.log(props);
     const originData = props.item;
     const data = [];
     for (let i = 0; i < originData.length; i++) {
@@ -132,13 +125,14 @@ export function ItemGenerate(props) {
             data.push(categoryObject);
         }
     }
+    const [display, setDisplay] = useState(data);
     
     return (
         <main>
             <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
-                <ItemGenerateForm products={data} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter}/>
-                <ItemDisplay item={data}/>
+                <ItemGenerateForm products={display} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter} setDisplay={setDisplay}/>
+                <ItemDisplay item={display}/>
             </div>
         </main>
     )

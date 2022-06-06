@@ -256,45 +256,7 @@
         "17-9": "rainy"
       }
     },
-    "18": {
-      "activity": {
-        "18-10": "movie",
-        "18-11": "picnic",
-        "18-12": "hiking"
-      },
-      "age": {
-        "18-1": "adult",
-        "18-2": "teenager"
-      },
-      "brand": "RetroSuperFuture",
-      "category": {
-        "18-13": "accessory"
-      },
-      "color": {
-        "18-3": "cold"
-      },
-      "description": "SSENSE Exclusive Black & Tortoiseshell Caro Sunglasses",
-      "event": {
-        "18-9": "casual"
-      },
-      "img ": "https://img.ssensemedia.com/images/b_white,c_lpad,g_center,h_1412,w_940/c_scale,h_960/f_auto,dpr_2.0/221191M134004_1/retrosuperfuture-ssense-exclusive-black-and-tortoiseshell-caro-sunglasses.jpg",
-      "imgDescription": "Image of SSENSE Exclusive Black & Tortoiseshell Caro Sunglasses",
-      "location": {
-        "18-8": "both"
-      },
-      "price": 160,
-      "sex": {
-        "18-6": "unisex"
-      },
-      "style": {
-        "18-4": "highStreet",
-        "18-5": "laidBack"
-      },
-      "type": "Eyewear",
-      "weather": {
-        "18-7": "sunny"
-      }
-    },
+    
     "19": {
       "activity": {
         "19-9": "picnic"

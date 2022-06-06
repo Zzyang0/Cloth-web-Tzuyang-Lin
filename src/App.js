@@ -57,18 +57,6 @@ function App(props) {
         }
     }
 
-    // function FilterOUtfit (data) {
-    //     let result = [];
-    //     for (let i = 0; i < data.length; i++){ // into a single obj
-    //         for (let j = 0; j < Object.values(data[i]).length; j++) {
-    //             for (let k = 0; k < Object.values(data[i][j]).length; k++){
-    //                 if (Object.values(data[i][j]).includes(e.target.value)) {
-    //                        result = [...result, data[i][j]];
-    //                 } 
-    //             }
-    //         }
-    //      }
-    // }
 
     useEffect(() => {
 

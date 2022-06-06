@@ -4,13 +4,11 @@ import { Nav, Footer } from "./Footer&Header";
 import database from './data/database.json';
 import { Mycloset, Displaycloset, Additem } from './MyCloset';
 
-function FullChoice(props) {
-      const [want, setWant] = useState([]);
-      const [value, setValue] = useState(['Select an option']);
+function FullChoice(props) { 
       let backUp = [];
       const handleChange = (e) => {
-        setValue(e.target.value);
-        backUp = [...backUp, e.target.value];
+        // setValue(e.target.value);
+        backUp.push(e.target.value);
         console.log(backUp); // it will update each time as long as user select the option;
 
       };
@@ -19,7 +17,7 @@ function FullChoice(props) {
             <form>
                 <div className='choice' id='choice'>
                 <label htmlFor='q1'>How IS THE WEATHER TODAY?</label>
-                    <select name='weather' id='weather' value={value} onChange={handleChange}>
+                    <select name='weather' id='weather' onChange={handleChange}>
                         <option value="none">Select an option</option>
                         <option value='sunny'>Sunny</option>
                         <option value='windy'>Windy</option>
@@ -29,17 +27,17 @@ function FullChoice(props) {
                 </div>
                 <div className='choice' id='choice'>
                 <label htmlFor='q2'>WHERE YOU ARE GOING TO BE?</label>
-                    <select name='in-out' id='in-out' value={value} onChange={handleChange}>
+                    <select name='in-out' id='in-out' onChange={handleChange}>
                         <option value="none">Select an option</option>
-                        <option value='Indoor'>Indoor</option>
-                        <option value='Ourdoor'>Outdoor</option>
-                        <option value='Both'>Both</option>
-                        <option value='None'>None</option>
+                        <option value='indoor'>Indoor</option>
+                        <option value='outdoor'>Outdoor</option>
+                        <option value='both'>Both</option>
+                        <option value='none'>None</option>
                     </select>
                 </div>
                 <div className='choice' id='choice'>
                 <label htmlFor='q3'>WHAT OCCASION YOU WILL BE?</label>
-                    <select name='occasion' id='occasion' value={value} onChange={handleChange}>
+                    <select name='occasion' id='occasion' onChange={handleChange}>
                         <option value="none">Select an option</option>
                         <option value='date'>Date</option>
                         <option value='casual'>Casual</option>
@@ -48,8 +46,8 @@ function FullChoice(props) {
                     </select>
                 </div>
                 <div className='choice' id='choice'>
-                <label htmlFor='q4'>Select an option</label>
-                    <select name='activity' id='activity' value={value} onChange={handleChange}>
+                <label htmlFor='q4'>WHAT ARE YOU DOING TODAY?</label>
+                    <select name='activity' id='activity' onChange={handleChange}>
                         <option value="none">Select an option</option>
                         <option value='movie'>Movie</option>
                         <option value='picnic'>Picnic</option>

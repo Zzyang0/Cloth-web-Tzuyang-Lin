@@ -16,24 +16,21 @@ import database from "./data/database.json";
 function App(props) {
     const nullUser = { userId: null, userName: null }
     const dataArray = Transform(database);
+    const dataArrayWithoutSaveItem = RemoveSavedItem(dataArray);
     const [currentUser, setCurrentUser] = useState(nullUser);
     const [displayData, setDisplayData] = useState(dataArray);
     const navigateTo = useNavigate();
     
     function FilterCategory (want) { // filter database with user input
-        console.log(dataArray);
         if (want.length === 0) {
-            return dataArray;
+            return dataArrayWithoutSaveItem;
         } else {
             let finalItem = [];
-            let filterItem = dataArray;
+            let filterItem = dataArrayWithoutSaveItem;
             for (let i = 0; i < want.length; i++) {
-                filterItem = dataArray.filter((categoryObject) =>
+                filterItem = dataArrayWithoutSaveItem.filter((categoryObject) =>
                     Object.keys(categoryObject)[0] === want[i]
                 );
-                console.log(i);
-                console.log(want[i]);
-                console.log(filterItem);
                 for (let j = 0; j < filterItem.length; j++) {
                     finalItem.push(filterItem[j]);
                 }
@@ -101,7 +98,7 @@ function App(props) {
                     </Route>
                     <Route path='/' element={<Homepage />} />
                     <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
-                    <Route path='itemgenerator' element={<ItemGenerate item={displayData} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
+                    <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />
@@ -183,6 +180,18 @@ function IdExtract(categoryValue) {
         
     }
     return dataArray;
+}
+
+function RemoveSavedItem(database) {
+    const data = [];
+    for (let i = 0; i < database.length; i++) {
+        let categoryObject = database[i];
+        let category = Object.keys(categoryObject)[0];
+        if (category !== 'Saveditem') {
+            data.push(categoryObject);
+        }
+    }
+    return data;
 }
 
 export default App;

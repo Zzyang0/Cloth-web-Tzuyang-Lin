@@ -100,18 +100,9 @@ function ItemGenerateForm(props) {
 }
 
 export function ItemGenerate(props) {
-    console.log(props);
     const currentUser = props.currentUser;
     const originData = props.item;
-    const data = [];
-    for (let i = 0; i < originData.length; i++) {
-        let categoryObject = originData[i];
-        let category = Object.keys(categoryObject)[0];
-        if (category !== 'Saveditem') {
-            data.push(categoryObject);
-        }
-    }
-    const [display, setDisplay] = useState(data);
+    const [display, setDisplay] = useState(originData);
     
     return (
         <main>

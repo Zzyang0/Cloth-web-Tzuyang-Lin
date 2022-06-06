@@ -4,7 +4,6 @@ import { Nav, Footer } from "./Footer&Header";
 import database from './data/database.json';
 import { Mycloset, Displaycloset, Additem } from './MyCloset';
 
-
 function FullChoice(props) {
       const [want, setWant] = useState([]);
       const [value, setValue] = useState(['Select an option']);
@@ -76,7 +75,6 @@ function FullChoice(props) {
     )
 }
 
-
 // in this case, the props will be single item Object
 function ItemDisplay(props) {
     const currentUser = props.currentUser;
@@ -111,7 +109,6 @@ function ItemDisplay(props) {
     )
 }
 
-
 // # this function takes in an array of object with product information
 function FullItem(props) {
     const currentUser = props.currentUser;
@@ -127,7 +124,6 @@ function FullItem(props) {
     )
 
 }
-
 
 // # combine the whole structure into ine function and export it
 export function Whole(props) {

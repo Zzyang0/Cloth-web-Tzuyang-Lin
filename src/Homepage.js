@@ -1,7 +1,6 @@
 import React from 'react'; //import React Component
 import { Link } from 'react-router-dom';
 
-
 export function Homepage() {
 
     return (
@@ -18,34 +17,33 @@ export function Homepage() {
                 </div>
             </section>
 
-            <section className="sec2_text">
+            <div className="sec2_text">
                 <div className="container-texts">
                     <p>See The Latest Fashion Trend</p>
                 </div>
 
-            </section>
+            </div>
 
             <section className="sec2_trend">
-            <div className="trend">
-            <img src="img/Coastal_Grandmother.png" alt="this is a picture of Coastal Grandmother Trend"/>
-            <div>
-            <p>Coastal Grandmother Trend</p>
-            </div>
-            </div>
-            <div className="trend">
-            <img src="img/jumpsuit.png" alt="this is a picture of Jumpsuit in Street Style Trend"/>
-            <div>
-            <p>Jumpsuit in Street Style Trend</p>
-            </div>
-            </div>
-            <div className="trend">
-            <img src="img/sweater_vests.png" alt="this is a picture of Street Stylers Worked Sweater Vests Trend "/>
-            <div>
-            <p> Street Stylers Worked Sweater Vests Trend</p>
-            </div>
+                <div className="trend">
+                    <img src="img/Coastal_Grandmother.png" alt="this is a picture of Coastal Grandmother Trend"/>
+                    <div>
+                    <p>Coastal Grandmother Trend</p>
+                    </div>
+                </div>
+                <div className="trend">
+                    <img src="img/jumpsuit.png" alt="this is a picture of Jumpsuit in Street Style Trend"/>
+                    <div>
+                    <p>Jumpsuit in Street Style Trend</p>
+                    </div>
+                </div>
+                <div className="trend">
+                    <img src="img/sweater_vests.png" alt="this is a picture of Street Stylers Worked Sweater Vests Trend "/>
+                    <div>
+                    <p> Street Stylers Worked Sweater Vests Trend</p>
+                    </div>
                 </div>
             </section>
         </main>
-
     );
 }

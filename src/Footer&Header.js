@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import the font-icon style
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, NavLink } from 'react-router-dom';
-
-
+import { Link} from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
+
 
 export function Nav(props) {
   const currentUser = props.currentUser.userId;
@@ -61,7 +60,6 @@ export function Nav(props) {
 }
 
 export function Footer() {
-
   return (
     <footer className="footer">
       <ul className="footer1">

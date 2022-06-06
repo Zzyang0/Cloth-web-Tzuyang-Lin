@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 export function Startquiz() {
 	return (
@@ -15,17 +14,14 @@ export function Startquiz() {
 				</div>
 			</div>
 			<div>
-				<NavLink to="/quizquestion"><button className='quiz_btn'>Start</button></NavLink>
+				<Link to="/quizquestion"><button className='quiz_btn'>Start</button></Link>
 			</div>
 		</div>
 	)
 };
 
-
 export function Quiz() {
 	const [current, setCurrent] = useState(0);
-	// const [count, setCount] = useState(0);
-	// const [start, setStart] = useState(0);
 
 	const questions = [
 		{
@@ -101,7 +97,9 @@ export function Quiz() {
 						<button className='navi_btn' onClick={ClickPrev}>previous</button>
 					}
 					{current === 3 &&
-						<button className='navi_btn' onClick={ClickNext}>submit</button>
+						<Link to="/resultquiz">
+							<button className='navi_btn' onClick={ClickNext}>submit</button>
+						</Link>
 					}
 				</div>
 			</div>

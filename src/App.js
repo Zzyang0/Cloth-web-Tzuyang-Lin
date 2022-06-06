@@ -119,6 +119,7 @@ function App(props) {
                     </Route>
                     <Route path='/about' element={<About />} />
                     <Route path='signin' element={<SignIn currentUser={currentUser} />} />
+                    {/* handel error routes */}
                     <Route path='*' element={<Navigate to='/' />} />
                 </Route>
 

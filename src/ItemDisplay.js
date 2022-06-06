@@ -26,7 +26,6 @@ function ItemShow(props) {
     });
 
     const datatransfom = {"des":des, "img": imgLink, "price":price};
-
     const handleoufitsave = (event) => {
         event.preventDefault();
         //const item = event.target.value;

@@ -2,6 +2,7 @@ import { faAppleWhole } from '@fortawesome/free-solid-svg-icons';
 import React , {useState} from 'react';
 import { Nav, Footer } from "./Footer&Header";
 import database from './data/database.json';
+import { Mycloset, Displaycloset, Additem } from './MyCloset';
 
 
 function FullChoice(props) {
@@ -78,14 +79,34 @@ function FullChoice(props) {
 
 // in this case, the props will be single item Object
 function ItemDisplay(props) {
+    const currentUser = props.currentUser;
     let re = props.intake;
-    return(
+    const [saved, setsaved] = useState(false);
+
+    const handlesave = (event) => {
+        event.preventDefault();
+        console.log(re);
+        Additem(re, currentUser);
+        setsaved(true);
+    }
+
+    // if(saved) {
+    //     const display = none;
+    // }
+
+    return (
         <div className="cloth">
-            <img src = {re.img} alt={re.imgd} />
+            <img src={re.img} alt={re.imgd} />
             <h1>{re.brand}</h1>
             <h2>{re.des}</h2>
             <p>{"$" + re.price}</p>
-            <button className="save-to-closet" type="button"> SAVE TO CLOSET </button>
+            {saved &&
+                <button className="save-to-closet" type="button" > SAVED </button>
+            }
+            {!saved &&
+                <button className="save-to-closet" type="button" disabled={saved} onClick={handlesave} > SAVE TO CLOSET </button>
+            }
+
         </div>
     )
 }
@@ -93,9 +114,10 @@ function ItemDisplay(props) {
 
 // # this function takes in an array of object with product information
 function FullItem(props) {
+    const currentUser = props.currentUser;
     let items = props.base;
     let info = items?.map((single) => {
-       return  <ItemDisplay intake={single} key={single.imgd} />
+       return  <ItemDisplay intake={single} key={single.imgd} currentUser={currentUser} />
     })
 
     return (
@@ -110,12 +132,13 @@ function FullItem(props) {
 // # combine the whole structure into ine function and export it
 export function Whole(props) {
     const file = props.require;
+    const currentUser = props.currentUser;
     return(
         <main>
             <header className="subpage-title"><h1>GENERATING OUTFIT</h1></header>
             <div className='containerg'>
                 <FullChoice />
-                <FullItem base={file}/>
+                <FullItem base={file} currentUser={currentUser} />
             </div>
         </main>
     )

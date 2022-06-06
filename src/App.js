@@ -92,11 +92,11 @@ function App(props) {
         return cleanup;
     }, [])
 
-    const loginUser = (userObject) => {
-        //can do more checking here if we want
-        setCurrentUser(userObject);
-        navigateTo('outfitgenerator'); //go to chat "after" we log in!
-    }
+    // const loginUser = (userObject) => {
+    //     //can do more checking here if we want
+    //     setCurrentUser(userObject);
+    //     navigateTo('outfitgenerator'); //go to chat "after" we log in!
+    // }
 
 
     return (
@@ -110,8 +110,8 @@ function App(props) {
                         } />
                     </Route>
                     <Route path='/' element={<Homepage />} />
-                    <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-                    <Route path='itemgenerator' element={<ItemGenerate item={displayData} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget}/>} />
+                    <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
+                    <Route path='itemgenerator' element={<ItemGenerate item={displayData} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />

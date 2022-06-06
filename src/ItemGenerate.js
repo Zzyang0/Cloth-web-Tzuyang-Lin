@@ -123,6 +123,7 @@ function ItemGenerateForm(props) {
 
 export function ItemGenerate(props) {
     console.log(props);
+    const currentUser = props.currentUser;
     const originData = props.item;
     const data = [];
     for (let i = 0; i < originData.length; i++) {
@@ -138,7 +139,7 @@ export function ItemGenerate(props) {
             <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
                 <ItemGenerateForm products={data} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter}/>
-                <ItemDisplay item={data}/>
+                <ItemDisplay item={data} currentUser={currentUser}/>
             </div>
         </main>
     )

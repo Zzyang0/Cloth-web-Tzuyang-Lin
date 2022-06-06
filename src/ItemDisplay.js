@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Additem } from './MyCloset';
 
 function ItemShow(props) {
+    const currentUser = props.currentUser;
     let need = props.intake;
+    const [outfitsaved, setoutfitsaved] = useState(false);
     let infoArray = need[Object.keys(need)[0]];
     let imgLink;
     let imgDes;
@@ -21,19 +24,35 @@ function ItemShow(props) {
             price = info['price'][0];
         }
     });
+
+    const datatransfom = {"des":des, "img": imgLink, "price":price};
+
+    const handleoufitsave = (event) => {
+        event.preventDefault();
+        //const item = event.target.value;
+        console.log(datatransfom);
+        Additem(datatransfom, currentUser);
+        setoutfitsaved(true);
+    }
     return (
         <div className="cloth">
             <img src={imgLink} alt={imgDes} />
             <h1>{brand}</h1>
             <h2>{des}</h2>
             <p>{"$" + price}</p >
-            <button className="save-to-closet" type="button"> SAVE TO CLOSET </button>
+            {outfitsaved &&
+                <button className="save-to-closet" type="button" > SAVED </button>
+            }
+            {!outfitsaved &&
+                <button className="save-to-closet" type="button" onClick={handleoufitsave} > SAVE TO CLOSET </button>
+            }
         </div>
     )
 }
 
 export default function ItemDisplay (item) {
     const database = item.item;
+    const currentUser = item.currentUser;
     let totalArray = [];
     let elemArray;
     let itemArray;
@@ -46,7 +65,7 @@ export default function ItemDisplay (item) {
         });
     }
     elemArray = totalArray?.map((anItem) => {
-        return <ItemShow intake={anItem}/>
+        return <ItemShow intake={anItem} currentUser={currentUser} />
     });
     return (
         <div className='generated-cloth'>

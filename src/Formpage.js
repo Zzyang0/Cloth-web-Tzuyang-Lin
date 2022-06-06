@@ -57,6 +57,7 @@ function FullChoice(props) {
                         <option value='hiking'>Hiking</option>
                     </select>
                 </div>
+
               <div className='choice' id='choice'>
                 <p>
                 <label htmlFor="budget" className='budget_input' id="budget_input">BUDGET:$</label>

@@ -4,7 +4,7 @@ import { getAuth, EmailAuthProvider } from 'firebase/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 const FIREBASEUI_CONFIG_OBJ = {
-    //what sign in options to show?
+    // sign in options to show
     signInOptions: [
         { provider: EmailAuthProvider.PROVIDER_ID, requireDisplayName: true }
     ],
@@ -14,8 +14,6 @@ const FIREBASEUI_CONFIG_OBJ = {
     },
     credentialHelper: 'none',
 }
-
-
 
 export default function SignIn(props) {
 

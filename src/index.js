@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './style.css'
 import 'whatwg-fetch';
-//import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 
@@ -18,7 +17,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 

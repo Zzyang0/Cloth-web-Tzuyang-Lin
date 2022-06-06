@@ -59,18 +59,6 @@ function App(props) {
         }
     }
 
-    // function FilterOUtfit (data) {
-    //     let result = [];
-    //     for (let i = 0; i < data.length; i++){ // into a single obj
-    //         for (let j = 0; j < Object.values(data[i]).length; j++) {
-    //             for (let k = 0; k < Object.values(data[i][j]).length; k++){
-    //                 if (Object.values(data[i][j]).includes(e.target.value)) {
-    //                        result = [...result, data[i][j]];
-    //                 } 
-    //             }
-    //         }
-    //      }
-    // }
 
     useEffect(() => {
 
@@ -94,11 +82,11 @@ function App(props) {
         return cleanup;
     }, [])
 
-    const loginUser = (userObject) => {
-        //can do more checking here if we want
-        setCurrentUser(userObject);
-        navigateTo('outfitgenerator'); //go to chat "after" we log in!
-    }
+    // const loginUser = (userObject) => {
+    //     //can do more checking here if we want
+    //     setCurrentUser(userObject);
+    //     navigateTo('outfitgenerator'); //go to chat "after" we log in!
+    // }
 
 
     return (
@@ -112,8 +100,8 @@ function App(props) {
                         } />
                     </Route>
                     <Route path='/' element={<Homepage />} />
-                    <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-                    <Route path='itemgenerator' element={<ItemGenerate item={displayData} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget}/>} />
+                    <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
+                    <Route path='itemgenerator' element={<ItemGenerate item={displayData} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />
@@ -121,6 +109,7 @@ function App(props) {
                     </Route>
                     <Route path='/about' element={<About />} />
                     <Route path='signin' element={<SignIn currentUser={currentUser} />} />
+                    {/* handel error routes */}
                     <Route path='*' element={<Navigate to='/' />} />
                 </Route>
 

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import ItemDisplay from './ItemDisplay.js';
 
 function ItemGenerateForm(props) {
@@ -29,22 +29,6 @@ function ItemGenerateForm(props) {
         props.budgetFilter(data, budget);
     }
 
-
-
-
-
-    
-
-
-    /*let currData = filterCategory(base3);
-    const forceRender = (item) => {
-        setWant(wantCopy);
-    } */
-    /*const forceRender = (data) => {
-        console.log("I went in");
-        return <FullProduct Data3={data}/>
-    }*/
-    //forceRender(currData);
     
     return (
         <div>
@@ -57,7 +41,7 @@ function ItemGenerateForm(props) {
                             <label htmlFor="vehicle1"> Shoes </label>
                         </div>
                         
-                        {/* <br></br> */}
+                        
                         <div className='input'>
                             <input type="checkbox" id="Clothes" name="category" value="top" onChange={handleInputChange}/>
                             <label htmlFor="vehicle2"> Top </label>
@@ -68,19 +52,19 @@ function ItemGenerateForm(props) {
                             <label htmlFor="vehicle2"> Bottom </label>
                         </div>
 
-                        {/* <br></br> */}
+                        
                         <div className='input'>
                             <input type="checkbox" id="Bags" name="category" value="bags" onChange={handleInputChange}/>
                             <label htmlFor="vehicle3"> Bags </label>
                         </div>
                         
-                        {/* <br></br> */}
+                        
                         <div className='input'>
                             <input type="checkbox" id="Accessories" name="category" value="accessories" onChange={handleInputChange}/>
                             <label htmlFor="vehicle3"> Accessories </label>
                         </div>
                         
-                        {/* <br></br> */}
+                        
                     </div>
                     <p>
             
@@ -116,6 +100,8 @@ function ItemGenerateForm(props) {
 }
 
 export function ItemGenerate(props) {
+    console.log(props);
+    const currentUser = props.currentUser;
     const originData = props.item;
     const data = [];
     for (let i = 0; i < originData.length; i++) {

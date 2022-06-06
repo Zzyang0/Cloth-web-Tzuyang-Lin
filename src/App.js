@@ -12,7 +12,6 @@ import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";
 
-
 function App(props) {
     const nullUser = { userId: null, userName: null }
     const dataArray = Transform(database);
@@ -79,13 +78,6 @@ function App(props) {
         return cleanup;
     }, [])
 
-    // const loginUser = (userObject) => {
-    //     //can do more checking here if we want
-    //     setCurrentUser(userObject);
-    //     navigateTo('outfitgenerator'); //go to chat "after" we log in!
-    // }
-
-
     return (
         <div>
             <Routes>
@@ -95,15 +87,15 @@ function App(props) {
                         <Route path="/closet" element={
                             <Mycloset currentUser={currentUser} />
                         } />
+                        <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
+                        <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
+                        <Route path='/closet' element={<Mycloset />} />
+                        <Route>
+                            <Route path="/quiz" element={<Startquiz />} />
+                            <Route path="/quizquestion" element={<Quiz />} />
+                        </Route>
                     </Route>
                     <Route path='/' element={<Homepage />} />
-                    <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
-                    <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
-                    <Route path='/closet' element={<Mycloset />} />
-                    <Route>
-                        <Route path="/quiz" element={<Startquiz />} />
-                        <Route path="/quizquestion" element={<Quiz />} />
-                    </Route>
                     <Route path='/about' element={<About />} />
                     <Route path='signin' element={<SignIn currentUser={currentUser} />} />
                     {/* handel error routes */}

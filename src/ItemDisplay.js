@@ -23,7 +23,7 @@ function ItemShow(props) {
     });
     return (
         <div className="cloth">
-            < img src={imgLink} alt={imgDes} />
+            <img src={imgLink} alt={imgDes} />
             <h1>{brand}</h1>
             <h2>{des}</h2>
             <p>{"$" + price}</p >
@@ -37,7 +37,7 @@ export default function ItemDisplay (item) {
     let totalArray = [];
     let elemArray;
     let itemArray;
-    for (let i = 0; i < database.length; i++) { // should be 4 for 4 categories
+    for (let i = 0; i < database.length; i++) { // should be 5 for 5 categories
         let categoryObject = database[i];
         let category = Object.keys(categoryObject);
         itemArray = categoryObject[category[0]];
@@ -45,8 +45,6 @@ export default function ItemDisplay (item) {
             totalArray.push(item);
         });
     }
-    console.log(totalArray);
-    console.log(totalArray.length);
     elemArray = totalArray?.map((anItem) => {
         return <ItemShow intake={anItem}/>
     });

@@ -18,6 +18,10 @@ html {
   background-color: #f7f1f0;
 }
 
+main {
+  width: 100%;
+}
+
 h1{
   text-align: center;
 }
@@ -247,11 +251,11 @@ button:hover{
 
 
 .cloth h1 {
-  font-size: 90%;
+  font-size: 120%;
 }
 
 .cloth h2 {
-  font-size: 15px;
+  font-size: 90%;
 }
 
 
@@ -291,7 +295,7 @@ button:hover{
 .containerg .generator {
   background-color: #C3A6A0;
   border-radius: 20px;
-  height: 450px;
+  height: 500px;
 }
 
 .generator label {
@@ -336,6 +340,15 @@ button:hover{
 
 .containerg .generated-cloth {
   margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.generated-cloth .cloth {
+  flex: 0 0 200px;
+  margin: 0.5rem;
+  border-radius: 10px;
 }
 
 .subpage-title {
@@ -721,16 +734,21 @@ button:hover{
   .containerg {
     display: flex;
     flex-grow: 1;
-    margin: 5% 20% 10px 10px;
+
   }
 
   .containerg .generated-cloth {
     flex-basis: 60%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .cloth {
     flex-grow: 1;
+    flex: 0 0 250px;
+    margin: 0.5rem;
+    border-radius: 10px;
   }
 
   .cloth .second {

@@ -13,13 +13,62 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";
 
 
-
 function App(props) {
     const nullUser = { userId: null, userName: null }
-    const [currentUser, setCurrentUser] = useState(nullUser);
-    const navigateTo = useNavigate();
     const dataArray = Transform(database);
+    const [currentUser, setCurrentUser] = useState(nullUser);
+    const [displayData, setDisplayData] = useState(dataArray);
+    const navigateTo = useNavigate();
     
+    function FilterCategory (filteredData, want) { // filter database with user input
+        if (want.length === 0) {
+            setDisplayData(filteredData);
+            return filteredData;
+        } else {
+            let finalItem = [];
+            let filterItem = filteredData;
+            for (let i = 0; i < want.length; i++) {
+                filterItem = filteredData.filter(
+                    (item) => item.category === want[i]
+                );
+                for (let j = 0; j < filterItem.length; j++) {
+                    finalItem.push(filterItem[j]);
+                }
+            }
+            setDisplayData(finalItem);
+            return finalItem;
+        }
+    }
+
+    function FilterBudget (data, budget) {
+        if (budget === null) {
+            setDisplayData(data);
+            return data;
+        } else {
+            let finalItem = [];
+            let filterItem = [...data];
+            for (let i = 0; i < filterItem.length; i ++) {
+                finalItem = filterItem.filter(
+                    (item) => item.price <= budget
+                );
+            }
+            setDisplayData(finalItem);
+            return finalItem;
+        }
+    }
+
+    // function FilterOUtfit (data) {
+    //     let result = [];
+    //     for (let i = 0; i < data.length; i++){ // into a single obj
+    //         for (let j = 0; j < Object.values(data[i]).length; j++) {
+    //             for (let k = 0; k < Object.values(data[i][j]).length; k++){
+    //                 if (Object.values(data[i][j]).includes(e.target.value)) {
+    //                        result = [...result, data[i][j]];
+    //                 } 
+    //             }
+    //         }
+    //      }
+    // }
 
     useEffect(() => {
 
@@ -58,7 +107,7 @@ function App(props) {
                     </Route>
                     <Route path='/' element={<Homepage />} />
                     <Route path='outfitgenerator' element={<Whole require={shoes} />} />
-                    <Route path='itemgenerator' element={<ItemGenerate item={dataArray}/>} />
+                    <Route path='itemgenerator' element={<ItemGenerate item={displayData} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget}/>} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />

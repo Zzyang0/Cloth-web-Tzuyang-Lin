@@ -109,7 +109,7 @@ export function ItemGenerate(props) {
             <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
                 <ItemGenerateForm products={display} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter} setDisplay={setDisplay}/>
-                <ItemDisplay item={display}/>
+                <ItemDisplay item={display} currentUser={currentUser} />
             </div>
         </main>
     )

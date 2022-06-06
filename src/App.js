@@ -24,7 +24,7 @@ function App(props) {
     useEffect(() => {
 
         const auth = getAuth();
-        onAuthStateChanged(auth, (firebaseUser) => {
+        const login = onAuthStateChanged(auth, (firebaseUser) => {
             if (firebaseUser) { //is defined, so "logged in"
                 console.log("authentication state changed");
                 console.log(firebaseUser);
@@ -37,6 +37,10 @@ function App(props) {
                 setCurrentUser(nullUser);
             }
         });
+        function cleanup(){
+            login();
+        }
+        return cleanup;
     }, [])
 
     const loginUser = (userObject) => {

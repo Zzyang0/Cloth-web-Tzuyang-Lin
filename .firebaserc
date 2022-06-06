@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "dvogue-a1779"
-  }
+    "default": "dvogue-a1779",
+    "staging": "dvogue-a1779"
+  },
+  "targets": {}
 }

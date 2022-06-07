@@ -11,17 +11,13 @@ import shoes from "./data/shoes.json";
 import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";
-import brandJson from './data/brand.json';
 
 function App(props) {
     const nullUser = { userId: null, userName: null }
     const dataArray = Transform(database);
     const dataArrayWithoutSaveItem = RemoveSavedItem(dataArray);
     const [currentUser, setCurrentUser] = useState(nullUser);
-    const [displayData, setDisplayData] = useState(dataArray);
     const navigateTo = useNavigate();
-    const brandObject = brandJson[0];
-    const brand = brandObject[Object.keys(brandObject)[0]];
 
     function FilterCategory (want) { // filter database with user input
         if (want.length === 0) {
@@ -137,7 +133,7 @@ function App(props) {
                             <Mycloset currentUser={currentUser} />
                         } />
                         <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
-                        <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} brand ={brand} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} applySearchFilter={SearchFilter} currentUser={currentUser} />} />
+                        <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} applySearchFilter={SearchFilter} currentUser={currentUser} />} />
                         <Route path='/closet' element={<Mycloset />} />
                         <Route>
                             <Route path="/quiz" element={<Startquiz />} />

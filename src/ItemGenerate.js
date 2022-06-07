@@ -108,7 +108,7 @@ export function ItemGenerate(props) {
         <main>
             <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
-                <ItemGenerateForm products={originData} brand={brand} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter} searchFilter={props.applySearchFilter} setDisplay={setDisplay}/>
+                <ItemGenerateForm products={originData} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter} searchFilter={props.applySearchFilter} setDisplay={setDisplay}/>
                 <ItemDisplay item={display} currentUser={currentUser} />
             </div>
         </main>

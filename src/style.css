@@ -178,6 +178,7 @@ button:hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: center;
 }
 .trend {
   flex: 0 0 500px;

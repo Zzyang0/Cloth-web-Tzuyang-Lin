@@ -32,7 +32,7 @@ function ItemShow(props) {
         Additem(datatransfom, currentUser);
         setoutfitsaved(true);
     }
-    return (
+    return (    
         <div className="cloth">
             <img src={imgLink} alt={imgDes} />
             <h1>{brand}</h1>

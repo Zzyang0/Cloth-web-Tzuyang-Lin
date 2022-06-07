@@ -11,6 +11,7 @@ import shoes from "./data/shoes.json";
 import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";
+import { Result } from "./ResultQuiz";
 
 function App(props) {
     const nullUser = { userId: null, userName: null }
@@ -136,6 +137,7 @@ function App(props) {
                         <Route>
                             <Route path="/quiz" element={<Startquiz />} />
                             <Route path="/quizquestion" element={<Quiz />} />
+                            <Route path='/result' element={<Result currentUser={currentUser} />} />
                         </Route>
                     </Route>
                     <Route path='/' element={<Homepage />} />

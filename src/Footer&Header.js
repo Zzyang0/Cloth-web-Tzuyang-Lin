@@ -29,6 +29,7 @@ export function Nav(props) {
     signOut(getAuth());
   }
 
+  
   return (
     <section className="navbar">
       <nav>

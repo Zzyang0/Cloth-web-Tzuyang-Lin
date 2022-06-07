@@ -89,14 +89,12 @@ export function Mycloset(props) {
                 item.firebaseKey = keyString;
                 return item
             })
-            console.log(addkeylist);
 
             const arr = addkeylist.filter((value, index, self) =>
                 index === self.findIndex((t) => (
                     t.userId === currentUser.userId && t.des === value.des
                 ))
             )
-            console.log(arr);
             setitemarray(arr);
 
 

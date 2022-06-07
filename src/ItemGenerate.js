@@ -101,7 +101,6 @@ function ItemGenerateForm(props) {
 export function ItemGenerate(props) {
     const currentUser = props.currentUser;
     const originData = props.item;
-    const brand = props.brand;
     const [display, setDisplay] = useState(originData);
     
     return (

@@ -6,8 +6,7 @@ import {ItemGenerate } from "./ItemGenerate";
 import { Startquiz, Quiz } from "./Quiz"
 import { Mycloset } from "./MyCloset"
 import { Routes, Route, Navigate, useNavigate, Outlet } from 'react-router-dom';
-import { Whole } from "./Formpage";
-import shoes from "./data/shoes.json";
+import { OutfitGenerate } from "./Formpage";
 import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";
@@ -99,6 +98,19 @@ function App(props) {
         }
     }
 
+    function FilterOutfit (count) { // filter database with user input
+        let finalItem = [];
+        let filterItem = dataArrayWithoutSaveItem;
+        for (let i = 0; i < filterItem.length; i++) {                let itemObject = filterItem[i];
+            let itemKey = Object.keys(itemObject)[0];
+            let itemArray = itemObject[itemKey];
+            let item = itemArray[count];
+            finalItem.push(item);
+        }
+        let finalItemObject = [{0:finalItem}];
+        return finalItemObject;
+    }
+
     useEffect(() => {
 
         const auth = getAuth();
@@ -130,7 +142,7 @@ function App(props) {
                         <Route path="/closet" element={
                             <Mycloset currentUser={currentUser} />
                         } />
-                        <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
+                        <Route path='outfitgenerator' element={<OutfitGenerate item={dataArrayWithoutSaveItem} applyBudgetFilter={FilterBudget} applyFilterOutfit={FilterOutfit} currentUser={currentUser} />} />
                         <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} applySearchFilter={SearchFilter} currentUser={currentUser} />} />
                         <Route path='/closet' element={<Mycloset />} />
                         <Route>

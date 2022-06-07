@@ -16,7 +16,7 @@ function Item(props) {
             <h1>{re.brand}</h1>
             <h2>{re.des}</h2>
             <p>{"$" + re.price}</p>
-            <button className="save-to-closet" type="button" onClick={handleremove} > remove </button>
+            <button className="save-to-closet" type="button" onClick={handleremove} > Remove </button>
         </div>
     )
 }

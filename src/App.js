@@ -12,15 +12,13 @@ import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";
 
-
 function App(props) {
     const nullUser = { userId: null, userName: null }
     const dataArray = Transform(database);
     const dataArrayWithoutSaveItem = RemoveSavedItem(dataArray);
     const [currentUser, setCurrentUser] = useState(nullUser);
-    const [displayData, setDisplayData] = useState(dataArray);
     const navigateTo = useNavigate();
-    
+
     function FilterCategory (want) { // filter database with user input
         if (want.length === 0) {
             return dataArrayWithoutSaveItem;
@@ -34,25 +32,70 @@ function App(props) {
                 for (let j = 0; j < filterItem.length; j++) {
                     finalItem.push(filterItem[j]);
                 }
-                console.log(finalItem);
-                
             }
             return finalItem;
         }
     }
 
-    function FilterBudget (data, budget) {
-        if (budget === null) {
-            return data;
+    function FilterBudget (database, budget) {
+        if (budget === "") {
+            return database;
         } else {
             let finalItem = [];
-            let filterItem = data;
-            for (let i = 0; i < filterItem.length; i ++) {
-                finalItem = filterItem.filter(
-                    (item) => item.price <= budget
-                );
+            for (let i = 0; i < database.length; i ++) {
+                let categoryObject = database[i];
+                let category = Object.keys(categoryObject)[0];
+                let itemObjectArray = categoryObject[category];
+                for (let j = 0; j < itemObjectArray.length; j++) {
+                    let itemObject = itemObjectArray[j];
+                    let item = Object.keys(itemObject)[0];
+                    let infoArray = itemObject[item];
+                    for (let k = 0; k < infoArray.length; k++) {
+                        let infoObject = infoArray[k];
+                        let infoName = Object.keys(infoObject)[0];
+                        if (infoName === 'price') {
+                            let price = infoObject[infoName][0];
+                            if (price <= budget) {
+                                finalItem.push(itemObject);
+                            }
+                        }
+                    }
+                }
             }
-            return finalItem;
+            let finalItemObject = [{0:finalItem}];
+            return finalItemObject;
+        }
+    }
+
+    function SearchFilter(database, searchTerm) {
+        if (searchTerm === "") {
+            return database;
+        } else {
+            let finalItem = [];
+            for (let i = 0; i < database.length; i ++) {
+                let categoryObject = database[i];
+                let category = Object.keys(categoryObject)[0];
+                let itemObjectArray = categoryObject[category];
+                for (let j = 0; j < itemObjectArray.length; j++) {
+                    let itemObject = itemObjectArray[j];
+                    let item = Object.keys(itemObject)[0];
+                    let infoArray = itemObject[item];
+                    for (let k = 0; k < infoArray.length; k++) {
+                        let infoObject = infoArray[k];
+                        let infoName = Object.keys(infoObject)[0];
+                        if (infoName === 'brand') {
+                            let brand = infoObject[infoName][0];
+                            console.log(brand.toLowerCase());
+                            console.log(searchTerm.toLowerCase());
+                            if (brand.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
+                                finalItem.push(itemObject);
+                            }
+                        }
+                    }
+                }
+            }
+            let finalItemObject = [{0:finalItem}];
+            return finalItemObject;
         }
     }
 
@@ -78,13 +121,6 @@ function App(props) {
         return cleanup;
     }, [])
 
-    // const loginUser = (userObject) => {
-    //     //can do more checking here if we want
-    //     setCurrentUser(userObject);
-    //     navigateTo('outfitgenerator'); //go to chat "after" we log in!
-    // }
-
-
     return (
         <div>
             <Routes>
@@ -94,15 +130,15 @@ function App(props) {
                         <Route path="/closet" element={
                             <Mycloset currentUser={currentUser} />
                         } />
+                        <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
+                        <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} applySearchFilter={SearchFilter} currentUser={currentUser} />} />
+                        <Route path='/closet' element={<Mycloset />} />
+                        <Route>
+                            <Route path="/quiz" element={<Startquiz />} />
+                            <Route path="/quizquestion" element={<Quiz />} />
+                        </Route>
                     </Route>
                     <Route path='/' element={<Homepage />} />
-                    <Route path='outfitgenerator' element={<Whole require={dataArrayWithoutSaveItem} currentUser={currentUser} />} />
-                    <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
-                    <Route path='/closet' element={<Mycloset />} />
-                    <Route>
-                        <Route path="/quiz" element={<Startquiz />} />
-                        <Route path="/quizquestion" element={<Quiz />} />
-                    </Route>
                     <Route path='/about' element={<About />} />
                     <Route path='signin' element={<SignIn currentUser={currentUser} />} />
                     {/* handel error routes */}

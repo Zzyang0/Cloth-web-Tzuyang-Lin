@@ -28,12 +28,11 @@ function ItemShow(props) {
     const datatransfom = {"des":des, "img": imgLink, "price":price};
     const handleoufitsave = (event) => {
         event.preventDefault();
-        //const item = event.target.value;
         console.log(datatransfom);
         Additem(datatransfom, currentUser);
         setoutfitsaved(true);
     }
-    return (
+    return (    
         <div className="cloth">
             <img src={imgLink} alt={imgDes} />
             <h1>{brand}</h1>

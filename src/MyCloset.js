@@ -4,10 +4,8 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 
 function Item(props) {
     const re = props.itemdata;
-    const [removed, setremoved] = useState(false);
     const handleremove = (event) => {
-        Removeitem(re)
-        setremoved(true);
+        Removeitem(re);
     }
 
     return (
@@ -23,15 +21,13 @@ function Item(props) {
 
 function Removeitem(item) {
     const itemkey = item.firebaseKey;
-    const db = getDatabase(); //url for the database, not the data itself
-    const itemref = ref(db, "Saveditem/" + itemkey); //refers to "message" location in the database
-    //const clothingItemRef = ref(db, "allItems/" + firebaseKey);
+    const db = getDatabase(); 
+    const itemref = ref(db, "Saveditem/" + itemkey); 
     firebaseSet(itemref,null);
 }
 
 
 function Displaycloset(props) {
-    const currentUser = props.currentuser;
     const itemarray = props.item;
     const newitemArray = itemarray.map((itemobj) => {
         const transformed = (
@@ -62,8 +58,8 @@ export function Additem(item, currentUser) {
         price: item.price
     }
 
-    const db = getDatabase(); //url for the database, not the data itself
-    const allMsgRef = ref(db, "Saveditem"); //refers to "message" location in the database
+    const db = getDatabase(); 
+    const allMsgRef = ref(db, "Saveditem"); 
 
     firebasePush(allMsgRef, newitem);
 
@@ -72,17 +68,13 @@ export function Additem(item, currentUser) {
 export function Mycloset(props) {
     const currentUser = props.currentUser;
     const [itemarray, setitemarray] = useState([])
-    const [key, setkey] = useState({});
 
     useEffect(() => {
-        //what to do FIRST TIME the component loads
-        //hook up listener for when a value changes
-        const db = getDatabase(); //url for the database, not the data itself
+        const db = getDatabase(); 
         const allMsgRef = ref(db, "Saveditem");
         const offFunction = onValue(allMsgRef, (snapshot) => {
             const newValObj = snapshot.val();
             const keys = Object.keys(newValObj);
-            const values = Object.values(newValObj);
 
             const addkeylist = keys.map((keyString) => {
                 const item = newValObj[keyString];
@@ -100,11 +92,11 @@ export function Mycloset(props) {
 
         })
 
-        //what to do when component unmounts (is removed, not shown)
+
         const cleanup = function () {
             offFunction();
         }
-        return cleanup; //tell people to do that when it leaves
+        return cleanup; 
     }, [])
     return (
         <div>

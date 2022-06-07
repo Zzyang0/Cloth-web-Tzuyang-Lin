@@ -97,10 +97,12 @@ export function Quiz() {
 						<button className='navi_btn' onClick={ClickPrev}>previous</button>
 					}
 					{current === 3 &&
-						<Link to="/resultquiz">
-							<button className='navi_btn' onClick={ClickNext}>submit</button>
-						</Link>
+					<Link to='/result'>
+						<button className='navi_btn' onClick={ClickNext}>submit</button>
+					</Link>
 					}
+
+
 				</div>
 			</div>
 		</div>

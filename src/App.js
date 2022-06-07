@@ -11,6 +11,7 @@ import shoes from "./data/shoes.json";
 import SignIn from "./SignInPage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import database from "./data/database.json";
+import brandJson from './data/brand.json';
 
 
 function App(props) {
@@ -20,7 +21,9 @@ function App(props) {
     const [currentUser, setCurrentUser] = useState(nullUser);
     const [displayData, setDisplayData] = useState(dataArray);
     const navigateTo = useNavigate();
-    
+    const brandObject = brandJson[0];
+    const brand = brandObject[Object.keys(brandObject)[0]];
+
     function FilterCategory (want) { // filter database with user input
         if (want.length === 0) {
             return dataArrayWithoutSaveItem;
@@ -34,27 +37,73 @@ function App(props) {
                 for (let j = 0; j < filterItem.length; j++) {
                     finalItem.push(filterItem[j]);
                 }
-                console.log(finalItem);
-                
             }
             return finalItem;
         }
     }
 
-    function FilterBudget (data, budget) {
-        if (budget === null) {
-            return data;
+    function FilterBudget (database, budget) {
+        if (budget === "") {
+            return database;
         } else {
             let finalItem = [];
-            let filterItem = data;
-            for (let i = 0; i < filterItem.length; i ++) {
-                finalItem = filterItem.filter(
-                    (item) => item.price <= budget
-                );
+            for (let i = 0; i < database.length; i ++) {
+                let categoryObject = database[i];
+                let category = Object.keys(categoryObject)[0];
+                let itemObjectArray = categoryObject[category];
+                for (let j = 0; j < itemObjectArray.length; j++) {
+                    let itemObject = itemObjectArray[j];
+                    let item = Object.keys(itemObject)[0];
+                    let infoArray = itemObject[item];
+                    for (let k = 0; k < infoArray.length; k++) {
+                        let infoObject = infoArray[k];
+                        let infoName = Object.keys(infoObject)[0];
+                        if (infoName === 'price') {
+                            let price = infoObject[infoName][0];
+                            if (price <= budget) {
+                                finalItem.push(itemObject);
+                            }
+                        }
+                    }
+                }
             }
-            return finalItem;
+            let finalItemObject = [{0:finalItem}];
+            return finalItemObject;
         }
     }
+
+    function SearchFilter(database, searchTerm) {
+        if (searchTerm === "") {
+            return database;
+        } else {
+            let finalItem = [];
+            for (let i = 0; i < database.length; i ++) {
+                let categoryObject = database[i];
+                let category = Object.keys(categoryObject)[0];
+                let itemObjectArray = categoryObject[category];
+                for (let j = 0; j < itemObjectArray.length; j++) {
+                    let itemObject = itemObjectArray[j];
+                    let item = Object.keys(itemObject)[0];
+                    let infoArray = itemObject[item];
+                    for (let k = 0; k < infoArray.length; k++) {
+                        let infoObject = infoArray[k];
+                        let infoName = Object.keys(infoObject)[0];
+                        if (infoName === 'brand') {
+                            let brand = infoObject[infoName][0];
+                            console.log(brand.toLowerCase());
+                            console.log(searchTerm.toLowerCase());
+                            if (brand.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
+                                finalItem.push(itemObject);
+                            }
+                        }
+                    }
+                }
+            }
+            let finalItemObject = [{0:finalItem}];
+            return finalItemObject;
+        }
+    }
+
 
 
     useEffect(() => {
@@ -98,7 +147,7 @@ function App(props) {
                     </Route>
                     <Route path='/' element={<Homepage />} />
                     <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
-                    <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
+                    <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} brand ={brand} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} applySearchFilter={SearchFilter} currentUser={currentUser} />} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>
                         <Route path="/quiz" element={<Startquiz />} />

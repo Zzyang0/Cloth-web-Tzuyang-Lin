@@ -58,9 +58,9 @@ function FullChoice(props) {
 
               <div className='choice' id='choice'>
                 <p>
-                <label htmlFor="budget" className='budget_input' id="budget_input">BUDGET:$</label>
+                <label htmlFor="budget" className='ques' id="budget_input">BUDGET:$</label>
                 </p >
-                <input type="BUDGET" className='budget_input' id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
+                <input type="BUDGET" className='written-input' id="budget_input" name="BUDGET" placeholder="0 - 10,000"></input>
             </div>
     
             <div className="output">

@@ -3,8 +3,12 @@ import ItemDisplay from './ItemDisplay.js';
 
 function ItemGenerateForm(props) {
     let data = props.products;
+    const [dataBudget, setDataBudget] = useState(data);
+    const [dataSearch, setDataSearch] = useState(data);
     const [want, setWant] = useState([]);
+    const [queryText, setQueryText] = useState('');
     let wantCopy = want;
+    let budgetInput;
     const handleInputChange = (event) => {
         const {value, checked} = event.target;
         wantCopy = want;
@@ -21,20 +25,30 @@ function ItemGenerateForm(props) {
         let copy = wantCopy.filter(n => n);
         setWant(copy);
         let filterData = props.filterCategory(copy);
+        setDataBudget(filterData);
+        setDataSearch(filterData);
         props.setDisplay(filterData);
     }
 
     const handleBudgetChange = (event) => {
         const budget = event.target.value;
-        props.budgetFilter(data, budget);
+        let filterData = props.budgetFilter(dataBudget, budget);
+        props.setDisplay(filterData);
     }
 
+    const handleSeachChange = (event) => {
+        setQueryText(event.target.value);
+        let filterData = props.searchFilter(dataSearch, event.target.value);
+        console.log(filterData);
+        props.setDisplay(filterData);
+    }
     
     return (
         <div>
             <div className='generator'>
                 <form>
                     <label className="ques" htmlFor="q1">Which category of items do you want?</label>
+                    <p className="budgetMessage">Note: Please fill out this section before entering Budget!</p>
                     <div className='category'>
                         <div className="input">
                             <input type="checkbox" id="Shoes" name="category" value="shoes" onChange={handleInputChange}/>
@@ -66,31 +80,16 @@ function ItemGenerateForm(props) {
                         
                         
                     </div>
-                    <p>
-            
-                    <label className='ques' htmlFor="q2">Optional: What other item you want to pair with?</label>
-                    </p >
-                    <div>
-                        <select name="activity" id="activity">
-                            <option value="none" defaultValue disabled hidden>Select an option</option>
-                            <option value="Rings">Rings</option>
-                            <option value="Hats">Hats</option>
-                            <option value="Glasses">Glasses</option>
-                            <option value="Scarves">Scraves</option>
-                        </select>
+                    <div className="search">
+                        <label htmlFor="searchQuery" className="ques">Which brand are you looking for?</label>
+                        <input type="text" className="written-input" placeholder="Search for a brand" value={queryText} onChange={handleSeachChange} />
                     </div>
 
                     <div className='choice' id='choice'>
                         <p>
-                        <label htmlFor="budget" className='budget_input' id="budget_input">BUDGET:$</label>
+                        <label htmlFor="budget" className='ques' id="budget_input">BUDGET:$</label>
                         </p >
-                        <input type="number" className='budget_input' id="budget_input" name="BUDGET" placeholder="0 - 10,000" onChange={handleBudgetChange}></input>
-                    </div>
-
-                    <div className="output">
-                        <button className="Generator" type="button">
-                            GENERATE
-                        </button>
+                        <input type="number" className='written-input' id="budget_input" name="BUDGET" value={budgetInput} placeholder="0 - 10,000" onChange={handleBudgetChange}></input>
                     </div>
                 </form>
             </div>
@@ -102,14 +101,15 @@ function ItemGenerateForm(props) {
 export function ItemGenerate(props) {
     const currentUser = props.currentUser;
     const originData = props.item;
+    const brand = props.brand;
     const [display, setDisplay] = useState(originData);
     
     return (
         <main>
             <header className="subpage-title"><h1>GENERATE ITEM</h1></header>
             <div className='containerg'>
-                <ItemGenerateForm products={display} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter} setDisplay={setDisplay}/>
-                <ItemDisplay item={display}/>
+                <ItemGenerateForm products={originData} brand={brand} filterCategory={props.applyFilterCallback} budgetFilter={props.applyBudgetFilter} searchFilter={props.applySearchFilter} setDisplay={setDisplay}/>
+                <ItemDisplay item={display} currentUser={currentUser} />
             </div>
         </main>
     )

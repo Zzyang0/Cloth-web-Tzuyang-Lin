@@ -294,18 +294,22 @@ button:hover{
 .containerg .generator {
   background-color: #C3A6A0;
   border-radius: 20px;
-  height: 580px;
+  height: 550px;
+}
+
+.generator div {
+  margin-bottom: 25px;
 }
 
 .generator label {
   display: inline-block;
   justify-content: left;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 
 .choice .button,
-.budget_input {
+.written-input {
   display: inline;
   font-family: 'Poppins', sans-serif;
   border-radius: 30px;
@@ -317,6 +321,7 @@ button:hover{
 .choice {
   margin: 10px;
   margin-left: 0px;
+  margin-bottom: 25px;
 }
 
 .choice:nth-last-of-type(1) {
@@ -335,6 +340,11 @@ button:hover{
   font-size: 16px;
 }
 
+.generator .budgetMessage {
+  font-size: 12px;
+  font-style: italic;
+}
+
 .output .Generator {
   background-color: #F7F1F0;
   line-height: 2.5;
@@ -344,7 +354,7 @@ button:hover{
 
 .containerg .generated-cloth {
   margin-left: 50px;
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -578,6 +588,10 @@ button:hover{
     display: flex;
     font-weight: bold;
     font-size: large;
+  }
+
+  .generated-cloth {
+    display: block;
   }
 } 
 

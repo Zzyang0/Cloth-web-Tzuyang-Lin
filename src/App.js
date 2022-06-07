@@ -56,7 +56,6 @@ function App(props) {
         }
     }
 
-
     useEffect(() => {
 
         const auth = getAuth();
@@ -97,7 +96,7 @@ function App(props) {
                         } />
                     </Route>
                     <Route path='/' element={<Homepage />} />
-                    <Route path='outfitgenerator' element={<Whole require={shoes} currentUser={currentUser} />} />
+                    <Route path='outfitgenerator' element={<Whole require={dataArrayWithoutSaveItem} currentUser={currentUser} />} />
                     <Route path='itemgenerator' element={<ItemGenerate item={dataArrayWithoutSaveItem} applyFilterCallback={FilterCategory} applyBudgetFilter={FilterBudget} currentUser={currentUser} />} />
                     <Route path='/closet' element={<Mycloset />} />
                     <Route>

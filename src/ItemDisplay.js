@@ -25,7 +25,7 @@ function ItemShow(props) {
         }
     });
 
-    const datatransfom = {"des":des, "img": imgLink, "price":price};
+    const datatransfom = {des: des || '', img: imgLink || '', price: price || '' };
     const handleoufitsave = (event) => {
         event.preventDefault();
         console.log(datatransfom);
@@ -34,7 +34,7 @@ function ItemShow(props) {
     }
     return (    
         <div className="cloth">
-            <img src={imgLink} alt={imgDes} />
+            < img src={imgLink} alt={imgDes} />
             <h1>{brand}</h1>
             <h2>{des}</h2>
             <p>{"$" + price}</p >
@@ -48,26 +48,24 @@ function ItemShow(props) {
     )
 }
 
-export default function ItemDisplay (item) {
-    const database = item.item;
-    const currentUser = item.currentUser;
+export default function ItemDisplay({ item, currentUser }) {
+    const database = item;
     let totalArray = [];
     let elemArray;
     let itemArray;
-    for (let i = 0; i < database.length; i++) { // should be 5 for 5 categories
-        let categoryObject = database[i];
-        let category = Object.keys(categoryObject);
-        itemArray = categoryObject[category[0]];
-        itemArray.forEach(function(item) {
-            totalArray.push(item);
-        });
+    for (let i = 0; i < database.length; i++) {
+      let categoryObject = database[i];
+      let category = Object.keys(categoryObject);
+      itemArray = categoryObject[category[0]];
+      itemArray.forEach(function (item) {
+        totalArray.push(item);
+      });
     }
-    elemArray = totalArray?.map((anItem) => {
-        return <ItemShow intake={anItem} currentUser={currentUser} />
+    let x=1
+    elemArray = totalArray?.map((item) => {
+      if (item) {
+        return <ItemShow key={x++} intake={item} currentUser={currentUser} />;
+      }
     });
-    return (
-        <div className='generated-cloth'>
-            {elemArray}
-        </div>
-    );
-}
+    return <div className="generated-cloth">{elemArray}</div>;
+  }

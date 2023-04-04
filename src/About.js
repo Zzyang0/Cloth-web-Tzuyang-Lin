@@ -38,8 +38,6 @@ export function About() {
             Users can input the accessories they want with the budget, the item generator will filter the corresponding items for users.{'\n'}
             My closet{'\n'}
             Users can save the cloth they like and view them in the ‘my closet page’{'\n'}
-            Style quiz{'\n'}
-            By taking some short questions, the quiz will generate some outfits based on user’s answers in general.
           </p>
         </div>
       </div>

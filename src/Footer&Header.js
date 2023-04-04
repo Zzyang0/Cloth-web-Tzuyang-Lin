@@ -40,7 +40,6 @@ export function Nav(props) {
           <li><Link to='/closet' className='navl' onClick={navlRemove}>My Closet</Link></li>
           <li><Link to='outfitgenerator' className='navl' onClick={navlRemove}>Outfit Generator</Link></li>
           <li><Link to='itemgenerator' className='navl' onClick={navlRemove}>Item Generator</Link></li>
-          <li><Link to='/quiz' className='navl' onClick={navlRemove}>Style Quiz</Link></li>
           <li><Link to='/about' className='navl' onClick={navlRemove}>About Us</Link></li>
           {!currentUser &&
             <li><Link to='/signin'><FontAwesomeIcon icon={faUser} />Login</Link></li>

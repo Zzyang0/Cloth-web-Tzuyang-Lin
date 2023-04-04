@@ -1,19 +1,18 @@
-# Dvougue👔
 
-## **This project was designed for course info340 spring 22:Client-side development.**
-
-
-**Wearing the appropriate clothes would not only satisfy people's physical needs, but also provide them comfort, productivity, others' recognition, happiness, and self-satisfaction. With the features of matching and searching for clothes on our website, we would make users' lives better by providing them with the most suitable outfits for different weather conditions, occasions, as well as activities that they are engaging in. Furthermore, our platform could offer recommendations on the outfit based on the user's input and saved item. The system can automatically generate outfit suggestions for users on the basis of their preferences, and the visitors can browse through the suggestions and select the desired outfit. We also provide our web application with the budget restriction, filter out items according to the user's input, as well as the option for users to pair different outfits with their current clothing.**
-
-## Website🕸️
-
-See our website: https://dvogue-a1779.web.app/
+# Description of the codebase
+The name of the codebase is called Dvougue and the original coders are YUNYI(Iris) Ding, Jiali Liu, Phuong Vu and Tzuyang Lin(Frank). The website is a React app that helps users find the most suitable outfits for different weather conditions, occasions, and activities. It features matching and searching for clothes. The platform also allows users to filter items based on budget restrictions and pair different outfits with their current clothing. Overall, the website aims to provide users with comfort, productivity, recognition, happiness, and self-satisfaction through appropriate clothing choices.
 
 
-## **Teams:**
+**The website is deployed on : https://dvogue-a1779.web.app/ through firebase.**
+
+
+<br>
+<br>
+
+
+
+**Info443 Project Teams**
 |  Name:   | Contact infomation：  |
 |  ----  | ----  |
 | YUNYI(Iris) Ding  | yding7@uw.edu|
 | Jiali Liu  | jiali123@uw.edu |
-| Phuong Vu  | pvu@uw.edu|
-| Tzuyang Lin(Frank) | lin528@uw.edu |

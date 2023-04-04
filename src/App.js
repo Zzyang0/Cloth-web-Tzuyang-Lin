@@ -110,9 +110,6 @@ function App(props) {
     }
 
     function FilterOutfit(want) { // filter database with user input
-        // category = ['weather', 'location', 'activity', 'event'];
-        // console.log(database);
-        // console.log("want:", want);
         let count = 0;
         let newwant = []
         for(let i=0; i<want.length; i++){
